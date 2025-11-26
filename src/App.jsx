@@ -6,6 +6,7 @@ import Sidekick from "./Components/Sidekick";
 import Footer from "./components/Footer";
 import Newsletter from "./components/Newsletter";
 import Header from "./components/Header";
+import CookieConsent from "./Components/CookieConsent";
 export default function App() {
   const onClose = () =>{
       const hide = document.querySelector(".close");
@@ -16,13 +17,13 @@ export default function App() {
   return (
     <div>
       <HelloBar/>
+      <Header/>
       <Outlet />
       <Sidekick/>
-   <Header/>
+       
       <Newsletter/>
-      
          <Footer/>
-
+<CookieConsent/>
       <RoadBlock onClose={onClose}/>
     </div>
   );
