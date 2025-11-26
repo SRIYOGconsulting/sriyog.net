@@ -1,38 +1,19 @@
-<<<<<<< HEAD
 import { Outlet } from "react-router-dom";
-
+import RoadBlock from "./Components/RoadBlock";
+import HelloBar from "./Components/HelloBar";
+import './index.css'
 export default function App() {
+  const onClose = () =>{
+      const hide = document.querySelector(".close");
+      if(hide){
+        hide.style.display = "none";
+      }
+  }
   return (
     <div>
+      <HelloBar/>
       <Outlet />
+      <RoadBlock onClose={onClose}/>
     </div>
   );
 }
-=======
-
-import RoadBlock from './Components/RoadBlock'
-import './App.css'
-
-import Footer from "./components/Footer.jsx";
-function App() {
-  const onClose = () => {
-    const closeDiv = document.querySelector(".close");
-    if (closeDiv) {
-      closeDiv.style.display = "none";
-    }
-  }
-  return (
-    <>
-        <RoadBlock onClose={onClose}/>
-        <Footer/>
-    </>
-  
-    
-  )
-}
-
-export default App
-
-
-
->>>>>>> 84eced7181fd050282e99901891da9904db296fb

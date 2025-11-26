@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const RoadBlock = ({ onClose }:any) => {
+const RoadBlock = ({ onClose }) => {
   const today = new Date();
 
   const day = today.getDate();
