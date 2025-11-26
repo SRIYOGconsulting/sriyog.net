@@ -15,7 +15,7 @@ export default function App() {
       <HelloBar/>
       <Outlet />
       <Sidekick/>
-      <RoadBlock onClose={onClose}/>
+      <RoadBlock onClose={onClose} />
     </div>
   );
 }
