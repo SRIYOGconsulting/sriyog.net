@@ -14,6 +14,10 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    /* Allow JSX (React) in .jsx files */
+    "allowJs": true,
+    "checkJs": false,
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
