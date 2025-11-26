@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const RoadBlock = ({ onClose }) => {
+const RoadBlock = ({ onClose }:any) => {
   const today = new Date();
 
   const day = today.getDate();
@@ -54,7 +54,7 @@ const RoadBlock = ({ onClose }) => {
   }, [onClose]);
 
   // When no image is matched
-  const handleImageError = (e) => {
+  const handleImageError = () => {
     onClose(); // then close after setting fallback
   };
   return (
