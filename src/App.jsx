@@ -2,6 +2,7 @@
 import RoadBlock from './Components/RoadBlock'
 import './App.css'
 
+import Footer from "./components/Footer.jsx";
 function App() {
   const onClose = ()=>{
       const closeDiv = document.querySelector(".close") as HTMLElement | null;
@@ -14,7 +15,12 @@ function App() {
     <>
         <RoadBlock onClose={onClose}/>
     </>
+  
+    
   )
 }
 
 export default App
+
+
+
