@@ -3,6 +3,9 @@ import RoadBlock from "./Components/RoadBlock";
 import HelloBar from "./Components/HelloBar";
 import './index.css'
 import Sidekick from "./Components/Sidekick";
+import Footer from "./components/Footer";
+import Newsletter from "./components/Newsletter";
+import Header from "./components/Header";
 export default function App() {
   const onClose = () =>{
       const hide = document.querySelector(".close");
@@ -15,6 +18,11 @@ export default function App() {
       <HelloBar/>
       <Outlet />
       <Sidekick/>
+   <Header/>
+      <Newsletter/>
+      
+         <Footer/>
+
       <RoadBlock onClose={onClose}/>
     </div>
   );

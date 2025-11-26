@@ -1,101 +1,151 @@
 
-import React from 'react';
-import Newsletter from './Newsletter';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-gray-200 py-5">
-      <div className="max-w-7xl mx-auto">
-        {/* Newsletter Component */}
-        <Newsletter />
+    <footer className="bg-white text-gray-900 pt-16 pb-10 border-t border-gray-200">
 
-        {/* Company Description */}
-        <div className="text-center mb-8 px-5">
-          <div className="text-3xl font-bold text-green-800 mb-3">SRIYOG</div>
-          <p className="text-gray-700 leading-relaxed max-w-4xl mx-auto">
-            Established on June 14, 2018, SRIYOG Consulting Pvt. Ltd. is based in Kamalpokhari, Kathmandu, Nepal. We're a leading provider of digital transformation solutions for the healthcare, employment, and tourism sectors. Our mission is to help organizations in these key industries thrive through innovative, scalable technology services that boost efficiency and drive sustainable growth.
+      {/* TOP SECTION */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row lg:justify-between gap-10">
+
+        {/* LEFT SIDE */}
+        <div className="w-full lg:w-[45%]">
+
+          <div className="mb-6">
+            <Link
+              to="/"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              <img
+                src="/images/Logo/sriyoglogo.svg"
+                alt="Sriyog Logo"
+                className="w-[180px] sm:w-[200px] h-auto"
+              />
+            </Link>
+          </div>
+
+          <p className="text-[15px] leading-relaxed text-gray-700 mb-4">
+            Established on June 14, 2018, SRIYOG Consulting Pvt. Ltd.,
+            based in Kamalpokhari, Kathmandu, Nepal, is a leading
+            provider of digital solutions dedicated to driving digital
+            transformation in the healthcare, employment, and
+            tourism sectors.
+          </p>
+
+          <p className="text-[15px] leading-relaxed text-gray-700">
+            Our mission is to empower organizations in these vital
+            industries with innovative, scalable, technology-driven
+            services that enhance operational efficiency and support
+            long-term growth.
           </p>
         </div>
 
-        {/* Footer Grid Links */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mb-5 px-5">
-          <div className="footer-section">
-            <h4 className="text-green-800 font-semibold mb-2">Browse More</h4>
-            <ul className="list-none p-0 space-y-1">
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">Mission & Vision</a></li>
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">History</a></li>
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">Why Us</a></li>
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">Certificates</a></li>
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">Timeline</a></li>
-            </ul>
-          </div>
-          <div className="footer-section">
-            <h4 className="text-green-800 font-semibold mb-2">Resources</h4>
-            <ul className="list-none p-0 space-y-1">
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">Gallery</a></li>
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">Career</a></li>
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">QR Code</a></li>
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">Glossary</a></li>
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">Message</a></li>
-            </ul>
-          </div>
-          <div className="footer-section">
-            <h4 className="text-green-800 font-semibold mb-2">Links</h4>
-            <ul className="list-none p-0 space-y-1">
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">Calendar</a></li>
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">FAQ</a></li>
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">Payment</a></li>
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">Internship</a></li>
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">Refund Policy</a></li>
-            </ul>
-          </div>
-          <div className="footer-section">
-            <h4 className="text-green-800 font-semibold mb-2">Explore</h4>
-            <ul className="list-none p-0 space-y-1">
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">Videos</a></li>
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">Trello Board</a></li>
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">Download</a></li>
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">Location</a></li>
-              <li><a href="#" className="text-gray-600 no-underline hover:text-green-800 transition-colors block py-1">Cookie Policy</a></li>
-            </ul>
-          </div>
-        </div>
+        {/* RIGHT COLUMNS */}
+        <div className="w-full lg:w-[50%] grid grid-cols-2 md:grid-cols-4 gap-8">
 
-        {/* Social and Contact */}
-        <div className="flex flex-col md:flex-row justify-between items-center px-5 mb-5 gap-4">
-          <div className="flex gap-3">
-            <a href="#" className="w-8 h-8 bg-green-800 text-white text-center leading-8 rounded-full no-underline text-sm hover:bg-green-700 transition-colors">X</a>
-            <a href="#" className="w-8 h-8 bg-green-800 text-white text-center leading-8 rounded-full no-underline text-sm hover:bg-green-700 transition-colors">LI</a>
-            <a href="#" className="w-8 h-8 bg-green-800 text-white text-center leading-8 rounded-full no-underline text-sm hover:bg-green-700 transition-colors">YT</a>
-            <a href="#" className="w-8 h-8 bg-green-800 text-white text-center leading-8 rounded-full no-underline text-sm hover:bg-green-700 transition-colors">IG</a>
-            <a href="#" className="w-8 h-8 bg-green-800 text-white text-center leading-8 rounded-full no-underline text-sm hover:bg-green-700 transition-colors">DC</a>
+          <div>
+            <h3 className="font-semibold mb-3 text-[16px]">Browse More</h3>
+            <ul className="space-y-2 text-[15px]">
+              <li className="cursor-pointer hover:underline">Mission & Vision</li>
+              <li className="cursor-pointer hover:underline">History</li>
+              <li className="cursor-pointer hover:underline">Why Us</li>
+              <li className="cursor-pointer hover:underline">Certificates</li>
+              <li className="cursor-pointer hover:underline">Timeline</li>
+            </ul>
           </div>
-          <div className="flex flex-wrap gap-5 justify-center md:justify-end text-sm">
-            <div className="flex items-center gap-1">
-              <span className="w-4 h-4 inline-block bg-gray-300 rounded"></span> {/* Simple placeholder for email icon */}
-              <a href="mailto:info@srivog.com" className="text-gray-600 hover:text-green-800 no-underline">info@srivog.com</a>
-            </div>
-            <div className="flex items-center gap-1">
-              <span className="w-4 h-4 inline-block bg-gray-300 rounded"></span> {/* Simple placeholder for phone icon */}
-              <span className="text-gray-600">+977-01-4548088</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <span className="w-4 h-4 inline-block bg-gray-300 rounded"></span> {/* Simple placeholder for chat icon */}
-              <span className="text-gray-600">+977 98520-24365</span>
-            </div>
-          </div>
-        </div>
 
-        {/* Footer Bottom */}
-        <div className="text-center border-t border-gray-200 pt-3 px-5 text-sm">
-          <p className="text-gray-600 mb-2">&copy; 2025 SRIYOG Consulting. Built with WordPress.</p>
-          <div className="space-x-3">
-            <a href="#" className="text-gray-600 hover:text-green-800 no-underline">Privacy Policy</a>
-            <a href="#" className="text-gray-600 hover:text-green-800 no-underline">Disclaimer</a>
-            <a href="#" className="text-gray-600 hover:text-green-800 no-underline">Terms of Service</a>
+          <div>
+            <h3 className="font-semibold mb-3 text-[16px]">Resources</h3>
+            <ul className="space-y-2 text-[15px]">
+              <li className="cursor-pointer hover:underline">Gallery</li>
+              <li className="cursor-pointer hover:underline">Career</li>
+              <li className="cursor-pointer hover:underline">QR Code</li>
+              <li className="cursor-pointer hover:underline">Glossary</li>
+              <li className="cursor-pointer hover:underline">Message</li>
+            </ul>
           </div>
+
+          <div>
+            <h3 className="font-semibold mb-3 text-[16px]">Links</h3>
+            <ul className="space-y-2 text-[15px]">
+              <li className="cursor-pointer hover:underline">Calendar</li>
+              <li className="cursor-pointer hover:underline">FAQ</li>
+              <li className="cursor-pointer hover:underline">Payment</li>
+              <li className="cursor-pointer hover:underline">Internship</li>
+              <li className="cursor-pointer hover:underline">Download</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold mb-3 text-[16px]">Explore</h3>
+            <ul className="space-y-2 text-[15px]">
+              <li className="cursor-pointer hover:underline">Videos</li>
+              <li className="cursor-pointer hover:underline">Trello Board</li>
+              <li className="cursor-pointer hover:underline">Location</li>
+              <li className="cursor-pointer hover:underline">Refund Policy</li>
+              <li className="cursor-pointer hover:underline">Cookie Policy</li>
+            </ul>
+          </div>
+
         </div>
       </div>
+
+      {/* SOCIAL + CONTACT SECTION */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-14 flex flex-col lg:flex-row justify-between gap-8">
+
+        {/* SOCIAL ICONS */}
+        <div className="flex gap-6 justify-center lg:justify-start">
+          <img src="/icons/x.svg" alt="X" className="h-6 w-6 cursor-pointer" />
+          <img src="/icons/linkedin.svg" alt="LinkedIn" className="h-6 w-6 cursor-pointer" />
+          <img src="/icons/youtube.svg" alt="YouTube" className="h-6 w-6 cursor-pointer" />
+          <img src="/icons/powerpoint.svg" alt="PowerPoint" className="h-6 w-6 cursor-pointer" />
+          <img src="/icons/discord.svg" alt="Discord" className="h-6 w-6 cursor-pointer" />
+        </div>
+
+        {/* CONTACT BOXES */}
+        <div className="flex flex-col sm:flex-row gap-4 items-center">
+
+          {/* EMAIL + PHONE */}
+          <div className="flex flex-col sm:flex-row items-stretch border-2 border-black rounded-lg overflow-hidden w-full sm:w-auto">
+
+            <div className="flex items-center gap-2 px-6 py-3">
+              <img src="/icons/mail.svg" alt="email" className="h-4 w-4" />
+              <span className="text-sm">info@sriyog.com</span>
+            </div>
+
+            {/* Divider */}
+            <div className="border-t-2 sm:border-t-0 sm:border-l-2 border-black w-full sm:w-auto"></div>
+
+            <div className="flex items-center gap-2 px-6 py-3">
+              <img src="/icons/phone.svg" alt="phone" className="h-4 w-4" />
+              <span className="text-sm">+977-01-4548068</span>
+            </div>
+
+          </div>
+
+          {/* WHATSAPP */}
+          <div className="flex items-center gap-2 border-2 border-black rounded-lg px-6 py-3 w-full sm:w-auto">
+            <img src="/icons/whatsapp.svg" alt="whatsapp" className="h-4 w-4" />
+            <span className="text-sm">+977 98520-24-365</span>
+          </div>
+
+        </div>
+      </div>
+
+      {/* FOOTER BOTTOM */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 flex flex-col md:flex-row justify-between text-[13px] text-black gap-3 text-center md:text-left font-semibold">
+        <p>Copyright 2025 SRIYOG Consulting | Built With: BroadPress</p>
+
+        <div className="flex gap-4 justify-center md:justify-end font-semibold text-black">
+          <span className="cursor-pointer hover:underline">Privacy Policy</span>
+          <span>|</span>
+          <span className="cursor-pointer hover:underline">Disclaimer</span>
+          <span>|</span>
+          <span className="cursor-pointer hover:underline">Terms of Service</span>
+        </div>
+      </div>
+
     </footer>
   );
 };

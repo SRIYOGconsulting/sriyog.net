@@ -1,38 +1,54 @@
 
-import React, { useState } from 'react';
+import React from "react";
 
 const Newsletter = () => {
-  const [email, setEmail] = useState('');
-
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    if (email) {
-      alert(`Thanks for subscribing with ${email}! We'll keep you updated.`); // A more friendly message
-      setEmail('');
-    }
-  };
-
   return (
-    <div className="bg-green-800 text-white text-center py-5 mb-5">
-      <h3 className="text-xl font-bold mb-3">Join Our Newsletter</h3>
-      <p className="mb-3 text-green-100">Stay in the loop with the latest updates from SRIVOG.</p>
-      <form onSubmit={handleSubscribe} className="flex justify-center items-center gap-2 flex-wrap">
-        <input
-          type="email"
-          placeholder="Enter your email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          className="px-3 py-2 border-none rounded-md w-64 max-w-full focus:outline-none focus:ring-2 focus:ring-yellow-400"
-        />
-        <button
-          type="submit"
-          className="bg-yellow-400 text-green-800 border-none px-5 py-2 rounded-md font-bold hover:bg-yellow-300 transition-colors"
-        >
-          Subscribe
-        </button>
-      </form>
-    </div>
+    <section className="bg-teal-900 text-white py-8 px-6">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+
+        {/* Left Text */}
+        <h2 className="text-2xl italic font-light text-center md:text-left">
+          Join our Newsletter
+        </h2>
+
+        {/* Input + Button */}
+        <div className="flex flex-col sm:flex-row items-center gap-4 mt-4 md:mt-0 w-full md:w-auto">
+
+          <input
+            type="email"
+            placeholder="enter your eMail"
+            className="
+              px-5 py-2
+              rounded-md
+              bg-transparent
+              border border-white
+              placeholder-white
+              text-white
+              focus:outline-none
+              w-full
+              sm:w-64
+            "
+          />
+
+          <button
+            className="
+              bg-yellow-400
+              hover:bg-yellow-300
+              text-teal-900
+              px-6 py-2
+              rounded-md
+              font-semibold
+              w-full
+              sm:w-auto
+            "
+          >
+            Subscribe
+          </button>
+
+        </div>
+
+      </div>
+    </section>
   );
 };
 
