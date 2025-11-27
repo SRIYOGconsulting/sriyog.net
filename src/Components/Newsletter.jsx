@@ -5,9 +5,10 @@ const Newsletter = () => {
     <section className="bg-teal-900 text-white py-10 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
         {/* Left Text */}
-        <h2 className="text-white font-semibold italic  text-4xl text-center md:text-left">
-          Join our Newsletter
-        </h2>
+  
+<h2 className="text-white font-semibold italic text-4xl text-left pl-8">
+  Join our Newsletter
+</h2>
 
         {/* Input + Button */}
         <div className="flex flex-col sm:flex-row items-center gap-6 mt-6 md:mt-0 w-full md:w-auto">
@@ -49,3 +50,18 @@ const Newsletter = () => {
 };
 
 export default Newsletter;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
