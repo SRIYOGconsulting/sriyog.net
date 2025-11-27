@@ -9,16 +9,16 @@ import Header from "./components/Header";
 import CookieConsent from "./Components/CookieConsent";
 import BacktoTop from './Components/BacktoTop'
 export default function App() {
-  const onClose = () =>{
-      const hide = document.querySelector(".close");
-      if(hide){
-        hide.style.display = "none";
-      }
+  const onClose = () => {
+    const hide = document.querySelector(".close");
+    if (hide) {
+      hide.style.display = "none";
+    }
   }
   return (
     <div>
-      <HelloBar/>
-      <Header/>
+      <HelloBar />
+      <Header />
       <Outlet />
       <Sidekick/>
        
