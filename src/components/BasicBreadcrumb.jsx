@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight, Home } from 'lucide-react';
 
 const BasicBreadcrumbs = ({ items }) => {
   return (
@@ -16,22 +15,19 @@ const BasicBreadcrumbs = ({ items }) => {
               className="flex items-center group"
             >
               {isLast ? (
-                <span className="text-gray-700 font-semibold  px-3 py-1.5 ">
+                <span className="text-gray-700 font-semibold bg-white px-3 py-1.5 rounded-md shadow-sm">
                   {item.label}
                 </span>
               ) : (
                 <>
                   <Link 
                     to={item.path}
-                    className="flex items-center gap-1.5 text-teal-800 hover:text-teal-900 hover:bg-white px-3 py-1.5 rounded-md transition-all duration-200 hover:shadow-sm"
+                    className="flex items-center gap-1.5 text-teal-700 hover:text-teal-900 hover:bg-white px-3 py-1.5 rounded-md transition-all duration-200 hover:shadow-sm"
                   >
-                    {isFirst && <Home size={16} className="flex-shrink-0" />}
+                    {isFirst && <span className="text-lg"></span>}
                     <span className="font-medium">{item.label}</span>
                   </Link>
-                  <ChevronRight 
-                    size={16} 
-                    className="mx-1 text-gray-400 flex-shrink-0" 
-                  />
+                  <span className="mx-1 text-gray-400 text-base">›</span>
                 </>
               )}
             </li>
