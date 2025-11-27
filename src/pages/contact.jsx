@@ -1,12 +1,6 @@
-// import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
 import React from 'react';
 
 export default function Contact() {
-    const breadcrumbItems = [
-        { label: 'Home', path: '/' },
-        { label: 'Contact', path: '/contact' }
-    ];
-
     // Minimalistic team members
     const teamMembers = [
         { name: 'Alice Johnson', designation: 'CEO', img: '/images/contact/1.png', whatsapp: '+1234567890' },
@@ -16,11 +10,7 @@ export default function Contact() {
 
     return (
         <div className="px-6 py-12 max-w-5xl mx-auto font-sans text-gray-800">
-            {/* <BasicBreadcrumbs items={breadcrumbItems} /> */}
-
-            <h1 className="text-4xl font-semibold text-center mb-12">Contact Us</h1>
-
-            {/* Contact Details & Map */}
+            <h1 className="text-4xl font-semibold text-center mb-12">Contact Us</h1>            {/* Contact Details & Map */}
             <div className="flex flex-col md:flex-row gap-12 mb-16">
                 {/* Left: Contact Details */}
                 <div className="md:w-1/2 space-y-6">
