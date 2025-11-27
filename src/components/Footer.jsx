@@ -118,32 +118,38 @@ const Footer = () => {
           <img
             src="/icons/x.svg"
             alt="X"
-            className="h-6 w-6 cursor-pointer rounded-lg"
+            className="h-7 w-7 cursor-pointer"
           />
           <img
             src="/icons/linkedin.svg"
             alt="LinkedIn"
-            className="h-6 w-6 cursor-pointer rounded-lg"
+            className="h-7 w-7 cursor-pointer"
           />
+          
           <img
             src="/icons/youtube.svg"
             alt="YouTube"
-            className="h-6 w-6 cursor-pointer rounded-lg"
+            className="h-7 w-7 cursor-pointer"
           />
           <img
             src="/icons/trello.svg"
             alt="Trello"
-            className="h-6 w-6 cursor-pointer rounded-lg"
+            className="h-7 w-7 cursor-pointer"
           />
           <img
             src="/icons/signal.svg"
             alt="Signal"
-            className="h-6 w-6 cursor-pointer rounded-lg"
+            className="h-7 w-7 cursor-pointer"
           />
           <img
             src="/icons/discord.svg"
             alt="Discord"
-            className="h-6 w-6 cursor-pointer rounded-lg"
+            className="h-7 w-7 cursor-pointer"
+          />
+          <img
+            src="/icons/viber.svg"
+            alt="LinkedIn"
+            className="h-7 w-7 cursor-pointer"
           />
         </div>
 
