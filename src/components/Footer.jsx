@@ -4,12 +4,8 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const currentYear = new Date().getFullYear(); //  Dynamic year
   return (
-<<<<<<< Updated upstream
     <footer className="relative bg-white text-gray-900 pt-16 pb-10 border-t border-gray-200 -z-10">
 
-=======
-    <footer className="bg-white text-gray-900 pt-16 pb-10 border-t border-gray-200">
->>>>>>> Stashed changes
       {/* TOP SECTION */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row lg:justify-between gap-10">
         {/* LEFT SIDE */}
@@ -140,7 +136,12 @@ const Footer = () => {
             className="h-6 w-6 cursor-pointer rounded-lg"
           />
           <img
-            src="/icons/discord-svgrepo-com (1).svg"
+            src="/icons/signal.svg"
+            alt="Signal"
+            className="h-6 w-6 cursor-pointer rounded-lg"
+          />
+          <img
+            src="/icons/discord-svgrepo-com.svg"
             alt="Discord"
             className="h-6 w-6 cursor-pointer rounded-lg"
           />
