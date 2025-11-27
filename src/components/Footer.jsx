@@ -99,7 +99,7 @@ const Footer = () => {
           <img src="/icons/x.svg" alt="X" className="h-6 w-6 cursor-pointer" />
           <img src="/icons/linkedin.svg" alt="LinkedIn" className="h-6 w-6 cursor-pointer" />
           <img src="/icons/youtube.svg" alt="YouTube" className="h-6 w-6 cursor-pointer" />
-          <img src="/icons/powerpoint.svg" alt="PowerPoint" className="h-6 w-6 cursor-pointer" />
+          <img src="/icons/trello.svg" alt="Trello" className="h-6 w-6 cursor-pointer" />
           <img src="/icons/discord.svg" alt="Discord" className="h-6 w-6 cursor-pointer" />
         </div>
 
