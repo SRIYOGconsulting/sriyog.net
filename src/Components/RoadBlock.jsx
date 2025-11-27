@@ -39,7 +39,7 @@ const RoadBlock = ({ onClose }) => {
   }, [onClose]);
 
   // Code for display timer
-  const [displayTimeLeft, setDisplayTimeLeft] = useState(2);
+  const [displayTimeLeft, setDisplayTimeLeft] = useState(10);
   useEffect(() => {
     const timer = setInterval(() => {
       setDisplayTimeLeft((prev) => {
