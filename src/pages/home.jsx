@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Home = () => {
   return (
     <div className="w-full">
@@ -50,9 +51,12 @@ const Home = () => {
         {/* <div className="absolute inset-0 bg-gradient-to-r from-[#D0D0D0]/50 to-transparent md:from-transparent"></div> */}
       </section>
 
+
       {/* More sections to be added below */}
     </div>
+    
   );
+
 };
 
 export default Home;

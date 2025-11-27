@@ -116,22 +116,22 @@ const Footer = () => {
         {/* SOCIAL ICONS */}
         <div className="flex gap-6 justify-center lg:justify-start">
           <img
-            src="/icons/X.png"
+            src="/icons/x.svg"
             alt="X"
             className="h-6 w-6 cursor-pointer rounded-lg"
           />
           <img
-            src="/icons/linkedin-svgrepo-com.svg"
+            src="/icons/linkedin.svg"
             alt="LinkedIn"
             className="h-6 w-6 cursor-pointer rounded-lg"
           />
           <img
-            src="/icons/youtube-svgrepo-com.svg"
+            src="/icons/youtube.svg"
             alt="YouTube"
             className="h-6 w-6 cursor-pointer rounded-lg"
           />
           <img
-            src="/icons/trello-svgrepo-com.svg"
+            src="/icons/trello.svg"
             alt="Trello"
             className="h-6 w-6 cursor-pointer rounded-lg"
           />
@@ -141,7 +141,7 @@ const Footer = () => {
             className="h-6 w-6 cursor-pointer rounded-lg"
           />
           <img
-            src="/icons/discord-svgrepo-com.svg"
+            src="/icons/discord.svg"
             alt="Discord"
             className="h-6 w-6 cursor-pointer rounded-lg"
           />
@@ -152,7 +152,7 @@ const Footer = () => {
           {/* EMAIL + PHONE */}
           <div className="flex flex-col sm:flex-row items-stretch border-2 border-black rounded-lg overflow-hidden w-full sm:w-auto">
             <div className="flex items-center gap-2 px-6 py-3">
-              <img src="/icons/mail.svg" alt="email" className="h-6 w-6" />
+              <img src="/icons/email.svg" alt="email" className="h-6 w-6" />
               <span className="text-sm">info@sriyog.com</span>
             </div>
 
