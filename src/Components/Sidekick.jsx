@@ -9,25 +9,27 @@ const Sidekick = () => {
   const [show,setShow] = useState(true);
   const [menu,setMenu] = useState(false);
   return (
-    <div className='absolute right-0 top-[30%]'>
+    <div className='fixed right-0 top-[30%] min-h-screen'>
+      <div className='relative '>
+
+      </div>
         {show && 
-        <div className='relative cursor-pointer'>
-            <button onClick={()=>{setShow(false)}} className='absolute -top-2 -left-2 bg-[#888888] rounded-full p-1'><HiX size={18}/></button>
-            <div onClick={()=>{setShow(false);setMenu(true)}} className="flex flex-col justify-center items-center gap-4 rounded-xl bg-[#EBEBEB] px-4 py-3">
-            <FaWhatsapp size={32} className='text-[#888888] ' />
-            <div className='w-[40px] h-[3px] bg-[#888888]'></div>
-            <FaFacebookMessenger className='text-[#888888]' size={30} />
-            <div className='w-[40px] h-[3px] bg-[#888888]'></div>
-            <FaDiscord size={32} className='text-[#888888]' />
-            <div className='w-[40px] h-[3px] bg-[#888888]'></div>
-            <SiSignal size={32} className='text-[#888888]' />
-            <div className='w-[40px] h-[2px] bg-[#888888]'></div>
-            <BiPhoneCall size={32} className='text-[#888888]' />
+        <div className='relative cursor-pointer hover:scale-[1.01] transition-all duration-200'>
+            <div onClick={()=>{setShow(false);setMenu(true)}} className="flex flex-col justify-center items-center gap-4 rounded-tl-xl rounded-bl-xl bg-[#EBEBEB] px-4 py-3">
+            <FaWhatsapp size={32} className='text-[#888888] hover:scale-[1.15] transition-all duration-200' />
+            <div className='w-[40px] h-[3px] bg-[#888888] '></div>
+            <FaFacebookMessenger className='text-[#888888] hover:scale-[1.15] transition-all duration-200' size={30} />
+            <div className='w-[40px] h-[3px] bg-[#888888] '></div>
+            <FaDiscord size={32} className='text-[#888888] hover:scale-[1.15] transition-all duration-200' />
+            <div className='w-[40px] h-[3px] bg-[#888888] '></div>
+            <SiSignal size={32} className='text-[#888888] hover:scale-[1.15] transition-all duration-200' />
+            <div className='w-[40px] h-[3px] bg-[#888888] '></div>
+            <BiPhoneCall size={32} className='text-[#888888] hover:scale-[1.15] transition-all duration-200' />
          </div>
         </div> }
 
         {menu &&
-        <div className='relative '>
+        <div className={`absolute top-0 right-0 h-full w-[260px] transform transition-transform duration-500 ease-in-out ${menu ? "translate-x-0" : "translate-x-full"}`}>
             <button onClick={()=>{setMenu(false);setShow(true)}} className='absolute -top-2 -left-2 bg-[#888888] rounded-full p-1'><HiX size={18}/></button>
             <div className='flex flex-col justify-center items-center bg-[#ebebeb] py-4 mr-3 rounded-md w-[250px]'>
                 <div className='flex items-center gap-3 justify-start'>

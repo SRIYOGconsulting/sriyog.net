@@ -39,7 +39,7 @@ const RoadBlock = ({ onClose }) => {
   }, [onClose]);
 
   // Code for display timer
-  const [displayTimeLeft, setDisplayTimeLeft] = useState(10);
+  const [displayTimeLeft, setDisplayTimeLeft] = useState(2);
   useEffect(() => {
     const timer = setInterval(() => {
       setDisplayTimeLeft((prev) => {
@@ -57,40 +57,47 @@ const RoadBlock = ({ onClose }) => {
   const handleImageError = () => {
     onClose(); // then close after setting fallback
   };
+
+  const [showRoadBlock, setShowRoadBlock] = useState(false);
+
+  useEffect(()=>{
+    const hasSeen = sessionStorage.getItem('roadblock_seen');
+    if(!hasSeen){
+      window.scroll(false)
+      setShowRoadBlock(true);
+      sessionStorage.setItem('roadblock_seen','true');
+    }
+  })
+
+  useEffect(() => {
+    if (showRoadBlock) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto"; // cleanup
+    };
+  }, [showRoadBlock]);
   return (
-    <div>
+    <>
+    {showRoadBlock &&
+    <div className="fixed inset-0 bg-[#D0D0D0] z-[9999] close">
       <div>
         <div>
           <div
             className="close"
             style={{
+              zIndex: 9999,
               borderRadius: "2%",
               height: "540px",
               position: "absolute",
-              left: "450px",
+              left: "500px",
               top: "100px",
               boxShadow: "1px 10px 10px grey",
             }}
           >
-            {/* <button
-              onClick={onClose}
-              style={{
-                backgroundColor: "red",
-                borderRadius: "50%",
-                border: "0px",
-                width: "40px",
-                height: "40px",
-                textAlign: "center",
-                alignContent: "center",
-                position: "absolute",
-                color: "white",
-                top: "-10px",
-                right: "-10px",
-                display: displayTimeLeft === 0 ? "block" : "none",
-              }}
-            >
-              X
-            </button> */}
+            
             <button
               onClick={displayTimeLeft <= 0 ? onClose : displayTimeLeft}
               style={{
@@ -136,24 +143,12 @@ const RoadBlock = ({ onClose }) => {
                 alt="Advertisement"
               />
             </a>
-            {/* <p
-              style={{
-                position: "absolute",
-                top: "-10px",
-                right: "5px",
-                backgroundColor: "red",
-                padding: "5px 10px",
-                color: "white",
-                borderRadius: "50px",
-                display: displayTimeLeft === 0 ? "none" : "block",
-              }}
-            >
-              Closing in {displayTimeLeft}
-            </p> */}
+            
           </div>
         </div>
       </div>
-    </div>
+    </div>}
+    </>
   );
 };
 

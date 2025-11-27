@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Newsletter from "./components/Newsletter";
 import Header from "./components/Header";
 import CookieConsent from "./Components/CookieConsent";
+import BacktoTop from './Components/BacktoTop'
 export default function App() {
   const onClose = () =>{
       const hide = document.querySelector(".close");
@@ -24,6 +25,7 @@ export default function App() {
       <Newsletter/>
          <Footer/>
 <CookieConsent/>
+      <BacktoTop/>
       <RoadBlock onClose={onClose}/>
     </div>
   );

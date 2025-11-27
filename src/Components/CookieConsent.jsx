@@ -42,7 +42,7 @@ export default function CookieConsent() {
   if (!visible) return null;
 
     return (
-    <div className="fixed bottom-5 right-5 z-50 w-[320px] rounded-xl p-5 text-white shadow-xl fade-in"
+    <div className="fixed bottom-5 left-5 z-50 w-[320px] rounded-xl p-5 text-white shadow-xl fade-in"
          style={{ backgroundColor: "#0D5D59" }}>
       
       <p className="text-sm leading-relaxed">
