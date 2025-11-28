@@ -2,12 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear(); //  Dynamic year
+  const currentYear = new Date().getFullYear();
+
+  // ⭐ Reusable hover class for all footer items
+  const hoverBox =
+    "transition-all duration-300 rounded-md hover:bg-gradient-to-r hover:from-green-600/20 hover:to-green-400/20 hover:scale-[1.03] hover:shadow-md";
+
   return (
-    <footer className="relative bg-white text-gray-900 pt-16 pb-10 border-t border-gray-200 -z-10">
+    <footer className="relative bg-white text-gray-900 pt-16 pb-10 border-t border-gray-200">
 
       {/* TOP SECTION */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row lg:justify-between gap-10">
+
         {/* LEFT SIDE */}
         <div className="w-full lg:w-[45%]">
           <div className="mb-6">
@@ -39,23 +45,26 @@ const Footer = () => {
 
         {/* RIGHT COLUMNS */}
         <div className="w-full lg:w-[50%] grid grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-8 pt-6">
-          {/* Increased pt-2 to pt-6 to move row slightly down */}
 
           {/* Browse More */}
           <div>
             <h3 className="font-semibold mb-3 text-[16px]">Browse More</h3>
             <ul className="space-y-2 text-[15px] leading-[1.6] pl-0">
-              {" "}
-              {/* FIX: removed left indent */}
-              <li className="py-1 hover:underline cursor-pointer">
-                Mission & Vision
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <Link to="/vmgo" className="hover:text-green-700">Mission & Vision</Link>
               </li>
-              <li className="py-1 hover:underline cursor-pointer">History</li>
-              <li className="py-1 hover:underline cursor-pointer">Why Us</li>
-              <li className="py-1 hover:underline cursor-pointer">
-                Certificates
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <Link to="/history" className="hover:text-green-700">History</Link>
               </li>
-              <li className="py-1 hover:underline cursor-pointer">Timeline</li>
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <Link to="/whyus" className="hover:text-green-700">Why Us</Link>
+              </li>
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <Link to="/certificates" className="hover:text-green-700">Certificates</Link>
+              </li>
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <Link to="/timeline" className="hover:text-green-700">Timeline</Link>
+              </li>
             </ul>
           </div>
 
@@ -63,13 +72,21 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-3 text-[16px]">Resources</h3>
             <ul className="space-y-2 text-[15px] leading-[1.6] pl-0">
-              {" "}
-              {/* FIX: aligned */}
-              <li className="py-1 hover:underline cursor-pointer">Gallery</li>
-              <li className="py-1 hover:underline cursor-pointer">Career</li>
-              <li className="py-1 hover:underline cursor-pointer">QR Code</li>
-              <li className="py-1 hover:underline cursor-pointer">Glossary</li>
-              <li className="py-1 hover:underline cursor-pointer">Message</li>
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <Link to="/gallery" className="hover:text-green-700">Gallery</Link>
+              </li>
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <Link to="/career" className="hover:text-green-700">Career</Link>
+              </li>
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <Link to="/qr" className="hover:text-green-700">QR Code</Link>
+              </li>
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <Link to="/glossary" className="hover:text-green-700">Glossary</Link>
+              </li>
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <Link to="/message" className="hover:text-green-700">Message</Link>
+              </li>
             </ul>
           </div>
 
@@ -77,15 +94,21 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-3 text-[16px]">Links</h3>
             <ul className="space-y-2 text-[15px] leading-[1.6] pl-0">
-              {" "}
-              {/* FIX: perfect alignment */}
-              <li className="py-1 hover:underline cursor-pointer">Calendar</li>
-              <li className="py-1 hover:underline cursor-pointer">FAQ</li>
-              <li className="py-1 hover:underline cursor-pointer">Payment</li>
-              <li className="py-1 hover:underline cursor-pointer">
-                Internship
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <Link to="/calendar" className="hover:text-green-700">Calendar</Link>
               </li>
-              <li className="py-1 hover:underline cursor-pointer">Download</li>
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <Link to="/faq" className="hover:text-green-700">FAQ</Link>
+              </li>
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <Link to="/payment" className="hover:text-green-700">Payment</Link>
+              </li>
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <Link to="/internship" className="hover:text-green-700">Internship</Link>
+              </li>
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <Link to="/downloads" className="hover:text-green-700">Download</Link>
+              </li>
             </ul>
           </div>
 
@@ -93,110 +116,86 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-3 text-[16px]">Explore</h3>
             <ul className="space-y-2 text-[15px] leading-[1.6] pl-0">
-              {" "}
-              {/* FIX: aligned */}
-              <li className="py-1 hover:underline cursor-pointer">Videos</li>
-              <li className="py-1 hover:underline cursor-pointer">
-                Trello Board
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <Link to="/videos" className="hover:text-green-700">Videos</Link>
               </li>
-              <li className="py-1 hover:underline cursor-pointer">Location</li>
-              <li className="py-1 hover:underline cursor-pointer">
-                Refund Policy
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <a href="https://trello.com" target="_blank" className="hover:text-green-700">Trello Board</a>
               </li>
-              <li className="py-1 hover:underline cursor-pointer">
-                Cookie Policy
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <Link to="/contact" className="hover:text-green-700">Location</Link>
+              </li>
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <Link to="/refund-policy" className="hover:text-green-700">Refund Policy</Link>
+              </li>
+              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+                <Link to="/cookie-policy" className="hover:text-green-700">Cookie Policy</Link>
               </li>
             </ul>
           </div>
         </div>
       </div>
+
       {/* SOCIAL + CONTACT SECTION */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between gap-8 mt-10">
-        {/* Added mt-10 for spacing from top section */}
+
         {/* SOCIAL ICONS */}
         <div className="flex gap-6 justify-center lg:justify-start">
-          <img
-            src="/icons/x.svg"
-            alt="X"
-            className="h-7 w-7 cursor-pointer"
-          />
-          <img
-            src="/icons/linkedin.svg"
-            alt="LinkedIn"
-            className="h-7 w-7 cursor-pointer"
-          />
-          
-          <img
-            src="/icons/youtube.svg"
-            alt="YouTube"
-            className="h-7 w-7 cursor-pointer"
-          />
-          <img
-            src="/icons/trello.svg"
-            alt="Trello"
-            className="h-7 w-7 cursor-pointer"
-          />
-          <img
-            src="/icons/signal.svg"
-            alt="Signal"
-            className="h-7 w-7 cursor-pointer"
-          />
-          <img
-            src="/icons/discord.svg"
-            alt="Discord"
-            className="h-7 w-7 cursor-pointer"
-          />
-          <img
-            src="/icons/viber.svg"
-            alt="LinkedIn"
-            className="h-7 w-7 cursor-pointer"
-          />
+          {["x", "linkedin", "youtube", "trello", "signal", "discord", "viber"].map((icon) => (
+            <a key={icon} href="#" className="hover:opacity-60 transition hover:scale-110">
+              <img src={`/icons/${icon}.svg`} alt={icon} className="h-7 w-7 cursor-pointer" />
+            </a>
+          ))}
         </div>
 
         {/* CONTACT BOXES */}
         <div className="flex flex-col sm:flex-row gap-4 items-center">
+
           {/* EMAIL + PHONE */}
           <div className="flex flex-col sm:flex-row items-stretch border-2 border-black rounded-lg overflow-hidden w-full sm:w-auto">
-            <div className="flex items-center gap-2 px-6 py-3">
+            <a href="mailto:info@sriyog.com" className={`flex items-center gap-2 px-6 py-3 ${hoverBox}`}>
               <img src="/icons/email.svg" alt="email" className="h-6 w-6" />
               <span className="text-sm">info@sriyog.com</span>
-            </div>
+            </a>
 
-            {/* Divider */}
-            <div className="border-t-2 sm:border-t-0 sm:border-l-2 border-black w-full sm:w-auto"></div>
+            <div className="border-t-2 sm:border-l-2 border-black w-full sm:w-auto"></div>
 
-            <div className="flex items-center gap-2 px-6 py-3">
+            <a href="tel:+977014548068" className={`flex items-center gap-2 px-6 py-3 ${hoverBox}`}>
               <img src="/icons/phone.svg" alt="phone" className="h-6 w-6" />
               <span className="text-sm">+977-01-4548068</span>
-            </div>
+            </a>
           </div>
 
           {/* WHATSAPP */}
-          <div className="flex items-center gap-2 border-2 border-black rounded-lg px-6 py-3 w-full sm:w-auto">
+          <a
+            href="https://wa.me/9779852024365"
+            target="_blank"
+            className={`flex items-center gap-2 border-2 border-black rounded-lg px-6 py-3 w-full sm:w-auto ${hoverBox}`}
+          >
             <img src="/icons/whatsapp.svg" alt="whatsapp" className="h-6 w-6" />
             <span className="text-sm">+977 98520-24-365</span>
-          </div>
+          </a>
         </div>
       </div>
-      {/* HORIZONTAL LINE BEFORE COPYRIGHT */}
-      <div className="w-full border-t border-black mt-14 mb-6"></div>{" "}
-      {/*   horizontal line */}
+
+      {/* HORIZONTAL LINE */}
+      <div className="w-full border-t border-black mt-14 mb-6"></div>
+
       {/* FOOTER BOTTOM */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 flex flex-col md:flex-row justify-between text-[13px] text-black gap-3 text-center md:text-left font-semibold">
         <p>
           Copyright {currentYear} SRIYOG Consulting | Built With: BroadPress
-        </p>{" "}
-        {/*  Dynamic year */}
+        </p>
+
         <div className="flex gap-4 justify-center md:justify-end font-semibold text-black">
-          <span className="cursor-pointer hover:underline">Privacy Policy</span>
+          <Link to="/privacy-policy" className={`hover:underline cursor-pointer ${hoverBox}`}>Privacy Policy</Link>
           <span>|</span>
-          <span className="cursor-pointer hover:underline">Disclaimer</span>
+          <Link to="/disclaimer" className={`hover:underline cursor-pointer ${hoverBox}`}>Disclaimer</Link>
           <span>|</span>
-          <span className="cursor-pointer hover:underline">
-            Terms of Service
-          </span>
+          <Link to="/terms-of-service" className={`hover:underline cursor-pointer ${hoverBox}`}>Terms of Service</Link>
         </div>
       </div>
+
     </footer>
   );
 };
