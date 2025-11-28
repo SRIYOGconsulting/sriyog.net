@@ -1,6 +1,6 @@
 import React from 'react'
 
-const HelloBar = () => {
+const NavBar = () => {
   return (
     <div className='w-full bg-[#074842] text-white'>
     <div className='max-w-5xl mx-auto py-2.5 px-5  md:space-y-0'>
@@ -13,4 +13,4 @@ const HelloBar = () => {
   )
 }
 
-export default HelloBar
+export default NavBar

@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [DarkIcon,setDarkIcon] = useState(true);
+  const TriggerTheme = ()=>{
+    if(document.body.classList.contains('dark')){
+      document.body.classList.remove('dark')
+      setDarkIcon(true);
+    }else{
+      document.body.classList.add('dark');
+      setDarkIcon(false);
+    }
+    
+  }
+
   return (
-    <header className="bg-gray-200">
+    <header className="header">
       <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
         
         {/* Logo */}
@@ -19,15 +31,15 @@ const Header = () => {
 
         {/* Nav Links */}
         <nav className="flex items-center space-x-6">
-          <Link to="/" className="text-teal-900 hover:text-teal-700">Home</Link>
-          <Link to="/about" className="text-teal-900 hover:text-teal-700">About</Link>
-          <Link to="/services" className="text-teal-900 hover:text-teal-700">Services</Link>
-          <Link to="/feedback" className="text-teal-900 hover:text-teal-700">Feedback</Link>
-          <Link to="/team" className="text-teal-900 hover:text-teal-700">Team</Link>
-          <Link to="/contact" className="text-teal-900 hover:text-teal-700">Contact</Link>
+          <Link to="/" className=" hover:text-teal-700">Home</Link>
+          <Link to="/about" className=" hover:text-teal-700">About</Link>
+          <Link to="/services" className=" hover:text-teal-700">Services</Link>
+          <Link to="/feedback" className=" hover:text-teal-700">Feedback</Link>
+          <Link to="/team" className=" hover:text-teal-700">Team</Link>
+          <Link to="/contact" className=" hover:text-teal-700">Contact</Link>
 
           <Link to="/career">
-            <button className="border border-teal-900 rounded px-4 py-1 text-teal-900 hover:bg-teal-50">
+            <button className="border border-teal-900 rounded px-4 py-1  hover:bg-teal-50">
               Career
             </button>
           </Link>
@@ -37,6 +49,12 @@ const Header = () => {
               Notice
             </button>
           </Link>
+
+          <div>
+            <button onClick={TriggerTheme} className={`text-2xl rounded-full h-8 w-8 ${DarkIcon ? "bg-black text-white rotate-45 pl-1" : "bg-white text-black"}`} >
+                {DarkIcon ? "☽" : "☀︎"}
+            </button>
+          </div>   
         </nav>
       </div>
     </header>

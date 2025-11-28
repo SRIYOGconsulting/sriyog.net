@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 
-const RoadBlock = ({ onClose }) => {
+const RoadBlock = () => {
   const today = new Date();
-
   const day = today.getDate();
   const monthNames = [
     "january",
@@ -22,6 +21,14 @@ const RoadBlock = ({ onClose }) => {
   const monthIndex = today.getMonth();
   const month = monthNames[monthIndex];
 
+
+  const [showRoadBlock, setShowRoadBlock] = useState(false);
+  const onClose = () => {
+    document.body.style.overflow = "auto";
+    setShowRoadBlock(false);
+  }
+
+
   // Code for forceful closing timer
   const [timeLeft, setTimeLeft] = useState(20);
   useEffect(() => {
@@ -39,7 +46,7 @@ const RoadBlock = ({ onClose }) => {
   }, [onClose]);
 
   // Code for display timer
-  const [displayTimeLeft, setDisplayTimeLeft] = useState(10);
+  const [displayTimeLeft, setDisplayTimeLeft] = useState(2);
   useEffect(() => {
     const timer = setInterval(() => {
       setDisplayTimeLeft((prev) => {
@@ -58,27 +65,16 @@ const RoadBlock = ({ onClose }) => {
     onClose(); // then close after setting fallback
   };
 
-  const [showRoadBlock, setShowRoadBlock] = useState(false);
-
+  
   useEffect(()=>{
     const hasSeen = sessionStorage.getItem('roadblock_seen');
     if(!hasSeen){
-      window.scroll(false)
       setShowRoadBlock(true);
+      document.body.style.overflow = "hidden";
       sessionStorage.setItem('roadblock_seen','true');
     }
   })
 
-  useEffect(() => {
-    if (showRoadBlock) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    return () => {
-      document.body.style.overflow = "auto"; // cleanup
-    };
-  }, [showRoadBlock]);
   return (
     <>
     {showRoadBlock &&

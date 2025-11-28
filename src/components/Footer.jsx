@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const currentYear = new Date().getFullYear(); //  Dynamic year
   return (
-    <footer className="relative bg-white text-gray-900 pt-16 pb-10 border-t border-gray-200 -z-10">
+    <footer className="relative footer pt-16 pb-10 border-t border-gray-200 -z-10">
 
       {/* TOP SECTION */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row lg:justify-between gap-10">
@@ -23,14 +23,14 @@ const Footer = () => {
             </Link>
           </div>
 
-          <p className="text-[15px] leading-relaxed text-gray-700 mb-4">
+          <p className="text-[15px] leading-relaxed  mb-4">
             Established on June 14, 2018, SRIYOG Consulting Pvt. Ltd., based in
             Kamalpokhari, Kathmandu, Nepal, is a leading provider of digital
             solutions dedicated to driving digital transformation in the
             healthcare, employment, and tourism sectors.
           </p>
 
-          <p className="text-[15px] leading-relaxed text-gray-700">
+          <p className="text-[15px] leading-relaxed ">
             Our mission is to empower organizations in these vital industries
             with innovative, scalable, technology-driven services that enhance
             operational efficiency and support long-term growth.
@@ -150,14 +150,14 @@ const Footer = () => {
         {/* CONTACT BOXES */}
         <div className="flex flex-col sm:flex-row gap-4 items-center">
           {/* EMAIL + PHONE */}
-          <div className="flex flex-col sm:flex-row items-stretch border-2 border-black rounded-lg overflow-hidden w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-stretch border-2  rounded-lg overflow-hidden w-full sm:w-auto">
             <div className="flex items-center gap-2 px-6 py-3">
               <img src="/icons/email.svg" alt="email" className="h-6 w-6" />
               <span className="text-sm">info@sriyog.com</span>
             </div>
 
             {/* Divider */}
-            <div className="border-t-2 sm:border-t-0 sm:border-l-2 border-black w-full sm:w-auto"></div>
+            <div className="border-t-2 sm:border-t-0 sm:border-l-2  w-full sm:w-auto"></div>
 
             <div className="flex items-center gap-2 px-6 py-3">
               <img src="/icons/phone.svg" alt="phone" className="h-6 w-6" />
@@ -166,22 +166,22 @@ const Footer = () => {
           </div>
 
           {/* WHATSAPP */}
-          <div className="flex items-center gap-2 border-2 border-black rounded-lg px-6 py-3 w-full sm:w-auto">
+          <div className="flex items-center gap-2 border-2  rounded-lg px-6 py-3 w-full sm:w-auto">
             <img src="/icons/whatsapp.svg" alt="whatsapp" className="h-6 w-6" />
             <span className="text-sm">+977 98520-24-365</span>
           </div>
         </div>
       </div>
       {/* HORIZONTAL LINE BEFORE COPYRIGHT */}
-      <div className="w-full border-t border-black mt-14 mb-6"></div>{" "}
+      <div className="w-full border-t  mt-14 mb-6"></div>{" "}
       {/*   horizontal line */}
       {/* FOOTER BOTTOM */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 flex flex-col md:flex-row justify-between text-[13px] text-black gap-3 text-center md:text-left font-semibold">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 flex flex-col md:flex-row justify-between text-[13px]  gap-3 text-center md:text-left font-semibold">
         <p>
           Copyright {currentYear} SRIYOG Consulting | Built With: BroadPress
         </p>{" "}
         {/*  Dynamic year */}
-        <div className="flex gap-4 justify-center md:justify-end font-semibold text-black">
+        <div className="flex gap-4 justify-center md:justify-end font-semibold ">
           <span className="cursor-pointer hover:underline">Privacy Policy</span>
           <span>|</span>
           <span className="cursor-pointer hover:underline">Disclaimer</span>
