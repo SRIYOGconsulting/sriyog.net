@@ -17,16 +17,16 @@ export default function Contact() {
                 </div>
             </div>
 
-            <div className="px-6 py-12 max-w-5xl mx-auto font-sans text-gray-800">
+            <div className="px-6 py-12 max-w-5xl mx-auto font-sans">
                 {/* Contact Details & Map */}
                 <div className="flex flex-col md:flex-row gap-12 mb-16">
                     {/* Left: Contact Details */}
                     <div className="md:w-1/2 space-y-6">
                         <h2 className="text-2xl font-medium">Get in Touch</h2>
-                        <p className="text-gray-600">
+                        <p className="">
                             We'd love to hear from you. Reach out to us via any of the following:
                         </p>
-                        <div className="space-y-2 text-gray-700">
+                        <div className="space-y-2 ">
                             <p><strong>Email:</strong> contact@company.com</p>
                             <p><strong>Phone:</strong> +123 456 7890</p>
                             <p><strong>Address:</strong> 123 Main Street, Kathmandu, Nepal</p>
@@ -63,13 +63,13 @@ export default function Contact() {
                             />
                             <div>
                                 <h3 className="text-lg font-semibold">{member.name}</h3>
-                                <p className="text-gray-500">{member.designation}</p>
+                                <p className="">{member.designation}</p>
                             </div>
                             
                                <a href={`https://wa.me/${member.whatsapp.replace(/\D/g, '')}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-block px-5 py-2 text-sm text-white bg-green-500 rounded-full hover:bg-green-600 transition-colors"
+                                className="inline-block px-5 py-2 text-sm  bg-green-500 rounded-full hover:bg-green-600 transition-colors"
                             >
                                 WhatsApp
                             </a>

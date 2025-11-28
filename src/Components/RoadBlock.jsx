@@ -19,7 +19,8 @@ const RoadBlock = () => {
     "december",
     "default",
   ];
-
+  const monthIndex = today.getMonth();
+  const month = monthNames[monthIndex];
 
   const [showRoadBlock, setShowRoadBlock] = useState(false);
   const onClose = () => {

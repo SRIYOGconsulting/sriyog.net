@@ -59,11 +59,11 @@ export default function services() {
                     {servicesList.map((service, index) => (
                         <div
                             key={index}
-                            className="bg-white border rounded-xl shadow-md p-6 hover:shadow-lg transition duration-200"
+                            className="card border rounded-xl shadow-md p-6 hover:shadow-lg transition duration-200"
                         >
                             <div className="text-5xl mb-4">{service.icon}</div>
                             <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
-                            <p className="text-gray-600 leading-relaxed">
+                            <p className=" leading-relaxed">
                                 {service.desc}
                             </p>
                         </div>

@@ -14,16 +14,16 @@ export default function Team() {
     return (
         <div>
             {/* Full-width Ribbon Header */}
-            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-8">
+            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 ">
                 <div className="max-w-7xl mx-auto px-4 md:px-8">
                     <h1 className="text-4xl font-bold">Team</h1>
                 </div>
             </div>
 
-            <div className="min-h-screen bg-gray-50">
+            <div className="min-h-screen footer">
                 <div className="container mx-auto px-4 py-16 max-w-6xl">
                     <div className="text-center mb-16">
-                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                        <p className="text-lg  max-w-2xl mx-auto">
                             Meet the dedicated individuals behind our success. We are a group of passionate professionals committed to excellence.
                         </p>
                     </div>
@@ -38,7 +38,7 @@ export default function Team() {
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
+                                <h3 className="text-xl font-bold  mb-1">{member.name}</h3>
                                 <p className="text-gray-500 font-medium tracking-wide uppercase text-sm">{member.role}</p>
 
                                 <div className="mt-4 w-12 h-1 bg-gray-200 rounded-full group-hover:bg-blue-500 transition-colors duration-300"></div>

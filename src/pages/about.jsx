@@ -20,7 +20,7 @@ export default function about() {
             <div className="max-w-7xl mx-auto px-4 md:px-8">
                 <div className="flex flex-col md:flex-row gap-8">
                     {/* Left side - Text content */}
-                    <div className="md:w-2/3 space-y-6 text-gray-700 leading-relaxed">
+                    <div className="md:w-2/3 space-y-6  leading-relaxed">
                         <p>
                             Established on June 14, 2018, SRIYOG Consulting Pvt. Ltd., based in Kamalpokhari,
                             Kathmandu, Nepal, is a leading provider of digital solutions dedicated to driving

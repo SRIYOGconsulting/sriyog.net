@@ -36,15 +36,15 @@ export default function Feedback() {
                 </div>
             </div>
 
-            <div className="px-6 py-12 max-w-3xl mx-auto font-sans text-gray-800">
-                <p className="text-center text-gray-600 mb-10">
+            <div className="px-6 py-12 max-w-3xl mx-auto font-sans ">
+                <p className="text-center  mb-10">
                     Please share your experience with our services. Your feedback helps us improve.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                     {/* Name */}
                     <div className="flex flex-col">
-                        <label htmlFor="name" className="mb-2 text-gray-700 font-medium">Name</label>
+                        <label htmlFor="name" className="mb-2  font-medium">Name</label>
                         <input
                             type="text"
                             id="name"
@@ -59,7 +59,7 @@ export default function Feedback() {
 
                     {/* Email */}
                     <div className="flex flex-col">
-                        <label htmlFor="email" className="mb-2 text-gray-700 font-medium">Email</label>
+                        <label htmlFor="email" className="mb-2  font-medium">Email</label>
                         <input
                             type="email"
                             id="email"
@@ -74,7 +74,7 @@ export default function Feedback() {
 
                     {/* Service */}
                     <div className="flex flex-col">
-                        <label htmlFor="service" className="mb-2 text-gray-700 font-medium">Service</label>
+                        <label htmlFor="service" className="mb-2  font-medium">Service</label>
                         <select
                             id="service"
                             name="service"
@@ -94,7 +94,7 @@ export default function Feedback() {
 
                     {/* Feedback Message */}
                     <div className="flex flex-col">
-                        <label htmlFor="message" className="mb-2 text-gray-700 font-medium">Feedback</label>
+                        <label htmlFor="message" className="mb-2  font-medium">Feedback</label>
                         <textarea
                             id="message"
                             name="message"

@@ -53,20 +53,20 @@ export default function Timeline() {
                             <div key={index} className="relative flex items-center">
 
                                 {/* Timeline dot */}
-                                <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-teal-700 border-2 border-white rounded-full shadow-md"></div>
+                                <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5  border-2 header rounded-full shadow-md"></div>
 
                                 {/* Card */}
                                 <div className={`w-full md:w-1/2 px-6 md:px-0 
                                     ${isLeft ? "md:pr-12 md:mr-auto" : "md:pl-12 md:ml-auto"}`}
                                 >
-                                    <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all">
-                                        <span className="text-sm font-semibold text-teal-600">
+                                    <div className="footer rounded-xl shadow-lg p-6 border  hover:shadow-xl transition-all">
+                                        <span className="text-sm font-semibold ">
                                             {event.year}
                                         </span>
-                                        <h3 className="text-xl font-bold mt-1 text-gray-800">
+                                        <h3 className="text-xl font-bold mt-1 ">
                                             {event.title}
                                         </h3>
-                                        <p className="mt-2 text-gray-600 leading-relaxed">
+                                        <p className="mt-2  leading-relaxed">
                                             {event.description}
                                         </p>
                                     </div>

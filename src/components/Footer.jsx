@@ -9,7 +9,7 @@ const Footer = () => {
     "transition-all duration-300 rounded-md hover:bg-gradient-to-r hover:from-green-600/20 hover:to-green-400/20 hover:scale-[1.03] hover:shadow-md";
 
   return (
-    <footer className="relative footer pt-16 pb-10 border-t border-gray-200 -z-10">
+    <footer className="relative  pt-16 pb-10 border-t footer z-10">
 
       {/* TOP SECTION */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row lg:justify-between gap-10">
@@ -152,15 +152,13 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row gap-4 items-center">
 
           {/* EMAIL + PHONE */}
-          <div className="flex flex-col sm:flex-row items-stretch border-2  rounded-lg overflow-hidden w-full sm:w-auto">
-            <div className="flex items-center gap-2 px-6 py-3">
-             <a href="tel:+977014548068" className={`flex items-center gap-2 px-6 py-3 ${hoverBox}`}> 
+          <div className="flex flex-col sm:flex-row items-stretch border-2 rounded-lg overflow-hidden w-full sm:w-auto">
+            <a href="mailto:info@sriyog.com" className={`flex items-center gap-2 px-6 py-3 ${hoverBox}`}>
               <img src="/icons/email.svg" alt="email" className="h-6 w-6" />
               <span className="text-sm">info@sriyog.com</span>
             </a>
 
-            {/* Divider */}
-            <div className="border-t-2 sm:border-t-0 sm:border-l-2  w-full sm:w-auto"></div>
+            <div className="border-t-2 sm:border-l-2  w-full sm:w-auto"></div>
 
             <a href="tel:+977014548068" className={`flex items-center gap-2 px-6 py-3 ${hoverBox}`}>
               <img src="/icons/phone.svg" alt="phone" className="h-6 w-6" />
@@ -169,24 +167,28 @@ const Footer = () => {
           </div>
 
           {/* WHATSAPP */}
-          <div className="flex items-center gap-2 border-2  rounded-lg px-6 py-3 w-full sm:w-auto">
+          <a
+            href="https://wa.me/9779852024365"
+            target="_blank"
+            className={`flex items-center gap-2 border-2 rounded-lg px-6 py-3 w-full sm:w-auto ${hoverBox}`}
+          >
             <img src="/icons/whatsapp.svg" alt="whatsapp" className="h-6 w-6" />
             <span className="text-sm">+977 98520-24-365</span>
-          </div>
-        </div>
+          </a>
         </div>
       </div>
-      {/* HORIZONTAL LINE BEFORE COPYRIGHT */}
-      <div className="w-full border-t  mt-14 mb-6"></div>{" "}
-      {/*   horizontal line */}
+
+      {/* HORIZONTAL LINE */}
+      <div className="w-full border-t  mt-14 mb-6"></div>
+
       {/* FOOTER BOTTOM */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 flex flex-col md:flex-row justify-between text-[13px]  gap-3 text-center md:text-left font-semibold">
         <p>
           Copyright {currentYear} SRIYOG Consulting | Built With: BroadPress
-        </p>{" "}
-        {/*  Dynamic year */}
+        </p>
+
         <div className="flex gap-4 justify-center md:justify-end font-semibold ">
-          <span className="cursor-pointer hover:underline">Privacy Policy</span>
+          <Link to="/privacy-policy" className={`hover:underline cursor-pointer ${hoverBox}`}>Privacy Policy</Link>
           <span>|</span>
           <Link to="/disclaimer" className={`hover:underline cursor-pointer ${hoverBox}`}>Disclaimer</Link>
           <span>|</span>

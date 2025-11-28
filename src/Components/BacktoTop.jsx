@@ -21,7 +21,7 @@ const BacktoTop = () => {
   return (
     <>
     {scrolled &&
-    <div className='fixed top-[90%] right-4  rounded-full bg-[#888888] scale-[0.8] border-2 border-[#ebebeb]'>
+    <div className='fixed top-[90%] right-4 z-20 rounded-full bg-[#888888] scale-[0.8] border-2 border-[#ebebeb]'>
       <div>
         <svg onClick={scrollToTop} className='  rounded-full -rotate-90 cursor-pointer scale-[1.3] hover:scale-[1.1] transition-all duration-200' width="50px" height="50px" viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000">
           <g id="SVGRepo_bgCarrier" stroke-width="0"/>

@@ -9,7 +9,7 @@ const Sidekick = () => {
   const [show,setShow] = useState(true);
   const [menu,setMenu] = useState(false);
   return (
-    <div className='fixed right-0 top-[15%] min-h-screen'>
+    <div className='fixed right-0 top-[15%] min-h-screen z-20'>
         {show && 
         <div className='relative cursor-pointer hover:scale-[1.01] transition-all duration-200'>
             <div onClick={()=>{setShow(false);setMenu(true)}} className="flex flex-col justify-center items-center gap-2 rounded-tl-xl rounded-bl-xl sidekick px-4 py-3">

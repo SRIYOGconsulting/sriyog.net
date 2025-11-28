@@ -22,17 +22,25 @@
   --header : #e5e7eb;
   --border : #a9a9a9;
   --sidekick : #EBEBEB;
+  --about : #374151;
+  --card : #EBEBEB;
 }
 
 .dark {
-  --bg: #121212;
+  --bg: #1e1e1e;
   --text: #ffffff;
   --footer: #1e1e1e;
-  --header : #1e1e1e;
+  --header : #2a2a2a;
   --border : #1c1c1c;
   --sidekick : #252525;
+  --about : #252525;
+  --card : #2a2a2a;
 }
 
+.card{
+ background: var(--card);
+ color: var(--text);
+}
 
 body{
   background: var(--bg);
@@ -48,6 +56,10 @@ body{
 
 .header{
   background: var(--header);
+  color: var(--text);
+}
+
+.about{
   color: var(--text);
 }
 
