@@ -1,16 +1,83 @@
 import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
 
-const pageName = "This is Timeline Page";
-export default function timeline() {
-    const breadcrumbItems = [
-        { label: 'Home', path: '/' },
-        { label: 'Timeline', path: '/timeline' }
+export default function Timeline() {
+
+    const events = [
+        {
+            year: "2018",
+            title: "Company Founded",
+            description: "SRIYOG Consulting Pvt. Ltd. was established to provide smart digital solutions.",
+        },
+        {
+            year: "2019",
+            title: "Service Expansion",
+            description: "Added data processing, digital marketing and automation services.",
+        },
+        {
+            year: "2021",
+            title: "Platform Launch",
+            description: "Launched digital platforms for employment and healthcare sectors.",
+        },
+        {
+            year: "2023",
+            title: "Team Growth",
+            description: "Company expanded with skilled developers, marketers, and support teams.",
+        },
+        {
+            year: "2024",
+            title: "Tech Modernization",
+            description: "Adopted cloud-native, AI-driven, and scalable microservice architecture.",
+        },
     ];
 
     return (
         <div>
-            <BasicBreadcrumbs items={breadcrumbItems} />
-            <p>This is Timeline Page</p>
+            {/* Header */}
+            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-12">
+                <div className="max-w-7xl mx-auto px-4 md:px-8">
+                    <h1 className="text-4xl font-bold">Timeline</h1>
+                </div>
+            </div>
+
+            {/* Timeline Container */}
+            <div className="max-w-5xl mx-auto px-4 md:px-8 relative">
+
+                {/* Vertical Center Line */}
+                <div className="absolute left-1/2 top-0 transform -translate-x-1/2 h-full w-1 bg-teal-600 rounded-full"></div>
+
+                <div className="space-y-16">
+                    {events.map((event, index) => {
+                        const isLeft = index % 2 === 0;  // alternate
+                        
+                        return (
+                            <div key={index} className="relative flex items-center">
+
+                                {/* Timeline dot */}
+                                <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-teal-700 border-2 border-white rounded-full shadow-md"></div>
+
+                                {/* Card */}
+                                <div className={`w-full md:w-1/2 px-6 md:px-0 
+                                    ${isLeft ? "md:pr-12 md:mr-auto" : "md:pl-12 md:ml-auto"}`}
+                                >
+                                    <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all">
+                                        <span className="text-sm font-semibold text-teal-600">
+                                            {event.year}
+                                        </span>
+                                        <h3 className="text-xl font-bold mt-1 text-gray-800">
+                                            {event.title}
+                                        </h3>
+                                        <p className="mt-2 text-gray-600 leading-relaxed">
+                                            {event.description}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+
+            <div className="h-24"></div>
         </div>
     );
 }

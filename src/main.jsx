@@ -8,6 +8,7 @@ import App from "./App.jsx";
 import Home from "./pages/home.jsx";
 import About from "./pages/about.jsx";
 import Certificates from "./pages/certificates.jsx";
+import Services from "./pages/services.jsx";
 import Contact from "./pages/contact.jsx";
 import Feedback from "./pages/feedback.jsx";
 import Gallery from "./pages/gallery.jsx";
@@ -21,6 +22,7 @@ import Timeline from "./pages/timeline.jsx";
 import Videos from "./pages/videos.jsx";
 import Vmgo from "./pages/vmgo.jsx";
 import WhyUs from "./pages/whyus.jsx";
+import NotFound from "./pages/notfound.jsx"; // ⭐ Add this
 
 const router = createBrowserRouter([
   {
@@ -28,8 +30,9 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: "", element: <Home /> },        // homepage → /
-      { path: "about", element: <About /> },  // /about
+      { path: "about", element: <About /> },
       { path: "certificates", element: <Certificates /> },
+      {path: "services", element: <Services/>},
       { path: "contact", element: <Contact /> },
       { path: "feedback", element: <Feedback /> },
       { path: "gallery", element: <Gallery /> },
@@ -43,6 +46,9 @@ const router = createBrowserRouter([
       { path: "videos", element: <Videos /> },
       { path: "vmgo", element: <Vmgo /> },
       { path: "whyus", element: <WhyUs /> },
+
+      // ⭐ 404 Page (must be last)
+      { path: "*", element: <NotFound /> },
     ],
   },
 ]);
