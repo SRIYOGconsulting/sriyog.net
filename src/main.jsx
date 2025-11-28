@@ -8,6 +8,7 @@ import App from "./App.jsx";
 import Home from "./pages/home.jsx";
 import About from "./pages/about.jsx";
 import Certificates from "./pages/certificates.jsx";
+import Services from "./pages/services.jsx";
 import Contact from "./pages/contact.jsx";
 import Feedback from "./pages/feedback.jsx";
 import Gallery from "./pages/gallery.jsx";
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
       { path: "", element: <Home /> },        // homepage → /
       { path: "about", element: <About /> },
       { path: "certificates", element: <Certificates /> },
+      {path: "services", element: <Services/>},
       { path: "contact", element: <Contact /> },
       { path: "feedback", element: <Feedback /> },
       { path: "gallery", element: <Gallery /> },

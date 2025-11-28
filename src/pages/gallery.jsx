@@ -15,7 +15,11 @@ export default function Gallery() {
         <div className="min-h-screen bg-gray-50 font-sans text-gray-800">
             <div className="container mx-auto px-4 py-16 max-w-6xl">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4 font-serif">Photo Gallery</h1>
+                   <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-8">
+                <div className="max-w-7xl mx-auto px-4 md:px-8">
+                    <h1 className="text-4xl font-bold">Gallery</h1>
+                </div>
+            </div>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                         Explore our collection of memories and events.
                     </p>

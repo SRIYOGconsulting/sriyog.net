@@ -6,15 +6,17 @@
   <link rel="icon" type="image/svg+xml" href="/logo.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="manifest" href="/manifest.json" />
+  
   <!-- Primary Meta Tags -->
   <title>SRIYOG Consulting | IT Consulting in Kathmandu, Nepal</title>
   <meta name="title" content="SRIYOG Consulting | IT Consulting in Kathmandu, Nepal">
   <meta name="description" content="Welcome to SRIYOG Consulting, your partner in IT solutions.">
   <meta name="keywords" content="SRIYOG Consulting, IT Consulting, IT Solutions, Kathmandu, Nepal">
   <meta name="author" content="SRIYOG Consulting">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <!-- HTML Meta Tags -->
   <meta name="description" content="Welcome to SRIYOG Consulting, your partner in IT solutions.">
+  
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content="https://sriyog.com">
   <meta property="og:type" content="website">
@@ -30,16 +32,40 @@
   <meta name="twitter:description" content="Welcome to SRIYOG Consulting, your partner in IT solutions.">
   <meta name="twitter:image" content="https://sriyog.com/images/og/default.jpg">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta property="twitter:domain" content="sriyog.com" />
-  <meta property="twitter:url" content="https://sriyog.com" />
-  <meta name="twitter:title" content="SRIYOG Consulting | IT Consulting in Kathmandu, Nepal" />
-  <meta name="twitter:description" content="Welcome to SRIYOG Consulting, your partner in IT solutions." />
-  <meta name="twitter:image" content="https://sriyog.com/assets/images/og/default.jpg" />
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  
+  <!-- OneSignal Push Notifications -->
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function(OneSignal) {
+      await OneSignal.init({
+        appId: "a01bfd1c-15f0-4e40-8fdd-8407ea54a00b",
+      });
+    });
+  </script>
+  <!-- End OneSignal -->
 </head>
 
 <body>
+  <!-- Meta Pixel Noscript -->
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
+  </noscript>
+  
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>

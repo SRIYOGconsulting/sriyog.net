@@ -24,7 +24,11 @@ export default function Certificate() {
         <div className="px-5 py-10 max-w-7xl mx-auto">
             {/* <BasicBreadcrumbs items={breadcrumbItems} /> */}
 
-            <h1 className="text-3xl font-semibold text-center mb-10">Certificates</h1>
+            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-8">
+                <div className="max-w-7xl mx-auto px-4 md:px-8">
+                    <h1 className="text-4xl font-bold">Certificates</h1>
+                </div>
+            </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
                 {certificates.map((cert, index) => (

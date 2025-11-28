@@ -12,32 +12,39 @@ const teamMembers = [
 
 export default function Team() {
     return (
-        <div className="min-h-screen bg-gray-50">
-            <div className="container mx-auto px-4 py-16 max-w-6xl">
-                <div className="text-center mb-16">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4 font-serif">Our Team</h1>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Meet the dedicated individuals behind our success. We are a group of passionate professionals committed to excellence.
-                    </p>
+        <div>
+            {/* Full-width Ribbon Header */}
+            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-8">
+                <div className="max-w-7xl mx-auto px-4 md:px-8">
+                    <h1 className="text-4xl font-bold">Team</h1>
                 </div>
+            </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                    {teamMembers.map((member) => (
-                        <div key={member.id} className="flex flex-col items-center group">
-                            <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full shadow-lg transition-transform duration-300 group-hover:scale-105 ring-4 ring-white">
-                                <img
-                                    src={member.image}
-                                    alt={member.name}
-                                    className="w-full h-full object-cover"
-                                />
+            <div className="min-h-screen bg-gray-50">
+                <div className="container mx-auto px-4 py-16 max-w-6xl">
+                    <div className="text-center mb-16">
+                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                            Meet the dedicated individuals behind our success. We are a group of passionate professionals committed to excellence.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                        {teamMembers.map((member) => (
+                            <div key={member.id} className="flex flex-col items-center group">
+                                <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full shadow-lg transition-transform duration-300 group-hover:scale-105 ring-4 ring-white">
+                                    <img
+                                        src={member.image}
+                                        alt={member.name}
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
+                                <p className="text-gray-500 font-medium tracking-wide uppercase text-sm">{member.role}</p>
+
+                                <div className="mt-4 w-12 h-1 bg-gray-200 rounded-full group-hover:bg-blue-500 transition-colors duration-300"></div>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
-                            <p className="text-gray-500 font-medium tracking-wide uppercase text-sm">{member.role}</p>
-
-                            {/* Optional: Social links or bio could go here */}
-                            <div className="mt-4 w-12 h-1 bg-gray-200 rounded-full group-hover:bg-blue-500 transition-colors duration-300"></div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
