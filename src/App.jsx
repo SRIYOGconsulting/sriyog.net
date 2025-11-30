@@ -3,19 +3,26 @@ import RoadBlock from "./Components/RoadBlock";
 import NavBar from "./Components/NavBar";
 import './index.css'
 import Sidekick from "./Components/Sidekick";
-import Footer from "./components/Footer";
-import Newsletter from "./components/Newsletter";
-import Header from "./components/Header";
+import Footer from "./Components/Footer";
+import Newsletter from "./Components/Newsletter";
+import Header from "./Components/Header";
 import CookieConsent from "./Components/CookieConsent";
 import BacktoTop from './Components/BacktoTop'
 import ExitPopup from "./Components/ExitPopup";
+import LoadfromTop from "./Components/LoadfromTop";
+import MobileDrawer from "./Components/MobileDrawer";
+
 export default function App() {
 
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
+      <LoadfromTop/>
       <NavBar />
       <Header />
-      <Outlet />
+      <MobileDrawer />
+      <main className="flex-grow">
+        <Outlet />
+      </main>
       <Sidekick/>
       <ExitPopup/>
       <Newsletter/>
