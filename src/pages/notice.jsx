@@ -81,12 +81,13 @@ export default function notice() {
 
   return (
    <>
-    
+       <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-8">
+                <div className="max-w-7xl mx-auto px-4 md:px-8">
+                    <h1 className="text-4xl font-bold">Notices</h1>
+                </div>
+            </div>
       <div className="container mx-auto px-4 py-8">
-        <br />
-        <h1 className="mb-3 text-[27px] text-gray-600 md:text-4xl text-center"><span className="text-blue-500">Notices</span></h1>
-        <div className="sm:mx-auto md:mx-auto border-blue-400 sm:border-b-4 w-12 mb-12"></div>
-        <br /> 
+
       
       <div className="flex flex-col md:flex-row gap-4 mb-8">
         <div className="flex-1">
