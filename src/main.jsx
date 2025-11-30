@@ -62,30 +62,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="certificates" element={<Certificates />} />
-          <Route path="services" element={<Services />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="feedback" element={<Feedback />} />
-          <Route path="gallery" element={<Gallery />} />
-          <Route path="history" element={<History />} />
-          <Route path="message" element={<Message />} />
-          <Route path="notice" element={<Notice />} />
-          <Route path="payment" element={<Payment />} />
-          <Route path="qr" element={<Qr />} />
-          <Route path="team" element={<Team />} />
-          <Route path="timeline" element={<Timeline />} />
-          <Route path="videos" element={<Videos />} />
-          <Route path="vmgo" element={<Vmgo />} />
-          <Route path="whyus" element={<WhyUs />} />
-          <Route path="sitemap" element={<Sitemap />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
