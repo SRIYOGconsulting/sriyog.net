@@ -1,7 +1,7 @@
 import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
 
 const pageName = "This is VMGO Page";
-export default function vmgo() {
+export default function Vmgo() {
     const breadcrumbItems = [
         { label: 'Home', path: '/' },
         { label: 'Vision & Mission', path: '/vmgo' }

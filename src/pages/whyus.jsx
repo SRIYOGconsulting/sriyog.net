@@ -1,7 +1,7 @@
 import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
 
 const pageName = "This is Why Us Page";
-export default function whyus() {
+export default function WhyUs () {
     const breadcrumbItems = [
         { label: 'Home', path: '/' },
         { label: 'Why Us', path: '/whyus' }

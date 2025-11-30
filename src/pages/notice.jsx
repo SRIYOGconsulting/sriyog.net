@@ -2,7 +2,7 @@ import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
 import { useState,useEffect } from 'react';
 
 const pageName = "This is Notice Page";
-export default function notice() {
+export default function Notice() {
     const breadcrumbItems = [
         { label: 'Home', path: '/' },
         { label: 'Notice', path: '/notice' }

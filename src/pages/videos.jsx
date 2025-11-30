@@ -1,7 +1,7 @@
 import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
 
 const pageName = "This is Videos Page";
-export default function videos() {
+export default function Videos() {
     const breadcrumbItems = [
         { label: 'Home', path: '/' },
         { label: 'Videos', path: '/videos' }

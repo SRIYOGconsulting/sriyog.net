@@ -2,7 +2,7 @@ import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
 import ClapButton from '../Components/ClapButton';
 import FontSizeChanger from '../Components/FontSizeChanger';
 
-export default function about() {
+export default function About() {
     const breadcrumbItems = [
         { label: 'Home', path: '/' },
         { label: 'About', path: '/about' }
