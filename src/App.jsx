@@ -9,10 +9,12 @@ import Header from "./components/Header";
 import CookieConsent from "./Components/CookieConsent";
 import BacktoTop from './Components/BacktoTop'
 import ExitPopup from "./Components/ExitPopup";
+import LoadfromTop from "./Components/LoadfromTop";
 export default function App() {
 
   return (
     <div>
+      <LoadfromTop/>
       <NavBar />
       <Header />
       <Outlet />
