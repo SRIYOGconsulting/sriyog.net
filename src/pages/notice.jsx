@@ -104,7 +104,7 @@ export default function notice() {
               key={category}
               className={`px-4 py-2 rounded-full whitespace-nowrap transition-colors ${
                 selectedCategory === category
-                  ? 'bg-blue-500 text-white'
+                  ? 'bg-[#074842] text-white'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
               }`}
               onClick={() => setSelectedCategory(category)}
@@ -120,7 +120,7 @@ export default function notice() {
           <div
             key={notice.id}
             className={`bg-white rounded-lg shadow-md border-l-4 overflow-hidden hover:scale-105 transition-all hover:shadow-2xl mx-auto ${
-              notice.important ? 'border-red-500' : 'border-blue-500'
+              notice.important ? 'border-red-500' : 'border-[#074842]'
             }`}
           >
             {notice.important && (
@@ -134,7 +134,7 @@ export default function notice() {
                   {notice.title}
                 </h3>
                 <div className="flex items-center gap-4">
-                  <span className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">
+                  <span className="bg-green-100 bg-[#074842] text-sm px-3 py-1 rounded-full">
                     {notice.category}
                   </span>
                   <span className="text-gray-500 text-sm">
