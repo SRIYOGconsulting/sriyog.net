@@ -1,52 +1,116 @@
+import React from "react";
+
+const appData = {
+  organizationName: "Sriyog Consulting",
+  municipality: "Kathmandu",
+  wardno: 5,
+  address1: "Street 123",
+  address2: "Area XYZ",
+  city: "Kathmandu",
+  established: 2010,
+};
+
 const teamMembers = [
-    { id: 1, name: 'Team Member 1', role: 'Role 1', image: '/images/team/1.png' },
-    { id: 2, name: 'Team Member 2', role: 'Role 2', image: '/images/team/2.png' },
-    { id: 3, name: 'Team Member 3', role: 'Role 3', image: '/images/team/3.png' },
-    { id: 4, name: 'Team Member 4', role: 'Role 4', image: '/images/team/4.png' },
-    { id: 5, name: 'Team Member 5', role: 'Role 5', image: '/images/team/5.png' },
-    { id: 6, name: 'Team Member 6', role: 'Role 6', image: '/images/team/6.png' },
-    { id: 7, name: 'Team Member 7', role: 'Role 7', image: '/images/team/7.png' },
-    { id: 8, name: 'Team Member 8', role: 'Role 8', image: '/images/team/8.png' },
-    { id: 9, name: 'Team Member 9', role: 'Role 9', image: '/images/team/9.png' },
+  { id: 1, name: "Team Member 1", role: "Role 1", image: "/images/team/1.png" },
+  { id: 2, name: "Team Member 2", role: "Role 2", image: "/images/team/2.png" },
+  { id: 3, name: "Team Member 3", role: "Role 3", image: "/images/team/3.png" },
+  { id: 4, name: "Team Member 4", role: "Role 4", image: "/images/team/4.png" },
+  { id: 5, name: "Team Member 5", role: "Role 5", image: "/images/team/5.png" },
+  { id: 6, name: "Team Member 6", role: "Role 6", image: "/images/team/6.png" },
+  { id: 7, name: "Team Member 7", role: "Role 7", image: "/images/team/7.png" },
+  { id: 8, name: "Team Member 8", role: "Role 8", image: "/images/team/8.png" },
+  { id: 9, name: "Team Member 9", role: "Role 9", image: "/images/team/9.png" },
 ];
 
-export default function Team() {
-    return (
-        <div>
-            {/* Full-width Ribbon Header */}
-            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 ">
-                <div className="max-w-7xl mx-auto px-4 md:px-8">
-                    <h1 className="text-4xl font-bold">Team</h1>
-                </div>
+const OurTeam = () => {
+  return (
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      {/* President Section */}
+      <div className="rounded-lg mb-10 border border-gray-300 bg-gray-50 p-6 sm:p-10">
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          {/* President Image */}
+          <div className="flex flex-col items-center justify-center w-full md:w-1/3">
+            <img
+              src="/images/team/1.png"
+              alt="President"
+              className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full mb-4 object-cover"
+            />
+            <h2 className="text-xl sm:text-2xl font-semibold text-center">
+              Full Name
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-700 text-center">
+              C.T.O
+            </p>
+          </div>
+
+          {/* About Section */}
+          <div className="flex-1 text-justify">
+            <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-center md:text-left">
+              About PRACAS
+            </h1>
+            <p className="text-gray-800 leading-relaxed text-base sm:text-lg">
+              Pracas Upreti's journey from a startup founder to a
+              technology-driven change-maker in Biratnagar, Nepal, exemplifies
+              the profound impact that individuals can have when they combine
+              innovation with a commitment to social responsibility. Through his
+              endeavors, Upreti has not only transformed his community but has
+              also set a precedent for how technology can be harnessed to drive
+              positive change and create a better future for all.
+              <br />
+              <br />
+              Upreti's journey into the realm of technology began over a decade
+              ago when he founded his first IT startup in 2007 A.D. as PRACAS
+              Infosys in Biratnagar. Recognizing the potential of technology to
+              bridge gaps and catalyze progress, he embarked on a mission to
+              leverage digital solutions to address local challenges and foster
+              economic development. His vision was not merely to create
+              successful businesses but to effect meaningful change in his
+              community.
+            </p>
+
+            {/* Social Media */}
+            <div className="mt-6 flex flex-wrap items-center gap-4 justify-center md:justify-start">
+              <p className="text-gray-900 font-medium">
+                Follow us on social media:
+              </p>
+              <div className="flex gap-3">
+                <img
+                  src="/assets/images/projects/twitter.png"
+                  alt="Twitter"
+                  className="w-6 h-6 hover:opacity-80 transition"
+                />
+                <img
+                  src="/assets/images/projects/linkedin.png"
+                  alt="LinkedIn"
+                  className="w-6 h-6 hover:opacity-80 transition"
+                />
+              </div>
             </div>
-
-            <div className="min-h-screen footer">
-                <div className="container mx-auto px-4 py-16 max-w-6xl">
-                    <div className="text-center mb-16">
-                        <p className="text-lg  max-w-2xl mx-auto">
-                            Meet the dedicated individuals behind our success. We are a group of passionate professionals committed to excellence.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                        {teamMembers.map((member) => (
-                            <div key={member.id} className="flex flex-col items-center group">
-                                <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full shadow-lg transition-transform duration-300 group-hover:scale-105 ring-4 ring-white">
-                                    <img
-                                        src={member.image}
-                                        alt={member.name}
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                                <h3 className="text-xl font-bold  mb-1">{member.name}</h3>
-                                <p className="text-gray-500 font-medium tracking-wide uppercase text-sm">{member.role}</p>
-
-                                <div className="mt-4 w-12 h-1 bg-gray-200 rounded-full group-hover:bg-blue-500 transition-colors duration-300"></div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    );
-}
+      </div>
+
+      {/* Team Members Grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        {teamMembers.slice(1).map((member) => (
+          <div
+            key={member.id}
+            className="bg-gray-50 border border-gray-300 rounded-lg shadow-sm p-6 flex flex-col items-center text-center transition-transform hover:-translate-y-1 hover:shadow-md min-h-[20rem]"
+          >
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full mb-3 object-cover"
+            />
+            <h2 className="text-base sm:text-lg font-semibold">
+              {member.name}
+            </h2>
+            <p className="text-gray-700 text-sm sm:text-base">{member.role}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default OurTeam;
