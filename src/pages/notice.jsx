@@ -135,7 +135,7 @@ export default function Notice() {
                   {notice.title}
                 </h3>
                 <div className="flex items-center gap-4">
-                  <span className="bg-green-100 bg-[#074842] text-sm px-3 py-1 rounded-full">
+                  <span className="bg-green-100  text-sm px-3 py-1 rounded-full">
                     {notice.category}
                   </span>
                   <span className="text-gray-500 text-sm">
