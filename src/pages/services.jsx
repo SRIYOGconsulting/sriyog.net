@@ -12,60 +12,73 @@ export default function services() {
         {
             title: "Web Development",
             desc: "Modern, responsive and high-performance websites tailored to your business needs.",
-            
+            image: "/images/services/1.svg"
         },
         {
             title: "Mobile App Development",
             desc: "User-friendly and scalable mobile apps for Android and iOS platforms.",
-           
+            image: "/images/services/2.svg"
         },
         {
             title: "Digital Marketing",
             desc: "SEO, social media management, and marketing campaigns that grow your brand.",
-            
+            image: "/images/services/3.svg"
         },
         {
             title: "IT Consulting",
             desc: "Expert guidance to help you make smarter technology decisions.",
-            
+            image: "/images/services/4.svg"
         },
         {
             title: "Cloud & Hosting Solutions",
             desc: "Secure and reliable cloud hosting, email servers, and backup systems.",
-            
+            image: "/images/services/5.svg"
         },
         {
             title: "Cybersecurity",
             desc: "Protect your digital assets from data loss, hacking, and cyber threats.",
-            
+            image: "/images/services/6.svg"
         }
     ];
 
     return (
-        <div>
+        <div className="bg-gray-50">
             {/* <BasicBreadcrumbs items={breadcrumbItems} /> */}
 
-            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-12">
+           <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-12">
                 <div className="max-w-7xl mx-auto px-4 md:px-8">
                     <h1 className="text-4xl font-bold">Our Services</h1>
-                    <p className="text-lg mt-2 opacity-90">
-                        What we provide to help your business grow and stay ahead.
-                    </p>
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 md:px-8 mb-16">
+            <div className="max-w-7xl mx-auto px-4 md:px-8 pb-16">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {servicesList.map((service, index) => (
                         <div
                             key={index}
-                            className="card border rounded-xl shadow-md p-6 hover:shadow-lg transition duration-200"
+                            className="group bg-white border-2 border-gray-100 rounded-2xl shadow-sm hover:shadow-2xl hover:border-teal-500 transition-all duration-300 p-8 transform hover:-translate-y-2"
                         >
-                            <div className="text-5xl mb-4">{service.icon}</div>
-                            <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
-                            <p className=" leading-relaxed">
+                            <div className="mb-6 flex justify-center">
+                                <div className="w-24 h-24 bg-teal-50 rounded-full flex items-center justify-center group-hover:bg-teal-100 transition-colors duration-300">
+                                    <img 
+                                        src={service.image} 
+                                        alt={service.title}
+                                        className="w-14 h-14 object-contain"
+                                    />
+                                </div>
+                            </div>
+                            <h3 className="text-2xl font-bold mb-3 text-gray-800 group-hover:text-teal-800 transition-colors">
+                                {service.title}
+                            </h3>
+                            <p className="text-gray-600 leading-relaxed">
                                 {service.desc}
                             </p>
+                            <div className="mt-6 flex items-center text-teal-700 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span>Learn more</span>
+                                <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </div>
                         </div>
                     ))}
                 </div>
