@@ -26,7 +26,7 @@ export default function Feedback() {
     };
 
     return (
-        <div>
+        <div className=''>
             {/* <BasicBreadcrumbs items={breadcrumbItems} /> */}
 
             {/* Full-width Ribbon Header */}

@@ -16,7 +16,7 @@
 }
 
 :root {
-  --bg: #D0D0D0;
+  --bg: #fbfbfb;
   --text: #0D5D59;
   --footer: #ffffff;
   --header : #e5e7eb;
@@ -40,6 +40,7 @@
 .card{
  background: var(--card);
  color: var(--text);
+ border-color: var(--text);
 }
 
 body{
@@ -65,4 +66,10 @@ body{
 
 .sidekick{
   background: var(--sidekick);
+}
+
+.servicesCard{
+  background: var(--card);
+  border-color: var(--text);
+  color: var(--text);
 }

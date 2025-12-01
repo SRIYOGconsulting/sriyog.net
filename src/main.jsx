@@ -7,6 +7,7 @@ import App from "./App.jsx";
 import Home from "./pages/Home.jsx";
 import NotFound from "./pages/NotFound.jsx"; // 404 page
 
+
 const About = React.lazy(() => import("./pages/About.jsx"));
 const Certificates = React.lazy(() => import("./pages/Certificates.jsx"));
 const Services = React.lazy(() => import("./pages/Services.jsx"));
@@ -23,8 +24,7 @@ const Timeline = React.lazy(() => import("./pages/Timeline.jsx"));
 const Videos = React.lazy(() => import("./pages/Videos.jsx"));
 const Vmgo = React.lazy(() => import("./pages/Vmgo.jsx"));
 const WhyUs = React.lazy(() => import("./pages/WhyUs.jsx"));
-const Sitemap = React.lazy(() => import("./pages/sitemap.jsx"));
-
+const Sitemap = React.lazy(() => import("./pages/Sitemap.jsx"));
 // Helper to wrap lazy components in Suspense
 const withSuspense = (Component, fallbackText) => (
   <Suspense fallback={<div>{fallbackText}</div>}>
@@ -55,7 +55,6 @@ const router = createBrowserRouter([
       { path: "vmgo", element: withSuspense(Vmgo, "Loading Vmgo...") },
       { path: "whyus", element: withSuspense(WhyUs, "Loading Why Us...") },
       { path: "sitemap", element: withSuspense(Sitemap, "Loading Sitemap...") },
-
       // 404 Page
       { path: "*", element: <NotFound /> },
     ],

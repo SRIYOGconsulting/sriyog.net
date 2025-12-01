@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+
+import { Link, useNavigate } from "react-router-dom"; // Added useNavigate
 
 const Header = () => {
   const [DarkIcon, setDarkIcon] = useState(true);
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate(); // Added navigation for search
-  const [menuOpen, setMenuOpen] = useState(false);
 
   const TriggerTheme = () => {
     if (document.body.classList.contains("dark")) {
       document.body.classList.remove("dark");
       setDarkIcon(true);
-    }else{
-      document.body.classList.add('dark');
+    } else {
+      document.body.classList.add("dark");
       setDarkIcon(false);
     }
   };
@@ -81,29 +81,40 @@ const Header = () => {
             </button>
           </Link>
 
-          {/* SEARCH ICON And INPUT */}
-          <div className="relative">
-            <img
-              src="/icons/search.svg"
-              alt="Search"
-              className="w-6 h-6 cursor-pointer"
-              onClick={() => setShowSearch((prev) => !prev)}
+          {/* SEARCH ICON */}
+          <img
+            src="/icons/search.svg"
+            alt="Search"
+            className="w-6 h-6 cursor-pointer"
+            onClick={() => setShowSearch((prev) => !prev)}
+          />
+
+          {/* THE NEW FULL-WIDTH SLIDE SEARCH BAR */}
+          <div
+            className={`fixed top-0 right-0 w-full bg-white shadow-md px-4 py-3 
+            transition-transform duration-300 z-[9999] 
+            ${showSearch ? "translate-x-0" : "translate-x-full"}`}
+          >
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={handleKeyPress}
+              placeholder="Search..."
+              className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-600"
             />
-            {showSearch && (
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                onKeyDown={handleKeyPress}
-                placeholder="Search..."
-                className="absolute bottom-full mb-2 right-0 w-64 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-600 bg-white z-50"
-              />
-            )}
           </div>
 
           <div>
-            <button onClick={TriggerTheme} className={`text-2xl rounded-full h-8 w-8 ${DarkIcon ? "bg-black text-white rotate-45 pl-1" : "bg-white text-black"}`} >
-                {DarkIcon ? "☽" : "☀︎"}
+            <button
+              onClick={TriggerTheme}
+              className={`text-2xl rounded-full h-8 w-8 ${
+                DarkIcon
+                  ? "bg-black text-white rotate-45 pl-1"
+                  : "bg-white text-black"
+              }`}
+            >
+              {DarkIcon ? "☽" : "☀︎"}
             </button>
           </div>
         </nav>
@@ -113,3 +124,5 @@ const Header = () => {
 };
 
 export default Header;
+
+

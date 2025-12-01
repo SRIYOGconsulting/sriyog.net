@@ -9,7 +9,7 @@ export default function About() {
     ];
 
     return (
-        <div>
+        <div className=''>
             {/* Full-width Ribbon Header */}
             <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-8">
                 <div className="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
@@ -57,7 +57,7 @@ export default function About() {
 
                     {/* Right side - Images */}
                     <div className="md:w-1/3 space-y-6">
-                        <div className="rounded-lg overflow-hidden shadow-md">
+                        <div className="rounded-lg overflow-hidden ">
                             <img
                                 src="/images/about/1.png"
                                 alt="About SRIYOG 1"
