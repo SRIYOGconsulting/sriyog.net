@@ -77,7 +77,7 @@ const OurTeam = () => {
               <p className="text-gray-900 font-medium">
                 Follow us on social media:
               </p>
-              <div className="flex gap-3">
+              <div className="flex gap-3 items-center">
                 <img
                   src="/icons/x.svg"
                   alt="Twitter"

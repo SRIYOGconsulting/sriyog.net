@@ -1,12 +1,13 @@
-import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
 import { useState, useEffect } from 'react';
+import Pagination from '../Components/Pagination';
 
-const pageName = "This is Notice Page";
 export default function Notice() {
-    const breadcrumbItems = [
-        { label: 'Home', path: '/' },
-        { label: 'Notice', path: '/notice' }
-    ];
+    const [currentPage, setCurrentPage] = useState(1);
+    const [itemsPerPage] = useState(10);
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [currentPage]);
 
     const [notices] = useState([
         {
@@ -64,6 +65,72 @@ export default function Notice() {
             category: "Placement",
             content: "Leading banks will be conducting campus placements for our certified candidates on January 20th. Prepare your resumes and attend the pre-placement briefing.",
             important: true
+        },
+
+        // ADDITIONAL ITEMS (from origin/main)
+        {
+            id: 8,
+            title: "Placement Drive for Certified Candidates",
+            date: "2024-01-01",
+            category: "Placement",
+            content: "Leading banks will be conducting campus placements for certified candidates.",
+            important: true
+        },
+        {
+            id: 9,
+            title: "Placement Drive for Certified Candidates",
+            date: "2024-01-01",
+            category: "Placement",
+            content: "Leading banks will be conducting campus placements for certified candidates.",
+            important: true
+        },
+        {
+            id: 10,
+            title: "Placement Drive for Certified Candidates",
+            date: "2024-01-01",
+            category: "Placement",
+            content: "Leading banks will be conducting campus placements for certified candidates.",
+            important: true
+        },
+        {
+            id: 11,
+            title: "Placement Drive for Certified Candidates",
+            date: "2024-01-01",
+            category: "Placement",
+            content: "Leading banks will be conducting campus placements for certified candidates.",
+            important: true
+        },
+        {
+            id: 12,
+            title: "Placement Drive for Certified Candidates",
+            date: "2024-01-01",
+            category: "Placement",
+            content: "Leading banks will be conducting campus placements for certified candidates.",
+            important: true
+        },
+        {
+            id: 13,
+            title: "Placement Drive for Certified Candidates",
+            date: "2024-01-01",
+            category: "Placement",
+            content: "Leading banks will be conducting campus placements for certified candidates.",
+            important: true
+        },
+        {
+            id: 14,
+            title: "Placement Drive for Certified Candidates",
+            date: "2024-01-01",
+            category: "Placement",
+            content: "Leading banks will be conducting campus placements for certified candidates.",
+            important: true
+        },
+        {
+            id: 15,
+            title: "Placement Drive for Certified Candidates",
+            date: "2024-01-01",
+            category: "Placement",
+            content: "Leading banks will be conducting campus placements for certified candidates.",
+            important: true
         }
     ]);
 
@@ -72,16 +139,24 @@ export default function Notice() {
 
     const categories = ["All", "Training", "Workshop", "Examination", "Placement", "Corporate", "Events", "Holiday"];
 
+    // Filtering logic
     const filteredNotices = notices.filter(notice => {
-        const matchesCategory =
-            selectedCategory === "All" || notice.category === selectedCategory;
-
+        const matchesCategory = selectedCategory === "All" || notice.category === selectedCategory;
         const matchesSearch =
             notice.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             notice.content.toLowerCase().includes(searchTerm.toLowerCase());
 
         return matchesCategory && matchesSearch;
     });
+
+    // Pagination logic
+    const totalPages = Math.ceil(filteredNotices.length / itemsPerPage);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const currentData = filteredNotices.slice(startIndex, startIndex + itemsPerPage);
+
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [selectedCategory, searchTerm]);
 
     return (
         <>
@@ -91,38 +166,34 @@ export default function Notice() {
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 py-8">
-
+            <div className="container mx-auto px-4 py-8 max-w-7xl">
+                
                 {/* SEARCH + CATEGORY FILTER */}
                 <div className="flex flex-col md:flex-row gap-4 mb-8">
+
                     {/* Search */}
                     <div className="flex-1">
                         <input
                             type="text"
                             placeholder="Search notices..."
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full px-4 py-2 border border-gray-300 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
                     </div>
 
-                    {/* CATEGORY SCROLLER (FULLY RESPONSIVE) */}
+                    {/* Category horizontal scroll (fixed version) */}
                     <div className="relative w-full md:w-auto">
-                        <div
-                            className="
-                                flex gap-2
-                                overflow-x-auto
-                                pb-3
-                                scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200
-                                whitespace-nowrap
-                                md:whitespace-normal
-                            "
-                        >
+                        <div className="
+                            flex gap-2 overflow-x-auto pb-3
+                            scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200
+                            whitespace-nowrap
+                        ">
                             {categories.map(category => (
                                 <button
                                     key={category}
                                     className={`
-                                        px-4 py-2 rounded-full flex-shrink-0 transition-colors 
+                                        px-4 py-2 rounded-full flex-shrink-0 transition-colors
                                         ${selectedCategory === category
                                             ? 'bg-[#074842] text-white'
                                             : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}
@@ -138,12 +209,12 @@ export default function Notice() {
 
                 {/* NOTICE CARDS */}
                 <div className="space-y-8">
-                    {filteredNotices.map(notice => (
+                    {currentData.map(notice => (
                         <div
                             key={notice.id}
                             className={`
-                                bg-white rounded-lg shadow-md border-l-4 overflow-hidden 
-                                hover:scale-105 transition-all hover:shadow-2xl mx-auto
+                                bg-white rounded-lg shadow-md border-l-4
+                                hover:scale-[1.02] transition-all hover:shadow-2xl 
                                 ${notice.important ? 'border-red-500' : 'border-[#074842]'}
                             `}
                         >
@@ -178,16 +249,24 @@ export default function Notice() {
                     ))}
                 </div>
 
+                {/* PAGINATION */}
+                {filteredNotices.length !== 0 && (
+                    <div className="flex items-center justify-center mt-8">
+                        <Pagination
+                            color="bg-red-500"
+                            currentPage={currentPage}
+                            onPageChange={setCurrentPage}
+                            totalPages={totalPages}
+                        />
+                    </div>
+                )}
+
                 {/* NO RESULTS */}
                 {filteredNotices.length === 0 && (
                     <div className="text-center py-12">
                         <div className="text-gray-400 text-6xl mb-4">📄</div>
-                        <h3 className="text-xl font-semibold text-gray-600 mb-2">
-                            No notices found
-                        </h3>
-                        <p className="text-gray-500">
-                            Try adjusting your search or filter criteria
-                        </p>
+                        <h3 className="text-xl font-semibold text-gray-600 mb-2">No notices found</h3>
+                        <p className="text-gray-500">Try adjusting your search or filter criteria</p>
                     </div>
                 )}
             </div>
