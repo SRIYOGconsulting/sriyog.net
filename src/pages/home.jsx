@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="w-full">
       {/* HERO SECTION */}
-      <section className="w-full h-auto flex flex-col md:flex-row justify-between items-start md:items-center p-4 md:p-0 md:pt-0 relative overflow-hidden">
+      <section className="w-full bg-[url('/images/home/1.jpg')] bg-cover bg-center bg-no-repeat min-h-[600px] flex flex-col md:flex-row justify-between items-start md:items-center p-4 md:p-0 md:pt-0 relative overflow-hidden">
         {/*   header width and alignment */}
         <div className="max-w-[1200px] mx-auto w-full flex flex-col md:flex-row justify-between items-start md:items-center px-6">
           {/* Text Content  Aligned directly below logo column */}
@@ -34,18 +34,7 @@ const Home = () => {
           {/* Spacer for mobile to push image below */}
           <div className="w-full md:hidden h-px"></div>
 
-          {/* Image - Full width on mobile, fixed on desktop, enhanced with better styling */}
-          <div className="w-full md:w-1/2 h-[300px] md:h-full flex justify-center md:justify-end order-2 md:order-2 px-0 md:px-0 z-0 mt-6 md:mt-0 pt-0 pb-0">
-            <div className="relative w-[500px]  h-full rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-300">
-              <img
-                src="/images/home/1.jpg"  // Ensure your image is at public/images/home/1.jpg
-                alt="Hero banner - Scenic view representing growth and innovation"
-                className="w-full h-full object-contain"
-              />
-              {/* Subtle gradient overlay for depth */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-            </div>
-          </div>
+
         </div>
 
         {/* <div className="absolute inset-0 bg-gradient-to-r from-[#D0D0D0]/50 to-transparent md:from-transparent"></div> */}

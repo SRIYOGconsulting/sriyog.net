@@ -2,7 +2,7 @@ import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
 
 const pageName = "This is Services Page";
 
-export default function services() {
+export default function Services() {
     const breadcrumbItems = [
         { label: 'Home', path: '/' },
         { label: 'Services', path: '/services' }
@@ -48,10 +48,7 @@ export default function services() {
            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-12">
                 <div className="max-w-7xl mx-auto px-4 md:px-8">
                     <h1 className="text-4xl font-bold">Our Services</h1>
-<<<<<<< Updated upstream
-=======
                     
->>>>>>> Stashed changes
                 </div>
             </div>
 

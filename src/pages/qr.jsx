@@ -1,7 +1,7 @@
 import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
 
 const pageName = "This is QR Page";
-export default function qr() {
+export default function Qr() {
     const breadcrumbItems = [
         { label: 'Home', path: '/' },
         { label: 'QR Code', path: '/qr' }

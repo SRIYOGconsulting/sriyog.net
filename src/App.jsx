@@ -9,12 +9,8 @@ import Header from "./Components/Header";
 import CookieConsent from "./Components/CookieConsent";
 import BacktoTop from './Components/BacktoTop'
 import ExitPopup from "./Components/ExitPopup";
-<<<<<<< Updated upstream
 import LoadfromTop from "./Components/LoadfromTop";
 import MobileDrawer from "./Components/MobileDrawer";
-=======
-
->>>>>>> Stashed changes
 
 export default function App() {
 
