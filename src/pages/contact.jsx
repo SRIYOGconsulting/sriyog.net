@@ -69,7 +69,7 @@ export default function Contact() {
                                <a href={`https://wa.me/${member.whatsapp.replace(/\D/g, '')}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-block px-5 py-2 text-sm  bg-green-500 rounded-full hover:bg-green-600 transition-colors"
+                                className="inline-block px-5 py-2 text-sm  bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors"
                             >
                                 WhatsApp
                             </a>

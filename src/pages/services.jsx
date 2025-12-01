@@ -42,7 +42,7 @@ export default function Services() {
     ];
 
     return (
-        <div className="bg-gray-50">
+        <div className="footer">
             {/* <BasicBreadcrumbs items={breadcrumbItems} /> */}
 
            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-12">
@@ -57,10 +57,10 @@ export default function Services() {
                     {servicesList.map((service, index) => (
                         <div
                             key={index}
-                            className="group bg-white border-2 border-gray-100 rounded-2xl shadow-sm hover:shadow-2xl hover:border-teal-500 transition-all duration-300 p-8 transform hover:-translate-y-2"
+                            className="group card border-2 rounded-2xl shadow-sm hover:shadow-2xl  transition-all duration-300 p-8 transform hover:-translate-y-2"
                         >
                             <div className="mb-6 flex justify-center">
-                                <div className="w-24 h-24 bg-teal-50 rounded-full flex items-center justify-center group-hover:bg-teal-100 transition-colors duration-300">
+                                <div className="w-24 h-24  rounded-full flex items-center justify-center group-hover:bg-white transition-colors duration-300">
                                     <img 
                                         src={service.image} 
                                         alt={service.title}
@@ -68,13 +68,13 @@ export default function Services() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-2xl font-bold mb-3 text-gray-800 group-hover:text-teal-800 transition-colors">
+                            <h3 className="text-2xl font-bold mb-3   transition-colors">
                                 {service.title}
                             </h3>
-                            <p className="text-gray-600 leading-relaxed">
+                            <p className=" leading-relaxed">
                                 {service.desc}
                             </p>
-                            <div className="mt-6 flex items-center text-teal-700 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div className="mt-6 flex items-center  font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <span>Learn more</span>
                                 <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

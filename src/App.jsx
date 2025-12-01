@@ -15,7 +15,7 @@ import MobileDrawer from "./Components/MobileDrawer";
 export default function App() {
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-hidden">
       <LoadfromTop/>
       <NavBar />
       <Header />

@@ -59,7 +59,7 @@ export default function Timeline() {
                                 <div className={`w-full md:w-1/2 px-6 md:px-0 
                                     ${isLeft ? "md:pr-12 md:mr-auto" : "md:pl-12 md:ml-auto"}`}
                                 >
-                                    <div className="footer rounded-xl shadow-lg p-6 border  hover:shadow-xl transition-all">
+                                    <div className=" rounded-xl shadow-lg p-6 border card  hover:shadow-xl transition-all">
                                         <span className="text-sm font-semibold ">
                                             {event.year}
                                         </span>
