@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const appData = {
   organizationName: "Sriyog Consulting",
   municipality: "Kathmandu",
@@ -23,8 +24,11 @@ const teamMembers = [
 ];
 
 const OurTeam = () => {
+  
+
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      
       {/* President Section */}
       <div className="rounded-lg mb-10 border border-gray-300 bg-gray-50 p-6 sm:p-10">
         <div className="flex flex-col md:flex-row items-center gap-8">
@@ -75,12 +79,12 @@ const OurTeam = () => {
               </p>
               <div className="flex gap-3">
                 <img
-                  src="/assets/images/projects/twitter.png"
+                  src="/icons/x.svg"
                   alt="Twitter"
                   className="w-6 h-6 hover:opacity-80 transition"
                 />
                 <img
-                  src="/assets/images/projects/linkedin.png"
+                  src="/icons/linkedin.svg"
                   alt="LinkedIn"
                   className="w-6 h-6 hover:opacity-80 transition"
                 />

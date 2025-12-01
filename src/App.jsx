@@ -12,6 +12,7 @@ import ExitPopup from "./Components/ExitPopup";
 import LoadfromTop from "./Components/LoadfromTop";
 import MobileDrawer from "./Components/MobileDrawer";
 
+
 export default function App() {
 
   return (
@@ -20,7 +21,9 @@ export default function App() {
       <NavBar />
       <Header />
       <MobileDrawer />
+   
       <main className="flex-grow">
+        
         <Outlet />
       </main>
       <Sidekick/>
