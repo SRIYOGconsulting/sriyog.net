@@ -1,5 +1,5 @@
 import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
-import { FaLightbulb, FaFlag, FaRocket, FaBullseye, FaCircle } from 'react-icons/fa';
+// Icons are now loaded from the public folder
 
 export default function Vmgo() {
   const breadcrumbItems = [
@@ -26,8 +26,8 @@ export default function Vmgo() {
         {/* Vision Section */}
         <section id="vision" className="mb-12 bg-white rounded-lg shadow-md p-8">
           <div className="flex items-center mb-6">
-            <div className="bg-teal-100 p-3 rounded-full mr-4">
-              <FaLightbulb className="text-teal-700 text-2xl" />
+            <div className="bg-teal-100 p-2 rounded-full mr-4 w-10 h-10 flex items-center justify-center">
+              <img src="/icons/lightbulb.svg" alt="" className="w-6 h-6 text-teal-700" />
             </div>
             <h2 className="text-3xl font-bold text-gray-800">Vision</h2>
           </div>
@@ -44,8 +44,8 @@ export default function Vmgo() {
         {/* Mission Section */}
         <section id="mission" className="mb-12 bg-white rounded-lg shadow-md p-8">
           <div className="flex items-center mb-6">
-            <div className="bg-teal-100 p-3 rounded-full mr-4">
-              <FaFlag className="text-teal-700 text-2xl" />
+            <div className="bg-teal-100 p-2 rounded-full mr-4 w-10 h-10 flex items-center justify-center">
+              <img src="/icons/flag.svg" alt="" className="w-6 h-6 text-teal-700" />
             </div>
             <h2 className="text-3xl font-bold text-gray-800">Mission</h2>
           </div>
@@ -59,8 +59,8 @@ export default function Vmgo() {
         {/* Goals Section */}
         <section id="goals" className="mb-12 bg-white rounded-lg shadow-md p-8">
           <div className="flex items-center mb-6">
-            <div className="bg-teal-100 p-3 rounded-full mr-4">
-              <FaRocket className="text-teal-700 text-2xl" />
+            <div className="bg-teal-100 p-2 rounded-full mr-4 w-10 h-10 flex items-center justify-center">
+              <img src="/icons/rocket.svg" alt="" className="w-6 h-6 text-teal-700" />
             </div>
             <h2 className="text-3xl font-bold text-gray-800">Our Goals</h2>
           </div>
@@ -72,7 +72,7 @@ export default function Vmgo() {
               "Continuously enhance our platform with new technologies to deliver the best user experience."
             ].map((goal, index) => (
               <div key={index} className="flex items-start">
-                <FaCircle className="text-teal-500 text-xs mt-2 mr-3 flex-shrink-0" />
+                <img src="/icons/circle.svg" alt="" className="w-2 h-2 text-teal-500 mt-3 mr-3 flex-shrink-0" />
                 <p className="text-gray-700 text-lg">{goal}</p>
               </div>
             ))}
@@ -82,8 +82,8 @@ export default function Vmgo() {
         {/* Objectives Section */}
         <section id="objectives" className="mb-12 bg-white rounded-lg shadow-md p-8">
           <div className="flex items-center mb-6">
-            <div className="bg-teal-100 p-3 rounded-full mr-4">
-              <FaBullseye className="text-teal-700 text-2xl" />
+            <div className="bg-teal-100 p-2 rounded-full mr-4 w-10 h-10 flex items-center justify-center">
+              <img src="/icons/bullseye.svg" alt="" className="w-6 h-6 text-teal-700" />
             </div>
             <h2 className="text-3xl font-bold text-gray-800">Objectives</h2>
           </div>
@@ -95,7 +95,7 @@ export default function Vmgo() {
               "Maintain high standards of security and privacy"
             ].map((objective, index) => (
               <div key={index} className="flex items-start">
-                <FaCircle className="text-teal-500 text-xs mt-2 mr-3 flex-shrink-0" />
+                <img src="/icons/circle.svg" alt="" className="w-2 h-2 text-teal-500 mt-3 mr-3 flex-shrink-0" />
                 <p className="text-gray-700 text-lg">{objective}</p>
               </div>
             ))}
