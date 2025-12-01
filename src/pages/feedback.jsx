@@ -26,25 +26,30 @@ export default function Feedback() {
     };
 
     return (
-        <div className=''>
-            {/* <BasicBreadcrumbs items={breadcrumbItems} /> */}
+        <div className="w-full">
 
             {/* Full-width Ribbon Header */}
-            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-8">
-                <div className="max-w-7xl mx-auto px-4 md:px-8">
-                    <h1 className="text-4xl font-bold">Feedback</h1>
+            <div className="bg-teal-800 text-white py-10 px-4 md:px-8 mb-10">
+                <div className="max-w-7xl mx-auto">
+                    <h1 className="text-3xl md:text-4xl font-bold">Feedback</h1>
                 </div>
             </div>
 
-            <div className="px-6 py-12 max-w-3xl mx-auto font-sans ">
-                <p className="text-center  mb-10">
+            {/* FORM SECTION */}
+            <div className="px-4 sm:px-6 md:px-8 lg:px-0 py-10 max-w-3xl mx-auto font-sans">
+
+                <p className="text-center text-gray-700 mb-10 px-2">
                     Please share your experience with our services. Your feedback helps us improve.
                 </p>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form 
+                    onSubmit={handleSubmit}
+                    className="space-y-6 bg-white p-6 sm:p-8 rounded-xl shadow-md border border-gray-200"
+                >
+
                     {/* Name */}
                     <div className="flex flex-col">
-                        <label htmlFor="name" className="mb-2  font-medium">Name</label>
+                        <label htmlFor="name" className="mb-2 font-medium">Name</label>
                         <input
                             type="text"
                             id="name"
@@ -53,13 +58,13 @@ export default function Feedback() {
                             onChange={handleChange}
                             placeholder="Your name"
                             required
-                            className="px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                            className="px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-700 focus:outline-none"
                         />
                     </div>
 
                     {/* Email */}
                     <div className="flex flex-col">
-                        <label htmlFor="email" className="mb-2  font-medium">Email</label>
+                        <label htmlFor="email" className="mb-2 font-medium">Email</label>
                         <input
                             type="email"
                             id="email"
@@ -68,20 +73,20 @@ export default function Feedback() {
                             onChange={handleChange}
                             placeholder="you@example.com"
                             required
-                            className="px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                            className="px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-700 focus:outline-none"
                         />
                     </div>
 
                     {/* Service */}
                     <div className="flex flex-col">
-                        <label htmlFor="service" className="mb-2  font-medium">Service</label>
+                        <label htmlFor="service" className="mb-2 font-medium">Service</label>
                         <select
                             id="service"
                             name="service"
                             value={formData.service}
                             onChange={handleChange}
                             required
-                            className="px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                            className="px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-700 focus:outline-none"
                         >
                             <option value="">Select a service</option>
                             <option value="Website Development">Website Development</option>
@@ -94,7 +99,7 @@ export default function Feedback() {
 
                     {/* Feedback Message */}
                     <div className="flex flex-col">
-                        <label htmlFor="message" className="mb-2  font-medium">Feedback</label>
+                        <label htmlFor="message" className="mb-2 font-medium">Feedback</label>
                         <textarea
                             id="message"
                             name="message"
@@ -103,7 +108,7 @@ export default function Feedback() {
                             placeholder="Write your feedback here..."
                             rows={5}
                             required
-                            className="px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-gray-300 focus:outline-none resize-none"
+                            className="px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-700 focus:outline-none resize-none"
                         ></textarea>
                     </div>
 
@@ -111,11 +116,12 @@ export default function Feedback() {
                     <div className="text-center">
                         <button
                             type="submit"
-                            className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors"
+                            className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-900 transition-all w-full sm:w-auto"
                         >
                             Submit Feedback
                         </button>
                     </div>
+
                 </form>
             </div>
         </div>
