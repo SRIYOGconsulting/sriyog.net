@@ -1,13 +1,20 @@
 import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
 import { useState,useEffect } from 'react';
+import Pagination from '../Components/Pagination';
 
 const pageName = "This is Notice Page";
 export default function Notice() {
+    const [currentPage, setCurrentPage] = useState(1);
+    const [itemsPerPage, setItemsPerPage] = useState(10);
+    useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [currentPage]);
     const breadcrumbItems = [
         { label: 'Home', path: '/' },
         { label: 'Notice', path: '/notice' }
     ];
-
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
   const [notices] = useState([
     {
       id: 1,
@@ -64,6 +71,73 @@ export default function Notice() {
       category: "Placement",
       content: "Leading banks will be conducting campus placements for our certified candidates on January 20th. Prepare your resumes and attend the pre-placement briefing.",
       important: true
+    },
+    {
+      id: 8,
+      title: "Placement Drive for Certified Candidates",
+      date: "2024-01-01",
+      category: "Placement",
+      content: "Leading banks will be conducting campus placements for our certified candidates on January 20th. Prepare your resumes and attend the pre-placement briefing.",
+      important: true
+    }
+    ,
+    {
+      id: 9,
+      title: "Placement Drive for Certified Candidates",
+      date: "2024-01-01",
+      category: "Placement",
+      content: "Leading banks will be conducting campus placements for our certified candidates on January 20th. Prepare your resumes and attend the pre-placement briefing.",
+      important: true
+    }
+    ,
+    {
+      id: 10,
+      title: "Placement Drive for Certified Candidates",
+      date: "2024-01-01",
+      category: "Placement",
+      content: "Leading banks will be conducting campus placements for our certified candidates on January 20th. Prepare your resumes and attend the pre-placement briefing.",
+      important: true
+    },
+    {
+      id: 11,
+      title: "Placement Drive for Certified Candidates",
+      date: "2024-01-01",
+      category: "Placement",
+      content: "Leading banks will be conducting campus placements for our certified candidates on January 20th. Prepare your resumes and attend the pre-placement briefing.",
+      important: true
+    }
+    ,
+    {
+      id: 12,
+      title: "Placement Drive for Certified Candidates",
+      date: "2024-01-01",
+      category: "Placement",
+      content: "Leading banks will be conducting campus placements for our certified candidates on January 20th. Prepare your resumes and attend the pre-placement briefing.",
+      important: true
+    },
+    {
+      id: 13,
+      title: "Placement Drive for Certified Candidates",
+      date: "2024-01-01",
+      category: "Placement",
+      content: "Leading banks will be conducting campus placements for our certified candidates on January 20th. Prepare your resumes and attend the pre-placement briefing.",
+      important: true
+    },
+    {
+      id: 14,
+      title: "Placement Drive for Certified Candidates",
+      date: "2024-01-01",
+      category: "Placement",
+      content: "Leading banks will be conducting campus placements for our certified candidates on January 20th. Prepare your resumes and attend the pre-placement briefing.",
+      important: true
+    },
+    {
+      id: 15,
+      title: "Placement Drive for Certified Candidates",
+      date: "2024-01-01",
+      category: "Placement",
+      content: "Leading banks will be conducting campus placements for our certified candidates on January 20th. Prepare your resumes and attend the pre-placement briefing.",
+      important: true
     }
   ]);
 
@@ -78,7 +152,11 @@ export default function Notice() {
                          notice.content.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
-
+  const totalPages = Math.ceil(filteredNotices.length / itemsPerPage);
+  const currentData = filteredNotices.slice(startIndex, endIndex);
+  useEffect(() => {
+        setCurrentPage(1);
+        }, [selectedCategory, searchTerm]);
   return (
    <>
        <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-8">
@@ -89,7 +167,7 @@ export default function Notice() {
       <div className="container mx-auto px-4 py-8">
 
       
-      <div className="flex flex-col md:flex-row gap-4 mb-8">
+      <div className="flex flex-col max-w-7xl mx-auto md:flex-row gap-4 mb-8">
         <div className="flex-1">
           <input
             type="text"
@@ -116,11 +194,11 @@ export default function Notice() {
         </div>
       </div>
 
-      <div className="space-y-8">
-        {filteredNotices.map(notice => (
+      <div className="space-y-8 max-w-7xl mx-auto ">
+        {currentData.map(notice => (
           <div
             key={notice.id}
-            className={`bg-white rounded-lg shadow-md border-l-4 overflow-hidden hover:scale-105 transition-all hover:shadow-2xl mx-auto ${
+            className={` rounded-lg shadow-md border-l-4 overflow-hidden hover:scale-[1.02] transition-all hover:shadow-2xl mx-auto ${
               notice.important ? 'border-red-500' : 'border-[#074842]'
             }`}
           >
@@ -131,11 +209,11 @@ export default function Notice() {
             )}
             <div className="p-6">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2 md:mb-0">
+                <h3 className="text-xl font-semibold  mb-2 md:mb-0">
                   {notice.title}
                 </h3>
                 <div className="flex items-center gap-4">
-                  <span className="bg-green-100  text-sm px-3 py-1 rounded-full">
+                  <span className="bg-green-100 text-black text-sm px-3 py-1 rounded-full">
                     {notice.category}
                   </span>
                   <span className="text-gray-500 text-sm">
@@ -150,7 +228,11 @@ export default function Notice() {
           </div>
         ))}
       </div>
-
+      <div className='flex items-center justify-center mt-6 mb-3'>
+      {filteredNotices.length != 0 && (
+        <Pagination color="bg-red-500" currentPage={currentPage} onPageChange={setCurrentPage} totalPages={totalPages}/>
+      )}
+      </div>
       {filteredNotices.length === 0 && (
         <div className="text-center py-12">
           <div className="text-gray-400 text-6xl mb-4">📄</div>

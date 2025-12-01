@@ -18,6 +18,7 @@
 :root {
   --bg: #fbfbfb;
   --text: #0D5D59;
+  --text2 : black;
   --footer: #ffffff;
   --header : #e5e7eb;
   --border : #a9a9a9;
@@ -29,6 +30,7 @@
 .dark {
   --bg: #1e1e1e;
   --text: #ffffff;
+  --text2: #f1f1f1;
   --footer: #1e1e1e;
   --header : #2a2a2a;
   --border : #1c1c1c;
@@ -41,6 +43,10 @@
  background: var(--card);
  color: var(--text);
  border-color: var(--text);
+}
+
+.card2{
+  color: var(--text2);
 }
 
 body{
