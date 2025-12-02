@@ -81,27 +81,27 @@ const Header = () => {
             </button>
           </Link>
 
-          {/* SEARCH ICON */}
-          <img
-            src="/icons/search.svg"
-            alt="Search"
-            className="w-6 h-6 cursor-pointer"
-            onClick={() => setShowSearch((prev) => !prev)}
-          />
+         {/* Search */}
+          <div className="flex items-center relative ml-4">
+            {/* Search Icon */}
+            <img
+              src="/icons/search.svg"
+              alt="Search"
+              className="w-6 h-6 cursor-pointer"
+              onClick={() => setShowSearch(prev => !prev)}
+            />
 
-          {/* THE NEW FULL-WIDTH SLIDE SEARCH BAR */}
-          <div
-            className={`fixed top-0 right-0 w-full bg-white shadow-md px-4 py-3 
-            transition-transform duration-300 z-[9999] 
-            ${showSearch ? "translate-x-0" : "translate-x-full"}`}
-          >
+            {/* Sliding Input */}
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyDown={handleKeyPress}
               placeholder="Search..."
-              className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-600"
+              className={`ml-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-teal-600
+                transition-all duration-300 ease-in-out
+                ${showSearch ? "w-64 opacity-100 px-3 py-1" : "w-0 opacity-0 px-0 py-0 overflow-hidden"}`}
+              style={{ height: "32px" }}
             />
           </div>
 
@@ -124,5 +124,14 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
+
+
+
+
+
+
 
 
