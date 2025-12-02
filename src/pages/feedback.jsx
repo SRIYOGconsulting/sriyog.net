@@ -1,12 +1,12 @@
 // import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
 import React, { useState } from 'react';
-
+import ReCAPTCHA from 'react-google-recaptcha';
 export default function Feedback() {
     const breadcrumbItems = [
         { label: 'Home', path: '/' },
         { label: 'Feedback', path: '/feedback' }
     ];
-
+    const [captchaToken, setCaptchaToken] = useState(null);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -20,6 +20,11 @@ export default function Feedback() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (!captchaToken) {
+            alert("Please verify you're not a robot!");
+            return;
+        }
+        alert(`Captcha token received: ${captchaToken}`);
         console.log('Feedback submitted:', formData);
         alert('Thank you for your feedback!');
         setFormData({ name: '', email: '', service: '', message: '' });
@@ -111,7 +116,12 @@ export default function Feedback() {
                             className="px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-700 focus:outline-none resize-none"
                         ></textarea>
                     </div>
-
+                    <div className='flex items-center justify-center'>
+                    <ReCAPTCHA 
+                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" 
+                    onChange={(token) => setCaptchaToken(token)}
+                    />
+                    </div>
                     {/* Submit Button */}
                     <div className="text-center">
                         <button
