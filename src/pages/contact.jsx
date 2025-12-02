@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function Contact() {
+    
     // Minimalistic team members
     const teamMembers = [
         { name: 'Alice Johnson', designation: 'CEO', img: '/images/contact/1.png', whatsapp: '+1234567890' },

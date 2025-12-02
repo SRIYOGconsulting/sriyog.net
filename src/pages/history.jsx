@@ -21,8 +21,8 @@ export default function History() {
 
                 {/* Introduction Section */}
                 <section>
-                    <h2 className="text-2xl font-bold text-teal-700 mb-4">Our Beginning</h2>
-                    <p className="text-gray-700 leading-relaxed">
+                    <h2 className="text-2xl font-bold  mb-4">Our Beginning</h2>
+                    <p className="card2 leading-relaxed">
                         SRIYOG Consulting Pvt. Ltd. began its journey with a mission to bring advanced digital
                         transformation to industries that needed it the most. What started as a small initiative
                         has now grown into a trusted technology partner for organizations across healthcare,
@@ -40,8 +40,8 @@ export default function History() {
 
                 {/* Evolution Section */}
                 <section>
-                    <h2 className="text-2xl font-bold text-teal-700 mb-4">Evolution Over the Years</h2>
-                    <p className="text-gray-700 leading-relaxed">
+                    <h2 className="text-2xl font-bold  mb-4">Evolution Over the Years</h2>
+                    <p className="card2 leading-relaxed">
                         Over the years, our company evolved by adopting modern technologies, expanding our 
                         team, and building systems that support thousands of users. Continuous learning,
                         innovation, and adaptability have shaped our growth and helped us stay ahead of
@@ -68,34 +68,34 @@ export default function History() {
 
                 {/* Milestones */}
                 <section>
-                    <h2 className="text-2xl font-bold text-teal-700 mb-4">Key Milestones</h2>
+                    <h2 className="text-2xl font-bold card2 mb-4">Key Milestones</h2>
 
                     <div className="space-y-6">
 
-                        <div className="p-6 bg-white border rounded-xl shadow-sm hover:shadow-md transition-all">
-                            <h3 className="text-xl font-semibold text-teal-700">2018 – Company Established</h3>
-                            <p className="text-gray-600 mt-2">
+                        <div className="p-6 card  border rounded-xl shadow-sm hover:shadow-md transition-all">
+                            <h3 className="text-xl font-semibold ">2018 – Company Established</h3>
+                            <p className=" mt-2 card2">
                                 Official registration and initial establishment of the company.
                             </p>
                         </div>
 
-                        <div className="p-6 bg-white border rounded-xl shadow-sm hover:shadow-md transition-all">
-                            <h3 className="text-xl font-semibold text-teal-700">2020 – Service Expansion</h3>
-                            <p className="text-gray-600 mt-2">
+                        <div className="p-6 card border rounded-xl shadow-sm hover:shadow-md transition-all">
+                            <h3 className="text-xl font-semibold ">2020 – Service Expansion</h3>
+                            <p className="card2 mt-2">
                                 Introduced more services including IT consulting, digital marketing, and automation.
                             </p>
                         </div>
 
-                        <div className="p-6 bg-white border rounded-xl shadow-sm hover:shadow-md transition-all">
-                            <h3 className="text-xl font-semibold text-teal-700">2022 – Major Platform Launch</h3>
-                            <p className="text-gray-600 mt-2">
+                        <div className="p-6 card border rounded-xl shadow-sm hover:shadow-md transition-all">
+                            <h3 className="text-xl font-semibold ">2022 – Major Platform Launch</h3>
+                            <p className="card2 mt-2">
                                 Developed and deployed large-scale platforms for employment and agriculture sectors.
                             </p>
                         </div>
 
-                        <div className="p-6 bg-white border rounded-xl shadow-sm hover:shadow-md transition-all">
-                            <h3 className="text-xl font-semibold text-teal-700">2024 – Modernization & Innovation</h3>
-                            <p className="text-gray-600 mt-2">
+                        <div className="p-6 card border rounded-xl shadow-sm hover:shadow-md transition-all">
+                            <h3 className="text-xl font-semibold ">2024 – Modernization & Innovation</h3>
+                            <p className="card2 mt-2">
                                 Adopted cloud infrastructure, smart automation, AI integration, and modern UI/UX design.
                             </p>
                         </div>
@@ -105,8 +105,8 @@ export default function History() {
 
                 {/* Closing Section */}
                 <section className="pb-12">
-                    <h2 className="text-2xl font-bold text-teal-700 mb-4">Our Journey Continues</h2>
-                    <p className="text-gray-700 leading-relaxed">
+                    <h2 className="text-2xl font-bold  mb-4">Our Journey Continues</h2>
+                    <p className="card2 leading-relaxed">
                         With each passing year, SRIYOG Consulting grows stronger and more dedicated to delivering
                         high-quality digital experiences. Our history reflects our commitment to innovation,
                         service excellence, and building solutions that make a real difference.

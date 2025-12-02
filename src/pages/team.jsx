@@ -25,7 +25,7 @@ const teamMembers = [
 
 const OurTeam = () => {
   return (
-    <div>
+    <div className="about">
       {/* Full-width Ribbon Header */}
       <div className="bg-teal-800 text-white py-8 md:py-12 px-4 md:px-8 mb-6 md:mb-8">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -47,7 +47,7 @@ const OurTeam = () => {
         </div>
 
         {/* President Section */}
-        <div className="rounded-lg mb-8 md:mb-10 border border-gray-300 bg-gray-50 p-4 sm:p-6 md:p-10">
+        <div className="rounded-lg mb-8 md:mb-10 border border-gray-300  p-4 sm:p-6 md:p-10">
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
             {/* President Image */}
             <div className="flex flex-col items-center justify-center w-full md:w-1/3">
@@ -59,7 +59,7 @@ const OurTeam = () => {
               <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-center">
                 Full Name
               </h2>
-              <p className="text-base sm:text-lg md:text-xl text-gray-700 text-center">
+              <p className="text-base sm:text-lg md:text-xl  text-center">
                 C.T.O
               </p>
             </div>
@@ -69,7 +69,7 @@ const OurTeam = () => {
               <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-center md:text-left">
                 About PRACAS
               </h1>
-              <p className="content-text text-gray-800 leading-relaxed text-sm sm:text-base md:text-lg">
+              <p className="content-text  leading-relaxed text-sm sm:text-base md:text-lg">
                 Pracas Upreti's journey from a startup founder to a
                 technology-driven change-maker in Biratnagar, Nepal, exemplifies
                 the profound impact that individuals can have when they combine
@@ -91,7 +91,7 @@ const OurTeam = () => {
 
               {/* Social Media */}
               <div className="mt-4 md:mt-6 flex flex-col sm:flex-row sm:flex-wrap items-center gap-3 md:gap-4 justify-center md:justify-start">
-                <p className="text-gray-900 font-medium text-sm sm:text-base">
+                <p className="card2  font-medium text-sm sm:text-base">
                   Follow us on social media:
                 </p>
                 <div className="flex gap-3 items-center">
@@ -116,7 +116,7 @@ const OurTeam = () => {
           {teamMembers.slice(1).map((member) => (
             <div
               key={member.id}
-              className="bg-gray-50 border border-gray-300 rounded-lg shadow-sm p-3 sm:p-4 md:p-6 flex flex-col items-center text-center transition-transform hover:-translate-y-1 hover:shadow-md"
+              className="card border border-gray-300 rounded-lg shadow-sm p-3 sm:p-4 md:p-6 flex flex-col items-center text-center transition-transform hover:-translate-y-1 hover:shadow-md"
             >
               <img
                 src={member.image}
@@ -126,7 +126,7 @@ const OurTeam = () => {
               <h2 className="text-sm sm:text-base md:text-lg font-semibold line-clamp-2">
                 {member.name}
               </h2>
-              <p className="text-gray-700 text-xs sm:text-sm md:text-base line-clamp-1">
+              <p className="text-gray-500 text-xs sm:text-sm md:text-base line-clamp-1">
                 {member.role}
               </p>
             </div>

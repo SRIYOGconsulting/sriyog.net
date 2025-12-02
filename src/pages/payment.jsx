@@ -20,17 +20,17 @@ const Payment = () => {
       </div>
 
       {/* Main Payment Section */}
-      <section className="min-h-screen bg-white flex flex-col justify-center items-center px-4 py-8 sm:py-10">
+      <section className="min-h-screen  flex flex-col justify-center items-center px-4 py-8 sm:py-10">
         <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* ===== Left: Bank Details ===== */}
-          <div className="text-gray-800 space-y-3 text-center lg:text-left">
+          <div className=" space-y-3 text-center lg:text-left">
             <img
               src="/images/payment/bank-logo.jpg"
               alt="Sriyog Consulting Logo"
               className="w-96 sm:w-[120] mb-5 mx-auto lg:mx-0"
             />
 
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+            <h2 className="text-2xl font-semibold  mb-4">
               Bank Account Details
             </h2>
 
@@ -52,18 +52,18 @@ const Payment = () => {
                 href="https://www.sriyogconsulting.com"
                 target="_blank"
                 rel="noreferrer"
-                className="text-black underline"
+                className=" underline"
               >
                 www.sriyogconsulting.com
               </a>
             </p>
-            <p className="pt-8 text-2xl text-gray-900">
+            <p className="pt-8 text-2xl ">
               <strong>VAT Number:</strong> 606683203
             </p>
           </div>
 
           {/* ===== Right: QR Code Section ===== */}
-          <div className="flex flex-col justify-center items-center border border-black rounded-3xl p-6 sm:p-8 w-full max-w-sm mx-auto shadow-sm">
+          <div className="card flex flex-col justify-center items-center border  rounded-3xl p-6 sm:p-8 w-full max-w-sm mx-auto shadow-sm">
             <img
               src="/images/payment/bank-logo.jpg"
               alt="Sriyog Consulting Logo"
@@ -75,7 +75,7 @@ const Payment = () => {
               className="w-48 sm:w-60 h-auto object-contain mb-6"
             />
 
-            <div className="text-center text-black font-semibold space-y-2 text-sm sm:text-base">
+            <div className="text-center  font-semibold space-y-2 text-sm sm:text-base">
               <p className="text-lg sm:text-xl">Sriyog Consulting Pvt Ltd.</p>
               <p>Account No: 00701017502051</p>
               <p>Branch: Kathmandu</p>
@@ -96,7 +96,7 @@ const Payment = () => {
                 href="https://www.sriyogconsulting.com"
                 target="_blank"
                 rel="noreferrer"
-                className="text-black underline block pt-2 font-medium"
+                className="underline block pt-2 font-medium"
               >
                 www.sriyogconsulting.com
               </a>

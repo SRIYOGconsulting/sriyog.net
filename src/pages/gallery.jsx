@@ -26,7 +26,7 @@ export default function Gallery() {
                     {galleryItems.map((item) => (
                         <div 
                             key={item.id} 
-                            className="group bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden hover:shadow-2xl hover:border-teal-500 transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
+                            className="group card border border-gray-200 rounded-xl shadow-md overflow-hidden hover:shadow-2xl hover:border-teal-500 transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
                         >
                             {/* Image Container */}
                             <div className="relative h-56 overflow-hidden bg-gray-100">
@@ -48,8 +48,8 @@ export default function Gallery() {
                             </div>
 
                             {/* Content */}
-                            <div className="p-5">
-                                <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-teal-700 transition-colors">
+                            <div className="p-5 card2">
+                                <h3 className="font-bold text-xl  mb-2 group-hover:text-teal-700 transition-colors">
                                     {item.title}
                                 </h3>
                                 <div className="flex items-center gap-2 text-sm text-gray-500">

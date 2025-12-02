@@ -51,19 +51,19 @@ export default function Faq() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-lg overflow-hidden"
+              className="border card  rounded-lg overflow-hidden group"
             >
               <button
                 onClick={() => toggleFaq(index)}
-                className="w-full flex justify-between items-center p-6 bg-white hover:bg-gray-50 transition-colors"
+                className="w-full flex justify-between items-center p-6 group-hover:bg-gray-50 transition-colors"
               >
-                <h2 className="text-xl font-semibold text-gray-800">{faq.question}</h2>
-                <span className="text-2xl font-bold text-gray-600">
+                <h2 className="text-xl font-semibold group-hover:text-black">{faq.question}</h2>
+                <span className="text-2xl font-bold card2 group-hover:text-gray-700">
                   {openIndex === index ? '-' : '+'}
                 </span>
               </button>
               {openIndex === index && (
-                <div className="p-6 bg-gray-50 text-gray-600">{faq.answer}</div>
+                <div className="p-6 card3 text-gray-600">{faq.answer}</div>
               )}
             </div>
           ))}

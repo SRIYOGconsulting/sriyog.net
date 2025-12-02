@@ -21,7 +21,7 @@
   --text2 : black;
   --footer: #ffffff;
   --header : #e5e7eb;
-  --border : #a9a9a9;
+  --border : #b9b9b9;
   --sidekick : #EBEBEB;
   --about : #374151;
   --card : #EBEBEB;
@@ -30,12 +30,12 @@
 .dark {
   --bg: #1e1e1e;
   --text: #ffffff;
-  --text2: #f1f1f1;
+  --text2: #dadada;
   --footer: #1e1e1e;
   --header : #2a2a2a;
   --border : #1c1c1c;
   --sidekick : #252525;
-  --about : #252525;
+  --about : #cfcfcf;
   --card : #2a2a2a;
 }
 
@@ -45,10 +45,21 @@
  border-color: var(--text);
 }
 
+
+
 .card2{
   color: var(--text2);
 }
 
+.card3{
+  color: var(--text2);
+  background: var(--border);
+}
+
+.card4{
+  background: var(--text2);
+  color: var(--border);
+}
 body{
   background: var(--bg);
   color: var(--text);

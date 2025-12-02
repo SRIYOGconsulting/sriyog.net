@@ -21,12 +21,12 @@ export default function Message() {
             <div className="max-w-5xl mx-auto px-4 md:px-8 pb-20">
 
                 {/* Title */}
-                <h2 className="text-3xl font-bold text-teal-700 mb-6">
+                <h2 className="text-3xl font-bold  mb-6">
                     Message from The CTO
                 </h2>
 
                 {/* Card */}
-                <div className="bg-white border rounded-xl shadow-md p-8 leading-relaxed text-gray-700">
+                <div className="card border rounded-xl shadow-md p-8 leading-relaxed text-gray-700">
 
                     {/* Optional Image (You can replace or remove it) */}
                     <div className="w-full flex justify-center mb-6">
@@ -73,7 +73,7 @@ export default function Message() {
 
                     {/* Signature */}
                     <div className="mt-10">
-                        <p className="font-bold text-gray-800 text-lg">PRACAS Upreti</p>
+                        <p className="font-bold card2 text-lg">PRACAS Upreti</p>
                         <p className="text-gray-500 text-sm">Chief Technology Officer</p>
                     </div>
                 </div>
