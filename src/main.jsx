@@ -26,6 +26,8 @@ const Videos = React.lazy(() => import("./pages/Videos.jsx"));
 const Vmgo = React.lazy(() => import("./pages/Vmgo.jsx"));
 const WhyUs = React.lazy(() => import("./pages/WhyUs.jsx"));
 const Sitemap = React.lazy(() => import("./pages/Sitemap.jsx"));
+const Downloads = React.lazy(() => import("./pages/Download.jsx"));
+const FAQ = React.lazy(() => import("./pages/FAQ.jsx"));
 
 // Helper to wrap lazy components in Suspense
 const withSuspense = (Component, fallbackText) => (
@@ -42,6 +44,8 @@ const router = createBrowserRouter([
       { path: "", element: <Home /> },
       { path: "about", element: withSuspense(About, "Loading About...") },
       { path: "certificates", element: withSuspense(Certificates, "Loading Certificates...") },
+      { path: "downloads", element: withSuspense(Downloads, "Loading Download...") },
+      { path: "faq", element: withSuspense(FAQ, "Loading FAQ...") },
       { path: "services", element: withSuspense(Services, "Loading Services...") },
       { path: "contact", element: withSuspense(Contact, "Loading Contact...") },
       { path: "feedback", element: withSuspense(Feedback, "Loading Feedback...") },

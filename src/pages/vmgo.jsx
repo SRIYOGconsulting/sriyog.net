@@ -18,11 +18,11 @@ export default function Vmgo() {
       
       {/* Breadcrumbs */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-4">
-        <BasicBreadcrumbs items={breadcrumbItems} />
+       {/* <BasicBreadcrumbs items={breadcrumbItems} /> */}
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
         {/* Vision Section */}
         <section id="vision" className="mb-12 bg-white rounded-lg shadow-md p-8">
           <div className="flex items-center mb-6">

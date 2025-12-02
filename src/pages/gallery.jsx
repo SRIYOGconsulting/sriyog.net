@@ -7,46 +7,54 @@ export default function Gallery() {
         id: i + 1,
         image: `/images/gallery/${i + 1}.jpg`,
         title: `Gallery Event ${i + 1}`,
-        date: 'Oct 24, 2023', // Placeholder date
-        count: Math.floor(Math.random() * 20) + 5 // Random count between 5 and 24
+        date: 'Oct 24, 2023',
+        count: Math.floor(Math.random() * 20) + 5
     }));
 
     return (
-        <div className="min-h-screen font-sans ">
-            <div className="container mx-auto px-4 py-16 max-w-6xl">
-                <div className="text-center mb-16">
-                   <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-8">
+        <div>
+            {/* Full-width Ribbon Header */}
+            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-8">
                 <div className="max-w-7xl mx-auto px-4 md:px-8">
                     <h1 className="text-4xl font-bold">Gallery</h1>
                 </div>
             </div>
-                    <p className="text-lg  max-w-2xl mx-auto">
-                        Explore our collection of memories and events.
-                    </p>
-                </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+            {/* Gallery Grid */}
+            <div className="max-w-7xl mx-auto px-4 md:px-8 pb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {galleryItems.map((item) => (
-                        <div key={item.id} className="card border rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group cursor-pointer">
-                            <div className="relative h-64 overflow-hidden">
+                        <div 
+                            key={item.id} 
+                            className="group bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden hover:shadow-2xl hover:border-teal-500 transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
+                        >
+                            {/* Image Container */}
+                            <div className="relative h-56 overflow-hidden bg-gray-100">
                                 <img
                                     src={item.image}
                                     alt={item.title}
                                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                    onError={(e) => {
+                                        e.target.src = 'https://via.placeholder.com/400x300?text=Gallery+Image';
+                                    }}
                                 />
-                                <div className="absolute inset-0  bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                
+                                {/* Photo Count Badge */}
+                                <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-1.5 shadow-md">
+                                    <FaImages className="text-teal-600 text-sm" />
+                                    <span className="text-sm font-semibold text-gray-700">{item.count}</span>
+                                </div>
                             </div>
+
+                            {/* Content */}
                             <div className="p-5">
-                                <h3 className="font-bold text-lg  mb-2 group-hover:text-blue-600 transition-colors">{item.title}</h3>
-                                <div className="flex justify-between items-center text-sm text-gray-500">
-                                    <div className="flex items-center space-x-1">
-                                        <FaCalendarAlt className="text-gray-400" />
-                                        <span>{item.date}</span>
-                                    </div>
-                                    <div className="flex items-center space-x-1 bg-gray-100 px-2 py-1 rounded-full">
-                                        <FaImages className="text-gray-400" />
-                                        <span>{item.count} Photos</span>
-                                    </div>
+                                <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-teal-700 transition-colors">
+                                    {item.title}
+                                </h3>
+                                <div className="flex items-center gap-2 text-sm text-gray-500">
+                                    <FaCalendarAlt className="text-gray-400" />
+                                    <span>{item.date}</span>
                                 </div>
                             </div>
                         </div>

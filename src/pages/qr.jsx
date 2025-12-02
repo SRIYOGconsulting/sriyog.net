@@ -55,12 +55,12 @@ function Qr() {
   return (
     <div>
       {/* Breadcrumb */}
-      <BasicBreadcrumbs items={breadcrumbItems} />
+      {/*<BasicBreadcrumbs items={breadcrumbItems} />
 
       {/* Page Header */}
       <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-8">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl font-bold">QR Codes & Quick Access</h1>
+          <h1 className="text-4xl font-bold">QR </h1>
         </div>
       </div>
 

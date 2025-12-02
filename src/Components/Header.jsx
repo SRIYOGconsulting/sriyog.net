@@ -80,16 +80,13 @@ const Header = () => {
               Notice
             </button>
           </Link>
-
-         {/* Search */}
-          <div className="flex items-center relative ml-4">
-            {/* Search Icon */}
-            <img
-              src="/icons/search.svg"
-              alt="Search"
-              className="w-6 h-6 cursor-pointer"
-              onClick={() => setShowSearch(prev => !prev)}
-            />
+          {/* SEARCH ICON */}
+          <img
+            src="/icons/search.svg"
+            alt="Search"
+            className="w-6 h-6 cursor-pointer"
+            onClick={() => setShowSearch((prev) => !prev)}
+          />
 
             {/* Sliding Input */}
             <input
@@ -103,7 +100,6 @@ const Header = () => {
                 ${showSearch ? "w-64 opacity-100 px-3 py-1" : "w-0 opacity-0 px-0 py-0 overflow-hidden"}`}
               style={{ height: "32px" }}
             />
-          </div>
 
           <div>
             <button

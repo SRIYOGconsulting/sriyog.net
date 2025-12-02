@@ -10,7 +10,7 @@ const Payment = () => {
   return (
     <div>
       {/* Breadcrumb at the top */}
-      <BasicBreadcrumbs items={breadcrumbItems} />
+      {/*<BasicBreadcrumbs items={breadcrumbItems} />*/}
 
       {/* Page Header */}
       <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-8">

@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import RoadBlock from "./Components/RoadBlock";
 import NavBar from "./Components/NavBar";
+import BrowserCompatibilityWarning from "./Components/BrowserCompatibilityWarning";
 import './index.css'
 import Sidekick from "./Components/Sidekick";
 import Footer from "./Components/Footer";
@@ -18,6 +19,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col overflow-hidden">
+      <BrowserCompatibilityWarning />  {/* Browser warning at the very top */}
       <LoadfromTop/>
       <NavBar />
       <Header />

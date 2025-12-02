@@ -25,9 +25,16 @@ function VideoPage() {
   ];
 
   return (
+            <div >
+            {/* <BasicBreadcrumbs items={breadcrumbItems} /> */}
+
+           <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-12">
+                <div className="max-w-7xl mx-auto px-4 md:px-8">
+                    <h1 className="text-4xl font-bold">Videos</h1>
+
+              </div>
+            </div>
     <div className="bg-white min-h-screen font-sans">
-      {/* Breadcrumb */}
-      <BasicBreadcrumbs items={breadcrumbItems} />
 
       {/* Featured Video Section */}
       <section className="max-w-6xl mx-auto bg-[#0D5D59] rounded-md mt-16 md:mt-20 shadow-lg px-4 sm:px-6 py-10 sm:py-12 md:py-16">
@@ -82,6 +89,7 @@ function VideoPage() {
           ))}
         </div>
       </section>
+    </div>
     </div>
   );
 }
