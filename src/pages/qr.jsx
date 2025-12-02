@@ -55,39 +55,37 @@ function Qr() {
   return (
     <div>
       {/* Breadcrumb */}
-      {/*<BasicBreadcrumbs items={breadcrumbItems} />
+      {/* <BasicBreadcrumbs items={breadcrumbItems} /> */}
 
       {/* Page Header */}
       <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-8">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl font-bold">QR </h1>
+          <h1 className="text-4xl font-bold">QR Codes</h1>
         </div>
       </div>
 
       {/* Cards */}
       <section className="min-h-screen bg-gray-50 flex flex-col items-center py-10 px-4">
-        <div className="max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 w-full">
           {cardData.map((card) => (
             <a
               key={card.id}
               href={card.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center text-center justify-between bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 w-96 h-[28rem] mx-auto"
+              className="flex flex-col items-center text-center justify-between bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 w-full sm:w-[22rem] lg:w-auto h-auto mx-auto p-4 md:p-6"
             >
-              <div className="pt-8 flex flex-col items-center">
-                {card.image && (
-                  <img
-                    src={card.image}
-                    alt={card.title}
-                    className="w-64 h-64 object-contain mb-4 rounded-md shadow-sm"
-                  />
-                )}
-                <h3 className="text-2xl font-semibold text-gray-900 mb-2">
-                  {card.title}
-                </h3>
-                <p className="text-gray-600 text-sm px-4">{card.description}</p>
-              </div>
+              {card.image && (
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="w-full max-w-xs h-auto object-contain mb-4 rounded-md shadow-sm"
+                />
+              )}
+              <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+                {card.title}
+              </h3>
+              <p className="text-gray-600 text-sm px-2 md:px-4">{card.description}</p>
             </a>
           ))}
         </div>
