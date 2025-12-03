@@ -1,83 +1,111 @@
-import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
+import React from "react";
 
-export default function Message() {
-    const breadcrumbItems = [
-        { label: 'Home', path: '/' },
-        { label: 'Message', path: '/message' }
-    ];
-
-    return (
-        <div>
-            {/* <BasicBreadcrumbs items={breadcrumbItems} /> */}
-
-            {/* Header */}
-            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-12">
-                <div className="max-w-7xl mx-auto px-4 md:px-8">
-                    <h1 className="text-4xl font-bold">Message</h1>
-                </div>
-            </div>
-
-            {/* Main Section */}
-            <div className="max-w-5xl mx-auto px-4 md:px-8 pb-20">
-
-                {/* Title */}
-                <h2 className="text-3xl font-bold  mb-6">
-                    Message from The CTO
-                </h2>
-
-                {/* Card */}
-                <div className="card border rounded-xl shadow-md p-8 leading-relaxed text-gray-700">
-
-                    {/* Optional Image (You can replace or remove it) */}
-                    <div className="w-full flex justify-center mb-6">
-                        <div className="w-40 h-40 rounded-full overflow-hidden shadow-md bg-gray-200">
-                            <img
-                                src="/images/message/1.png"
-                                alt="CTO"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
-                    </div>
-
-                    {/* Message Content */}
-                    <p className="mb-6">
-                        Technology has been connecting everyone from one corner of the globe to another 
-                        corner in the very fastest way. Businesses and almost all organisations need to 
-                        have their proper digital presence and adapt technology in a very effective way. 
-                        Their main motive should be to perform great in competition and stay ahead.
-                    </p>
-
-                    <p className="mb-6">
-                        My journey into the realm of technology began over a decade ago when I founded 
-                        my first IT startup in 2007 A.D. as <span className="font-semibold">PRACAS Infosys</span> 
-                        in Biratnagar. Recognizing the potential of technology to bridge the digital divide 
-                        and catalyze progress, I embarked on a mission to leverage digital solutions to 
-                        address local challenges and foster economic development.
-                    </p>
-
-                    <p className="mb-6">
-                        My vision was not merely to create successful businesses but to effect meaningful 
-                        change in my community. I have contributed to more than 500 clients across 
-                        15 countries, helping them develop websites, optimize search visibility, build 
-                        mobile applications, manage social media, strengthen digital presence, implement 
-                        corporate email solutions, and offer dedicated IT consulting services.
-                    </p>
-
-                    <p className="mb-6">
-                        Having good Information Technology practices can grow businesses faster, enhance 
-                        digital presence, save expensive man hours, optimize workforce, manage data privacy, 
-                        and protect the reputation of any organisation from forthcoming digital disasters 
-                        like data loss, hacking, identity theft, ransomware attacks, and other unforeseen 
-                        issues which we may face anytime.
-                    </p>
-
-                    {/* Signature */}
-                    <div className="mt-10">
-                        <p className="font-bold card2 text-lg">PRACAS Upreti</p>
-                        <p className="text-gray-500 text-sm">Chief Technology Officer</p>
-                    </div>
-                </div>
-            </div>
+const Message = () => {
+  return (
+    <div className="message-page">
+      {/* Full-width Teal Ribbon Header */}
+      <header className="bg-teal-800 text-white py-8 md:py-12 px-4 md:px-8 mb-6 md:mb-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <h1 className="text-3xl md:text-4xl font-bold">Message</h1>
         </div>
-    );
-}
+      </header>
+
+      {/* Main Content */}
+      <main className="bg-gray-100 py-14 px-4 md:px-10 lg:px-16">
+        <div className="bg-white rounded-2xl p-10 md:p-14 max-w-5xl mx-auto shadow-md">
+          {/* Logo */}
+          <div className="flex justify-center mb-10">
+            <img
+              src="/images/Logo/sriyoglogo.svg"
+              alt="Sriyog Logo"
+              className="w-40 h-auto"
+            />
+          </div>
+
+          {/* Message Paragraphs */}
+          <section className="space-y-6 text-justify text-gray-700 leading-relaxed mb-10">
+            <p>
+              Technology has been connecting everyone from one corner of the
+              globe to another in the fastest way. Businesses and organizations
+              need a strong digital presence and must adopt technology
+              effectively to stay ahead in competition.
+            </p>
+
+            <p>
+              My journey into technology began over a decade ago when I founded
+              <strong> PRACAS Infosys</strong> in 2007 A.D. in Biratnagar. I
+              aimed to leverage digital solutions to address local challenges
+              and foster economic development.
+            </p>
+
+            <p>
+              My vision has always been to create meaningful impact. I have
+              worked with over 500 clients across 15 countries, helping them
+              with websites, mobile apps, SEO, social media, corporate emails,
+              and IT consulting.
+            </p>
+
+            <p>
+              Good IT practices help businesses grow faster, enhance digital
+              presence, optimize workforce, protect data, and safeguard
+              reputation against digital threats like hacking, ransomware, or
+              identity theft.
+            </p>
+          </section>
+
+          {/* Two Paragraphs + Image */}
+          <section className="flex flex-wrap md:flex-nowrap items-start gap-10 mb-12">
+            {/* Left Text */}
+            <div className="w-full md:w-3/5 space-y-6 text-justify text-gray-700 leading-relaxed">
+              <p>
+                Technology is transforming industries globally, creating
+                opportunities for innovation and growth. At Sriyog, we harness
+                these advancements to support businesses and individuals in
+                achieving their highest potential.
+              </p>
+
+              <p>
+                We believe in smart digital transformation solutions that solve
+                today's problems and prepare organizations for the future. Our
+                commitment is to deliver excellence and measurable value through
+                every service.
+              </p>
+            </div>
+
+            {/* Right Image */}
+            <div className="w-full md:w-2/5 flex justify-center md:justify-end">
+              <div className="w-48 h-48 rounded-full overflow-hidden shadow-md bg-gray-200">
+                <img
+                  src="/images/message/1.png"
+                  alt="CTO"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* Contact Info */}
+          <footer className="mt-10 text-left">
+            <p className="text-xl font-bold">Prakash Upreti [ PRACAS ]</p>
+            <p className="text-gray-600 text-sm mb-2">
+              Chief Technology Officer
+            </p>
+            <p className="text-gray-700 font-medium mb-4">p@sriyog.com</p>
+
+            {/* Social Icons */}
+            <div className="flex gap-4 mt-3">
+              <img src="/icons/x.svg" alt="Twitter" className="w-5 h-5" />
+              <img
+                src="/icons/linkedin.svg"
+                alt="LinkedIn"
+                className="w-5 h-5"
+              />
+            </div>
+          </footer>
+        </div>
+      </main>
+    </div>
+  );
+};
+
+export default Message;
