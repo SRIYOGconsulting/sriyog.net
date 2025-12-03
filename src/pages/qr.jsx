@@ -23,7 +23,7 @@ const cardData = [
   },
   {
     id: 3,
-    title: "Google",
+    title: "Google Reviews",
     image: "/images/qr/google.jpg",
     link: "tel:+9779852024365",
     description: "Get in touch with our team for consultations and support.",
