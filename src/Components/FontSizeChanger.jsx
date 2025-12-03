@@ -41,15 +41,15 @@ const FontSizeChanger = () => {
   };
 
   return (
-    <div className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-gray-200">
-      <span className="text-gray-700 font-medium text-sm">Change Font Size:</span>
+    <div className="flex items-center gap-3 p-3 card rounded-lg shadow-sm border border-gray-200">
+      <span className=" font-medium text-sm">Change Font Size:</span>
       <div className="flex gap-2">
         <button
           onClick={() => changeFontSize('small')}
           className={`w-10 h-10 flex items-center justify-center border-2 rounded-md font-semibold transition-all ${
             fontSize === 'small'
-              ? 'border-teal-600 bg-teal-50 text-teal-700'
-              : 'border-gray-300 text-gray-600 hover:border-teal-400 hover:bg-gray-50'
+              ? 'border-teal-600 card4'
+              : 'card hover:border-teal-400 hover:bg-gray-50'
           }`}
           title="Small font size"
         >
@@ -60,8 +60,8 @@ const FontSizeChanger = () => {
           onClick={() => changeFontSize('medium')}
           className={`w-10 h-10 flex items-center justify-center border-2 rounded-md font-semibold transition-all ${
             fontSize === 'medium'
-              ? 'border-teal-600 bg-teal-50 text-teal-700'
-              : 'border-gray-300 text-gray-600 hover:border-teal-400 hover:bg-gray-50'
+              ? 'border-teal-600 card4'
+              : 'card hover:border-teal-400 hover:bg-gray-50'
           }`}
           title="Medium font size"
         >
@@ -72,8 +72,8 @@ const FontSizeChanger = () => {
           onClick={() => changeFontSize('large')}
           className={`w-10 h-10 flex items-center justify-center border-2 rounded-md font-semibold transition-all ${
             fontSize === 'large'
-              ? 'border-teal-600 bg-teal-50 text-teal-700'
-              : 'border-gray-300 text-gray-600 hover:border-teal-400 hover:bg-gray-50'
+              ? 'border-teal-600 card4 '
+              : 'card hover:border-teal-400 hover:bg-gray-50'
           }`}
           title="Large font size"
         >

@@ -33,15 +33,15 @@ export default function Certificate() {
                     {certificates.map((cert, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-lg shadow-md overflow-hidden w-full max-w-xs hover:shadow-lg transition-shadow duration-300"
+                            className="card rounded-lg shadow-md overflow-hidden w-full max-w-xs hover:shadow-lg transition-shadow duration-300"
                         >
                             <img
                                 src={cert.img}
                                 alt={cert.title}
                                 className="w-full h-48 object-cover"
                             />
-                            <div className="p-4">
-                                <h2 className="text-lg font-medium text-gray-800">{cert.title}</h2>
+                            <div className="p-4 card2">
+                                <h2 className="text-lg font-medium ">{cert.title}</h2>
                                 <p className="text-gray-500 text-sm mt-2">
                                     Short description about the certificate.
                                 </p>

@@ -24,7 +24,7 @@ export default function Contact() {
         console.log('Form submitted:', formData);
         // Add your form submission logic here
     };
-
+    
     const teamMembers = [
         {
             name: 'Prakash',

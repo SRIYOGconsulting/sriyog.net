@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Download() {
+  // Table data
   const files = [
     { title: "Meeting Minutes", size: "44.42 KB", type: "PDF Document", date: "12/2/2025", link: "#" },
     { title: "Work Order", size: "9.07 KB", type: "Word Document", date: "12/2/2025", link: "#" },
@@ -31,7 +32,8 @@ export default function Download() {
           <h1 className="text-4xl font-bold">Download</h1>
         </div>
       </div>
-
+    
+    <div className="px-5 py-10 max-w-7xl mx-auto">
       <div className="px-5 py-10 max-w-7xl mx-auto">
 
         {/* Desktop Table */}
@@ -97,6 +99,7 @@ export default function Download() {
         </div>
 
       </div>
+    </div>
     </div>
   );
 }

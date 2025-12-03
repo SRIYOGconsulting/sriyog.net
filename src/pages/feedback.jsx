@@ -43,13 +43,13 @@ export default function Feedback() {
             {/* FORM SECTION */}
             <div className="px-4 sm:px-6 md:px-8 lg:px-0 py-10 max-w-3xl mx-auto font-sans">
 
-                <p className="text-center text-gray-700 mb-10 px-2">
+                <p className="text-center  mb-10 px-2">
                     Please share your experience with our services. Your feedback helps us improve.
                 </p>
 
                 <form 
                     onSubmit={handleSubmit}
-                    className="space-y-6 bg-white p-6 sm:p-8 rounded-xl shadow-md border border-gray-200"
+                    className="space-y-6 card p-6 sm:p-8 rounded-xl shadow-md border border-gray-200"
                 >
 
                     {/* Name */}
@@ -91,7 +91,7 @@ export default function Feedback() {
                             value={formData.service}
                             onChange={handleChange}
                             required
-                            className="px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-700 focus:outline-none"
+                            className="px-4 py-3 text-black border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-700 focus:outline-none"
                         >
                             <option value="">Select a service</option>
                             <option value="Website Development">Website Development</option>

@@ -34,7 +34,7 @@ function VideoPage() {
 
               </div>
             </div>
-    <div className="bg-white min-h-screen font-sans">
+    <div className=" min-h-screen font-sans">
 
       {/* Featured Video Section */}
       <section className="max-w-6xl mx-auto bg-[#0D5D59] rounded-md mt-16 md:mt-20 shadow-lg px-4 sm:px-6 py-10 sm:py-12 md:py-16">
@@ -61,7 +61,7 @@ function VideoPage() {
 
       {/* Video Gallery Section */}
       <section className="max-w-7xl mx-auto py-14 px-4 sm:px-6 md:px-8">
-        <h2 className="text-[#0D5D59] text-xl sm:text-2xl md:text-3xl font-semibold text-center mb-10">
+        <h2 className="card2 text-xl sm:text-2xl md:text-3xl font-semibold text-center mb-10">
           Sriyog Consulting Videos
         </h2>
 

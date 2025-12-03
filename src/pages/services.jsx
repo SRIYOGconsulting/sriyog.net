@@ -6,6 +6,7 @@ export default function Services() {
         { label: 'Services', path: '/services' }
     ];
 
+    
     const servicesList = [
         {
             title: "Data Processing",
