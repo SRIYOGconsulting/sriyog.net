@@ -123,7 +123,7 @@ const Footer = () => {
                 <a href="https://trello.com" target="_blank" className="hover:text-green-700">Trello Board</a>
               </li>
               <li className={`py-1 cursor-pointer ${hoverBox}`}>
-                <Link to="/contact" className="hover:text-green-700">Location</Link>
+                <Link to="/location" className="hover:text-green-700">Location</Link>
               </li>
               <li className={`py-1 cursor-pointer ${hoverBox}`}>
                 <Link to="/refund-policy" className="hover:text-green-700">Refund Policy</Link>

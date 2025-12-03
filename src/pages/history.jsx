@@ -31,9 +31,9 @@ export default function History() {
 
                     <div className="mt-6 rounded-lg overflow-hidden shadow-md">
                         <img
-                            src="/images/history/1.jpg"
-                            alt="History Image 1"
-                            className="w-full h-72 object-cover"
+                            src="/images/history/2.jpg"
+                            alt="History Beginning"
+                            className="w-full h-full object-cover"
                         />
                     </div>
                 </section>
@@ -48,21 +48,49 @@ export default function History() {
                         technological advancements.
                     </p>
 
+                    {/* Two Card Format */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                        <div className="rounded-lg overflow-hidden shadow-md">
+
+                        {/* Card 1 */}
+                        <div className="bg-white p-6 shadow rounded-xl border hover:shadow-md transition">
                             <img
-                                src="/images/history/2.png"
-                                alt="History Image 2"
-                                className="w-full h-56 object-contain"
+                                src="/images/history/1.png"  // Male placeholder
+                                alt="Male Placeholder"
+                                className="w-28 h-28 mx-auto rounded-full object-cover mb-4"
                             />
+
+                            <h3 className="text-xl font-semibold text-center text-teal-700">
+                                Full Name
+                            </h3>
+                            <p className="text-center text-gray-600 text-sm">
+                                Designation
+                            </p>
+                            <p className="mt-3 text-gray-700 text-center text-sm leading-relaxed">
+                                Short placeholder message about this individual’s contribution
+                                or involvement in the company’s evolution.
+                            </p>
                         </div>
-                        <div className="rounded-lg overflow-hidden shadow-md">
+
+                        {/* Card 2 */}
+                        <div className="bg-white p-6 shadow rounded-xl border hover:shadow-md transition">
                             <img
-                                src="/images/history/1.png"
-                                alt="History Image 3"
-                                className="w-full h-56 object-contain"
+                                src="/images/history/2.png"  // Female placeholder
+                                alt="Female Placeholder"
+                                className="w-28 h-28 mx-auto rounded-full object-cover mb-4"
                             />
+
+                            <h3 className="text-xl font-semibold text-center text-teal-700">
+                                Full Name
+                            </h3>
+                            <p className="text-center text-gray-600 text-sm">
+                                Designation
+                            </p>
+                            <p className="mt-3 text-gray-700 text-center text-sm leading-relaxed">
+                                Short placeholder message describing contributions, leadership,
+                                or role in the company’s development.
+                            </p>
                         </div>
+
                     </div>
                 </section>
 
@@ -114,7 +142,6 @@ export default function History() {
                 </section>
 
             </div>
-
         </div>
     );
 }

@@ -32,7 +32,7 @@ export default function About() {
 
                 <div className="flex flex-col md:flex-row gap-6 md:gap-8">
                      {/* Image on mobile - inserted here for better reading flow */}
-                        <div className="md:hidden rounded-lg overflow-hidden ">
+                        <div className="md:hidden overflow-hidden">
                             <img
                                 src="/images/about/1.png"
                                 alt="About SRIYOG 1"
@@ -78,7 +78,7 @@ export default function About() {
 
                     {/* Right side - Images (Desktop only) */}
                     <div className="hidden md:block md:w-1/3 space-y-6">
-                        <div className="rounded-lg overflow-hidden shadow-md">
+                        <div className="overflow-hidden">
                             <img
                                 src="/images/about/1.png"
                                 alt="About SRIYOG 1"
@@ -88,8 +88,8 @@ export default function About() {
                     </div>
                 </div>
                 
-                {/* Clap Button with better mobile spacing */}
-                <div className="mt-6 md:mt-8">
+                {/* Clap Button with better mobile spacing - aligned left */}
+                <div className="mt-6 md:mt-8 flex justify-start">
                     <ClapButton/>
                 </div>
             </div>

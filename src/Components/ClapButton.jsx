@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from "react";
 
 const ClapButton = () => {
@@ -23,15 +21,13 @@ setClapCount(clapCount + 1);
 setTotalClaps(totalClaps + 1);
 setIsClicked(true);
 
-
-
   setTimeout(() => setIsClicked(false), 300);
 }
 };
 
 return (
 <div style={styles.container}>
-    <div className="flex items-center gap-2 justify-center">
+    <div className="flex items-center gap-2">
         <button
         onClick={handleClap}
         disabled={clapCount === MAX_CLAPS}
@@ -41,9 +37,9 @@ return (
         ...(clapCount === MAX_CLAPS ? styles.disabled : {}),
         }}
         >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 20 20">
             <title>Hands-clapping SVG Icon</title>
-            <g fill={color} fill-rule="evenodd" clip-rule="evenodd">
+            <g fill={color} fillRule="evenodd" clipRule="evenodd">
                 <path d="M3.268 10.422a1.5 1.5 0 1 1 2.166-2.076L8.2 11.234a.5.5 0 1 1-.722.692L4.712 9.038a.5.5 0 0 0-.722.692l2.767 2.888a.5.5 0 0 1-.722.692z"/>
                 <path d="M4.02 8.316a1.5 1.5 0 1 1 2.166-2.075l2.767 2.888a.5.5 0 1 1-.722.692L5.464 6.932a.5.5 0 1 0-.722.692l2.767 2.888a.5.5 0 0 1-.722.692z"/>
                 <path d="M6.156 7.654A1.5 1.5 0 1 1 8.322 5.58l3.116 3.251a.5.5 0 1 1-.723.692L7.6 6.271a.5.5 0 1 0-.722.692L9.645 9.85a.5.5 0 1 1-.722.691z"/>
@@ -56,9 +52,6 @@ return (
             </button>
             <div style={styles.total}>{totalClaps.toLocaleString()}</div>
         </div>
-
-
-  <div style={styles.counter}>+{clapCount}</div>
 </div>
 );
 };
@@ -67,7 +60,7 @@ export default ClapButton;
 
 const styles = {
 container: {
-textAlign: "center",
+textAlign: "left",
 marginTop: "20px",
 },
 button: {
@@ -86,12 +79,6 @@ transform: "scale(1.3)",
 disabled: {
 cursor: "not-allowed",
 opacity: 0.5,
-},
-counter: {
-fontSize: "18px",
-color: "#ff5722",
-marginTop: "10px",
-fontWeight: "bold",
 },
 total: {
 fontSize: "15px",

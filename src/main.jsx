@@ -28,6 +28,8 @@ const WhyUs = React.lazy(() => import("./pages/WhyUs.jsx"));
 const Sitemap = React.lazy(() => import("./pages/Sitemap.jsx"));
 const Downloads = React.lazy(() => import("./pages/Download.jsx"));
 const FAQ = React.lazy(() => import("./pages/FAQ.jsx"));
+const Location = React.lazy(() => import("./pages/Location.jsx"));
+const Refundpolicy = React.lazy(() => import("./pages/Refundpolicy.jsx"));
 
 // Helper to wrap lazy components in Suspense
 const withSuspense = (Component, fallbackText) => (
@@ -48,6 +50,8 @@ const router = createBrowserRouter([
       { path: "faq", element: withSuspense(FAQ, "Loading FAQ...") },
       { path: "services", element: withSuspense(Services, "Loading Services...") },
       { path: "contact", element: withSuspense(Contact, "Loading Contact...") },
+      { path: "location", element: withSuspense(Location, "Loading Location...") },
+      { path: "refund-policy", element: withSuspense(Refundpolicy, "Loading Refundpolicy...") },
       { path: "feedback", element: withSuspense(Feedback, "Loading Feedback...") },
       { path: "gallery", element: withSuspense(Gallery, "Loading Gallery...") },
       { path: "history", element: withSuspense(History, "Loading History...") },

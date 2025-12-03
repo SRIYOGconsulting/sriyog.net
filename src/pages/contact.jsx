@@ -1,78 +1,296 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Contact() {
-    // Minimalistic team members
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        countryCode: 'Nepal (+977)',
+        phone: '',
+        extension: '',
+        topic: 'Sales',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('Form submitted:', formData);
+        // Add your form submission logic here
+    };
+
     const teamMembers = [
-        { name: 'Alice Johnson', designation: 'CEO', img: '/images/contact/1.png', whatsapp: '+1234567890' },
-        { name: 'Bob Smith', designation: 'CTO', img: '/images/contact/2.png', whatsapp: '+1234567891' },
-        { name: 'Carol Lee', designation: 'CMO', img: '/images/contact/3.png', whatsapp: '+1234567892' },
+        {
+            name: 'Prakash',
+            designation: 'Project Manager',
+            img: '/images/contact/1.png',
+            email: 'prakash@sriyog.com'
+        },
+        {
+            name: 'Bijay',
+            designation: 'Internship Coordinator',
+            img: '/images/contact/2.png',
+            email: 'bijay@sriyog.com'
+        },
+        {
+            name: 'PRACAS',
+            designation: 'CTO',
+            img: '/images/contact/1.png',
+            email: 'pracas@sriyog.com'
+        },
+    ];
+
+    const services = [
+        { icon: '/icons/2.svg', title: 'Training', desc: 'Join our classes to sharpen your skills.' },
+        { icon: '/icons/3.svg', title: 'Workshop', desc: 'Hands-in IT workshop & seminar.' },
+        { icon: '/icons/4.svg', title: 'Meeting', desc: 'Book a Meeting to discuss and clarify your needs.' },
+        { icon: '/icons/shield.svg', title: 'Internship', desc: 'Get experiences in real time projects.' }
+    ];
+
+    const countries = [
+        'Nepal (+977)', 'Afghanistan (+93)', 'Albania (+355)', 'Algeria (+213)',
+        'Andorra (+376)', 'Angola (+244)', 'Antigua and Barbuda (+1-268)',
+        'Argentina (+54)', 'Armenia (+374)', 'Australia (+61)', 'Austria (+43)',
+        'Azerbaijan (+994)', 'Bahrain (+973)', 'Bangladesh (+880)', 'Barbados (+1-246)',
+        'Belarus (+375)', 'Belgium (+32)', 'Belize (+501)', 'Benin (+229)'
+        // Add more countries as needed
     ];
 
     return (
-        <div>
-            {/* Full-width Ribbon Header */}
-            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-8">
+        <div className="bg-white min-h-screen">
+            {/* Header Section */}
+            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-12">
                 <div className="max-w-7xl mx-auto px-4 md:px-8">
                     <h1 className="text-4xl font-bold">Contact</h1>
                 </div>
             </div>
 
-            <div className="px-6 py-12 max-w-5xl mx-auto font-sans">
-                {/* Contact Details & Map */}
-                <div className="flex flex-col md:flex-row gap-12 mb-16">
-                    {/* Left: Contact Details */}
-                    <div className="md:w-1/2 space-y-6">
-                        <h2 className="text-2xl font-medium">Get in Touch</h2>
-                        <p className="">
-                            We'd love to hear from you. Reach out to us via any of the following:
-                        </p>
-                        <div className="space-y-2 ">
-                            <p><strong>Email:</strong> contact@company.com</p>
-                            <p><strong>Phone:</strong> +123 456 7890</p>
-                            <p><strong>Address:</strong> 123 Main Street, Kathmandu, Nepal</p>
-                            <p><strong>Working Hours:</strong> Mon - Fri, 9:00 AM - 6:00 PM</p>
+            <div className="max-w-7xl mx-auto px-4 md:px-8 pb-16">
+                {/* Main Content Grid */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                    {/* Left Side - Map and Services */}
+                    <div className="space-y-6">
+                        {/* Welcome Section */}
+                        <div className="bg-white border border-gray-200 rounded-lg p-6">
+                            <h2 className="text-2xl font-bold text-teal-700 mb-3">Welcome to SRIYOG Consulting</h2>
+                            <p className="text-gray-700 text-sm mb-4">
+                                Welcome to SRIYOG Consulting! We're located at Rem.Work, Kamalpokhari, Kathmandu, Nepal
+                            </p>
+
+                            {/* Google Map */}
+                            <div className="rounded-lg overflow-hidden border border-gray-200 h-64 mb-3">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.1234567890!2d85.3240!3d27.7172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190123456789%3A0x1234567890abcdef!2sKamalpokhari%2C%20Kathmandu%2C%20Nepal!5e0!3m2!1sen!2sus!4v1699999999999"
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0 }}
+                                    allowFullScreen=""
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                ></iframe>
+                            </div>
+                            <a
+                                href="https://maps.google.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-teal-700 hover:text-teal-800 font-medium text-sm"
+                            >
+                                Directions →
+                            </a>
                         </div>
+
+                        {/* Services Grid */}
+                        <div className="grid grid-cols-2 gap-4">
+                            {services.map((service, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow flex items-start gap-4"
+                                >
+                                    {/* Icon (left) */}
+                                    <img
+                                        src={service.icon}
+                                        alt={service.title}
+                                        className="w-10 h-10 flex-shrink-0"
+                                    />
+
+                                    {/* Text (right) */}
+                                    <div>
+                                        <h3 className="text-lg font-bold text-teal-700 mb-2">
+                                            {service.title}
+                                        </h3>
+                                        <p className="text-gray-700 text-sm">
+                                            {service.desc}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
                     </div>
 
-                    {/* Right: Google Map */}
-                    <div className="md:w-1/2 h-80 md:h-full rounded-lg overflow-hidden shadow-sm">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.1234567890!2d85.3240!3d27.7172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190123456789%3A0x1234567890abcdef!2sKathmandu%2C%20Nepal!5e0!3m2!1sen!2sus!4v1699999999999"
-                            width="100%"
-                            height="100%"
-                            style={{ border: 0 }}
-                            allowFullScreen=""
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                        ></iframe>
+                    {/* Right Side - Contact Form */}
+                    <div className="bg-white border border-gray-200 rounded-lg p-8">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="w-8 h-8">
+                                <img src="/icons/email.svg" alt="email" className="w-full h-full" />
+                            </div>
+                            <h2 className="text-2xl font-bold text-teal-700">Send Your Queries</h2>
+                        </div>
+
+                        <form onSubmit={handleSubmit} className="space-y-4">
+                            {/* Name Fields */}
+                            <div className="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-700 mb-2">First Name</label>
+                                    <input
+                                        type="text"
+                                        name="firstName"
+                                        placeholder="eg: Madan"
+                                        value={formData.firstName}
+                                        onChange={handleChange}
+                                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent focus:bg-white"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-700 mb-2">Last Name</label>
+                                    <input
+                                        type="text"
+                                        name="lastName"
+                                        placeholder="eg: Tamang"
+                                        value={formData.lastName}
+                                        onChange={handleChange}
+                                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent focus:bg-white"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Email */}
+                            <div>
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="eg: madan@sriyog.com"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    className="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent focus:bg-white"
+                                />
+                                <p className="text-xs text-gray-500 mt-1.5">We'll never share your email with anyone else.</p>
+                            </div>
+
+                            {/* Phone Fields */}
+                            <div className="grid grid-cols-3 gap-4">
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-700 mb-2">Country Code</label>
+                                    <select
+                                        name="countryCode"
+                                        value={formData.countryCode}
+                                        onChange={handleChange}
+                                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent focus:bg-white"
+                                    >
+                                        {countries.map((country, index) => (
+                                            <option key={index} value={country}>{country}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-700 mb-2">Phone</label>
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        placeholder="Phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent focus:bg-white"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-700 mb-2">Extension</label>
+                                    <input
+                                        type="text"
+                                        name="extension"
+                                        placeholder="Extension"
+                                        value={formData.extension}
+                                        onChange={handleChange}
+                                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent focus:bg-white"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Topic */}
+                            <div>
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">What do you need help with?</label>
+                                <select
+                                    name="topic"
+                                    value={formData.topic}
+                                    onChange={handleChange}
+                                    className="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent focus:bg-white"
+                                >
+                                    <option value="Sales">Sales</option>
+                                    <option value="Support">Support</option>
+                                    <option value="Billing">Billing</option>
+                                    <option value="Complain">Complain</option>
+                                    <option value="Training">Training</option>
+                                    <option value="Internship">Internship</option>
+                                    <option value="Certificates">Certificates</option>
+                                    <option value="Meeting">Meeting</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </div>
+
+                            {/* Message */}
+                            <div>
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">Message</label>
+                                <textarea
+                                    name="message"
+                                    placeholder="Message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    rows="4"
+                                    className="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none focus:bg-white"
+                                ></textarea>
+                            </div>
+
+                            {/* Submit Button */}
+                            <button
+                                type="submit"
+                                className="w-40 bg-teal-700 text-white py-2 rounded hover:bg-teal-800 transition-colors text-sm"
+                            >
+                                Submit
+                            </button>
+                        </form>
                     </div>
                 </div>
 
+                {/* Quick Contact Section */}
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl text-teal-700 mb-2">Quick Contact</h2>
+                    <p className="text-gray-600">Quick contact the relevant people.</p>
+                </div>
+
                 {/* Team Members */}
-                <h2 className="text-3xl font-medium mb-8 text-center">Our Team</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
                     {teamMembers.map((member, index) => (
                         <div
                             key={index}
-                            className="w-full max-w-xs text-center space-y-4"
+                            className="bg-white rounded-lg p-8 text-center hover:shadow-lg transition-shadow"
                         >
                             <img
                                 src={member.img}
                                 alt={member.name}
-                                className="w-28 h-28 mx-auto rounded-full object-cover shadow-sm"
+                                className="w-40 h-40 mx-auto mb-6 rounded-full object-cover"
                             />
-                            <div>
-                                <h3 className="text-lg font-semibold">{member.name}</h3>
-                                <p className="">{member.designation}</p>
-                            </div>
-                            
-                               <a href={`https://wa.me/${member.whatsapp.replace(/\D/g, '')}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-block px-5 py-2 text-sm  bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors"
-                            >
-                                WhatsApp
-                            </a>
+                            <h3 className="text-2xl font-bold text-gray-800 mb-2">{member.name}</h3>
+                            <p className="text-gray-600 text-base mb-6">{member.designation}</p>
+                            <button className="px-8 py-2.5 border-2 border-teal-700 text-teal-700 rounded hover:bg-teal-700 hover:text-white transition-colors font-semibold text-base">
+                                eMail
+                            </button>
                         </div>
                     ))}
                 </div>
