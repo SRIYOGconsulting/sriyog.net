@@ -54,8 +54,8 @@ export default function History() {
                         {/* Card 1 */}
                         <div className="bg-white p-6 shadow rounded-xl border hover:shadow-md transition">
                             <img
-                                src="/images/history/1.png"  // Male placeholder
-                                alt="Male Placeholder"
+                                src="/images/history/1.png"  // placeholder
+                                alt=" Placeholder"
                                 className="w-28 h-28 mx-auto rounded-full object-cover mb-4"
                             />
 
@@ -74,8 +74,8 @@ export default function History() {
                         {/* Card 2 */}
                         <div className="bg-white p-6 shadow rounded-xl border hover:shadow-md transition">
                             <img
-                                src="/images/history/2.png"  // Female placeholder
-                                alt="Female Placeholder"
+                                src="/images/history/2.png"  //  placeholder
+                                alt=" Placeholder"
                                 className="w-28 h-28 mx-auto rounded-full object-cover mb-4"
                             />
 
