@@ -28,14 +28,10 @@ const WhyUs = React.lazy(() => import("./pages/WhyUs.jsx"));
 const Sitemap = React.lazy(() => import("./pages/Sitemap.jsx"));
 const Downloads = React.lazy(() => import("./pages/Download.jsx"));
 const FAQ = React.lazy(() => import("./pages/FAQ.jsx"));
-<<<<<<< Updated upstream
 const Location = React.lazy(() => import("./pages/Location.jsx"));
 const Refundpolicy = React.lazy(() => import("./pages/Refundpolicy.jsx"));
-const Internship = React.lazy(()=> import("./pages/internship.jsx"));
-=======
 const Calendar = React.lazy(() => import("./pages/calendar.jsx"));
-
->>>>>>> Stashed changes
+const Internship = React.lazy(()=> import("./pages/internship.jsx"));
 // Helper to wrap lazy components in Suspense
 const withSuspense = (Component, fallbackText) => (
   <Suspense fallback={<div>{fallbackText}</div>}>
