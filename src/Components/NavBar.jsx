@@ -1,15 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const NavBar = () => {
+  const [visible ,setVisible] = useState(true);
   return (
-    <div className='w-full bg-[#074842] text-white'>
+    <>
+    {visible && 
+    <div className='w-full bg-[#074842] text-white flex'>
     <div className='max-w-5xl mx-auto py-2.5 px-5  md:space-y-0'>
-        <div className='flex flex-col items-center  md:justify-between md:flex-row'>
+        <div className='flex flex-col items-center gap-24 md:justify-between md:flex-row'>
             <p className='text-center pb-3 md:pb-0'>Grab a limited time offer. get upto USD 120 credits in professional plans. Hurry up.</p>
             <button className='bg-white text-black font-semibold px-2 py-1 rounded-md'>Apply Now</button>
         </div>
     </div>
-    </div>
+    <button className='bg-[#074842] pr-10 cursor-pointer' onClick={()=>setVisible(false)}>
+      <svg fill="#ffffff" width="22px" height="22px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.8,16l5.5-5.5c0.8-0.8,0.8-2,0-2.8l0,0C24,7.3,23.5,7,23,7c-0.5,0-1,0.2-1.4,0.6L16,13.2l-5.5-5.5  c-0.8-0.8-2.1-0.8-2.8,0C7.3,8,7,8.5,7,9.1s0.2,1,0.6,1.4l5.5,5.5l-5.5,5.5C7.3,21.9,7,22.4,7,23c0,0.5,0.2,1,0.6,1.4  C8,24.8,8.5,25,9,25c0.5,0,1-0.2,1.4-0.6l5.5-5.5l5.5,5.5c0.8,0.8,2.1,0.8,2.8,0c0.8-0.8,0.8-2.1,0-2.8L18.8,16z"/>
+        </svg>
+    </button>
+    </div>}
+    </>
   )
 }
 

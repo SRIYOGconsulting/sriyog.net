@@ -50,19 +50,19 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-3 text-[16px]">Browse More</h3>
             <ul className="space-y-2 text-[15px] leading-[1.6] pl-0">
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+              <li className={`py-1 cursor-pointer `}>
                 <Link to="/vmgo" className="hover:text-green-700">Mission & Vision</Link>
               </li>
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+              <li className={`py-1 cursor-pointer `}>
                 <Link to="/history" className="hover:text-green-700">History</Link>
               </li>
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+              <li className={`py-1 cursor-pointer `}>
                 <Link to="/whyus" className="hover:text-green-700">Why Us</Link>
               </li>
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+              <li className={`py-1 cursor-pointer `}>
                 <Link to="/certificates" className="hover:text-green-700">Certificates</Link>
               </li>
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+              <li className={`py-1 cursor-pointer `}>
                 <Link to="/timeline" className="hover:text-green-700">Timeline</Link>
               </li>
             </ul>
@@ -72,19 +72,19 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-3 text-[16px]">Resources</h3>
             <ul className="space-y-2 text-[15px] leading-[1.6] pl-0">
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+              <li className={`py-1 cursor-pointer `}>
                 <Link to="/gallery" className="hover:text-green-700">Gallery</Link>
               </li>
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+              <li className={`py-1 cursor-pointer `}>
                 <Link to="/career" className="hover:text-green-700">Career</Link>
               </li>
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+              <li className={`py-1 cursor-pointer `}>
                 <Link to="/qr" className="hover:text-green-700">QR Code</Link>
               </li>
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+              <li className={`py-1 cursor-pointer `}>
                 <Link to="/glossary" className="hover:text-green-700">Glossary</Link>
               </li>
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+              <li className={`py-1 cursor-pointer `}>
                 <Link to="/message" className="hover:text-green-700">Message</Link>
               </li>
             </ul>
@@ -94,19 +94,19 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-3 text-[16px]">Links</h3>
             <ul className="space-y-2 text-[15px] leading-[1.6] pl-0">
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+              <li className={`py-1 cursor-pointer `}>
                 <Link to="/calendar" className="hover:text-green-700">Calendar</Link>
               </li>
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+              <li className={`py-1 cursor-pointer `}>
                 <Link to="/faq" className="hover:text-green-700">FAQ</Link>
               </li>
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+              <li className={`py-1 cursor-pointer `}>
                 <Link to="/payment" className="hover:text-green-700">Payment</Link>
               </li>
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+              <li className={`py-1 cursor-pointer `}>
                 <Link to="/internship" className="hover:text-green-700">Internship</Link>
               </li>
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+              <li className={`py-1 cursor-pointer `}>
                 <Link to="/downloads" className="hover:text-green-700">Download</Link>
               </li>
             </ul>
@@ -116,19 +116,19 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-3 text-[16px]">Explore</h3>
             <ul className="space-y-2 text-[15px] leading-[1.6] pl-0">
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+              <li className={`py-1 cursor-pointer `}>
                 <Link to="/videos" className="hover:text-green-700">Videos</Link>
               </li>
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+              <li className={`py-1 cursor-pointer `}>
                 <a href="https://trello.com" target="_blank" className="hover:text-green-700">Trello Board</a>
               </li>
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
-                <Link to="/location" className="hover:text-green-700">Location</Link>
+              <li className={`py-1 cursor-pointer `}>
+                <Link to="/contact" className="hover:text-green-700">Location</Link>
               </li>
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+              <li className={`py-1 cursor-pointer `}>
                 <Link to="/refund-policy" className="hover:text-green-700">Refund Policy</Link>
               </li>
-              <li className={`py-1 cursor-pointer ${hoverBox}`}>
+              <li className={`py-1 cursor-pointer `}>
                 <Link to="/cookie-policy" className="hover:text-green-700">Cookie Policy</Link>
               </li>
             </ul>
@@ -153,14 +153,14 @@ const Footer = () => {
 
           {/* EMAIL + PHONE */}
           <div className="flex flex-col sm:flex-row items-stretch border-2 rounded-lg overflow-hidden w-full sm:w-auto">
-            <a href="mailto:info@sriyog.com" className={`flex items-center gap-2 px-6 py-3 ${hoverBox}`}>
+            <a href="mailto:info@sriyog.com" className={`flex items-center gap-2 px-6 py-3 `}>
               <img src="/icons/email.svg" alt="email" className="h-6 w-6" />
               <span className="text-sm">info@sriyog.com</span>
             </a>
 
             <div className="border-t-2 sm:border-l-2  w-full sm:w-auto"></div>
 
-            <a href="tel:+977014548068" className={`flex items-center gap-2 px-6 py-3 ${hoverBox}`}>
+            <a href="tel:+977014548068" className={`flex items-center gap-2 px-6 py-3 `}>
               <img src="/icons/phone.svg" alt="phone" className="h-6 w-6" />
               <span className="text-sm">+977-01-4548068</span>
             </a>
@@ -170,7 +170,7 @@ const Footer = () => {
           <a
             href="https://wa.me/9779852024365"
             target="_blank"
-            className={`flex items-center gap-2 border-2 rounded-lg px-6 py-3 w-full sm:w-auto ${hoverBox}`}
+            className={`flex items-center gap-2 border-2 rounded-lg px-6 py-3 w-full sm:w-auto `}
           >
             <img src="/icons/whatsapp.svg" alt="whatsapp" className="h-6 w-6" />
             <span className="text-sm">+977 98520-24-365</span>
@@ -184,15 +184,15 @@ const Footer = () => {
       {/* FOOTER BOTTOM */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 flex flex-col md:flex-row justify-between text-[13px]  gap-3 text-center md:text-left font-semibold">
         <p>
-          Copyright {currentYear} SRIYOG Consulting | Built With: BroadPress
+          All Rights Reserved. © 2018-{currentYear} SRIYOG Consulting Pvt. Ltd. Built With : <a href="https://broadpress.org" className="hover:border-b hover:border-black text-gray-500">BroadPress</a>
         </p>
 
         <div className="flex gap-4 justify-center md:justify-end font-semibold ">
-          <Link to="/privacy-policy" className={`hover:underline cursor-pointer ${hoverBox}`}>Privacy Policy</Link>
+          <Link to="/privacy-policy" className={` cursor-pointer `}>Privacy Policy</Link>
           <span>|</span>
-          <Link to="/disclaimer" className={`hover:underline cursor-pointer ${hoverBox}`}>Disclaimer</Link>
+          <Link to="/disclaimer" className={` cursor-pointer `}>Disclaimer</Link>
           <span>|</span>
-          <Link to="/terms-of-service" className={`hover:underline cursor-pointer ${hoverBox}`}>Terms of Service</Link>
+          <Link to="/terms-of-service" className={` cursor-pointer `}>Terms of Service</Link>
         </div>
       </div>
 

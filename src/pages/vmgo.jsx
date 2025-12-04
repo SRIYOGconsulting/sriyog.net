@@ -71,8 +71,10 @@ export default function Vmgo() {
               "Provide equal access to opportunities for professionals from all backgrounds.",
               "Continuously enhance our platform with new technologies to deliver the best user experience."
             ].map((goal, index) => (
-              <div key={index} className="flex card2 items-start">
-                <img src="/icons/circle.svg" alt="" className="w-2 h-2  mt-3 mr-3 flex-shrink-0" />
+              <div key={index} className="flex card2 items-center gap-3">
+                <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
                 <p className=" text-lg">{goal}</p>
               </div>
             ))}
@@ -94,8 +96,10 @@ export default function Vmgo() {
               "Foster a strong community of professionals and businesses",
               "Maintain high standards of security and privacy"
             ].map((objective, index) => (
-              <div key={index} className="flex items-start">
-                <img src="/icons/circle.svg" alt="" className="w-2 h-2 text-teal-500 mt-3 mr-3 flex-shrink-0" />
+              <div key={index} className="flex items-center gap-3">
+                <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
                 <p className=" text-lg">{objective}</p>
               </div>
             ))}

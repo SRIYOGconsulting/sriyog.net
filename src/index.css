@@ -25,6 +25,8 @@
   --sidekick : #EBEBEB;
   --about : #374151;
   --card : #EBEBEB;
+  --questions :#f2f2f2; 
+  --answers: white;
 }
 
 .dark {
@@ -37,6 +39,8 @@
   --sidekick : #252525;
   --about : #cfcfcf;
   --card : #2a2a2a;
+  --questions :#2a2a2a; 
+  --answers: black;
 }
 
 .card{
@@ -89,4 +93,18 @@ body{
   background: var(--card);
   border-color: var(--text);
   color: var(--text);
+}
+
+.faqsQuestions{
+  background: var(--questions);
+  color: var(--text);
+}
+
+.faqsAnswers{
+  background: var(--answers);
+  color: var(--text);
+}
+
+.shadow{
+  box-shadow: 0px 0px 5px 2px var(--sidekick);
 }

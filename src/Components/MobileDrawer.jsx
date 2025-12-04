@@ -58,7 +58,7 @@ const MobileDrawer = () => {
   // Handle window resize and mobile detection
   useEffect(() => {
     const handleResize = () => {
-      const mobile = window.innerWidth <= 768;
+      const mobile = window.innerWidth <= 1024;
       setIsMobile(mobile);
       if (!mobile) setIsOpen(false);
     };
@@ -85,7 +85,7 @@ const MobileDrawer = () => {
       <div className="relative w-full">
         <button
           onClick={toggleDrawer}
-          className="absolute right-4 top-1/2 -translate-y-[150%] md:hidden z-50 p-2 rounded"
+          className="absolute right-4 top-1/2 -translate-y-[165%] lg:hidden block z-50 p-2 rounded"
           style={{ background: 'var(--header)', color: 'var(--text)' }}
           aria-label={isOpen ? 'Close menu' : 'Open menu'}
         >
@@ -175,13 +175,6 @@ const MobileDrawer = () => {
         </div>
       </div>
 
-      <style jsx>{`
-        @media (max-width: 768px) {
-          .header nav {
-            display: none !important;
-          }
-        }
-      `}</style>
     </>
   );
 };

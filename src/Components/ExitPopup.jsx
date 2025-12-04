@@ -1,22 +1,20 @@
 import React, { useEffect, useState } from 'react'
 
 const ExitPopup = () => {
-  const [show,setShow] = useState(false);
+//   const [show,setShow] = useState(false);
 
-  useEffect((e)=>{
-        const handleMouseLeave = (e)=>{
-            if(e.clientY <= 0){
-                setShow(true);
-            }
-        }
-        document.addEventListener("mouseout",handleMouseLeave)
-        return () => document.removeEventListener("mouseout",handleMouseLeave)
-  },[])
 
-  if(!show) return null
+  window.addEventListener("beforeunload", function (event) {
+      // Show confirmation dialog
+      event.preventDefault();
+      event.returnValue = "Leaving Site ?"; 
+    });
+
+
+//   if(!show) return null
   return (
     <>
-    {show &&
+    {/* {show &&
     <div className='fixed top-[260px] left-[630px] bg-[#074842] z-40 rounded-md'>
         <div className='flex flex-col justify-center items-center py-2 '>
             <h1 className=' text-3xl uppercase font px-5 pt-4 text-white'>You're Leaving?</h1>
@@ -28,7 +26,7 @@ const ExitPopup = () => {
                 </a>
             </div>
         </div>
-    </div>}
+    </div>} */}
     </>
   )
 }

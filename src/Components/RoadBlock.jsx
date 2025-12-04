@@ -46,7 +46,7 @@ const RoadBlock = () => {
   }, [onClose]);
 
   // Show close timer (10 sec)
-  const [displayTimeLeft, setDisplayTimeLeft] = useState(10);
+  const [displayTimeLeft, setDisplayTimeLeft] = useState(2);
   useEffect(() => {
     const timer = setInterval(() => {
       setDisplayTimeLeft((prev) => {

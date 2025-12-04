@@ -219,7 +219,7 @@ export default function Notice() {
                             `}
                         >
                             {notice.important && (
-                                <div className="bg-red-500 text-white px-4 py-1 text-sm font-semibold">
+                                <div className="bg-red-500 rounded-tr-lg text-white px-4 py-1 text-sm font-semibold">
                                     Important
                                 </div>
                             )}
