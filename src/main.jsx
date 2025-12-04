@@ -28,6 +28,7 @@ const WhyUs = React.lazy(() => import("./pages/WhyUs.jsx"));
 const Sitemap = React.lazy(() => import("./pages/Sitemap.jsx"));
 const Downloads = React.lazy(() => import("./pages/Download.jsx"));
 const FAQ = React.lazy(() => import("./pages/FAQ.jsx"));
+const Glossary = React.lazy(() => import("./pages/Glossary.jsx"));
 const Location = React.lazy(() => import("./pages/Location.jsx"));
 const Refundpolicy = React.lazy(() => import("./pages/Refundpolicy.jsx"));
 const Calendar = React.lazy(() => import("./pages/calendar.jsx"));
@@ -60,6 +61,7 @@ const router = createBrowserRouter([
       { path: "notice", element: withSuspense(Notice, "Loading Notice...") },
       { path: "payment", element: withSuspense(Payment, "Loading Payment...") },
       { path: "qr", element: withSuspense(Qr, "Loading QR...") },
+      { path: "glossary", element: withSuspense(Glossary, "Loading Glossary...") },
       { path: "team", element: withSuspense(Team, "Loading Team...") },
       { path: "timeline", element: withSuspense(Timeline, "Loading Timeline...") },
       { path: "videos", element: withSuspense(Videos, "Loading Videos...") },
