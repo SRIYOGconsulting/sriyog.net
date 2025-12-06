@@ -1,12 +1,14 @@
 // import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
-import React from 'react';
+import React, { useState } from 'react';
+import Ribbon from '../Components/Ribbon';
 
 export default function Certificate() {
     const breadcrumbItems = [
         { label: 'Home', path: '/' },
         { label: 'Certificates', path: '/certificates' }
     ];
-
+    const [lightbox,openLightbox] = useState(false);
+    const [index,setIndex] = useState(null);
     // Updated certificate data with new image paths
     const certificates = [
         { title: 'Certificate 1', img: '/images/certificates/1.jpg' },
@@ -22,12 +24,8 @@ export default function Certificate() {
 
     return (
         <div >
-            {/* <BasicBreadcrumbs items={breadcrumbItems} /> */}
-            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-12">
-                <div className="max-w-7xl mx-auto px-4 md:px-8">
-                    <h1 className="text-4xl font-bold">Certificates</h1>
-                </div>
-            </div>
+            {/* Header */}
+            <Ribbon name="Certificates"/>
             <div className="px-5 py-10 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
                     {certificates.map((cert, index) => (
@@ -38,9 +36,10 @@ export default function Certificate() {
                             <img
                                 src={cert.img}
                                 alt={cert.title}
-                                className="w-full h-48 object-cover"
+                                onClick={()=>{openLightbox(true);setIndex(index)}}
+                                className="w-full h-56 object-cover"
                             />
-                            <div className="p-4 card2">
+                            <div className="px-4 py-5 card2">
                                 <h2 className="text-lg font-medium ">{cert.title}</h2>
                                 <p className="text-gray-500 text-sm mt-2">
                                     Short description about the certificate.
@@ -50,6 +49,20 @@ export default function Certificate() {
                     ))}
                 </div>
             </div>
+            {lightbox && (
+            <div
+                className="fixed inset-0 bg-black/70 z-[9999] flex items-center justify-center"
+                onClick={() => openLightbox(false)}
+            >
+                <button className='absolute top-5 right-5 text-2xl rounded-full w-10 h-10 bg-white'>X</button>
+                <img
+                src={certificates[index].img}
+                alt=""
+                className="max-w-[90%] max-h-[90%] rounded-lg shadow-lg"
+                onClick={(e) => e.stopPropagation()} // prevent closing when clicking the image
+                />
+            </div>
+            )}
         </div>
     );
 }

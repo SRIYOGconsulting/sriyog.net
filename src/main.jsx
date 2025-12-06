@@ -33,6 +33,11 @@ const Location = React.lazy(() => import("./pages/Location.jsx"));
 const Refundpolicy = React.lazy(() => import("./pages/Refundpolicy.jsx"));
 const Calendar = React.lazy(() => import("./pages/calendar.jsx"));
 const Internship = React.lazy(()=> import("./pages/internship.jsx"));
+const cookiePolicy = React.lazy(()=> import("./pages/cookiePolicy.jsx"));
+const PrivacyPolicy = React.lazy(()=> import("./pages/PrivacyPolicy.jsx"));
+const TermsOfServices = React.lazy(()=>import("./pages/Tos.jsx"));
+const Disclaimer = React.lazy(()=>import("./pages/Disclaimer.jsx"));
+const PhotoGallery = React.lazy(()=>import("./pages/PhotoGallery.jsx"))
 // Helper to wrap lazy components in Suspense
 const withSuspense = (Component, fallbackText) => (
   <Suspense fallback={<div>{fallbackText}</div>}>
@@ -73,7 +78,12 @@ const router = createBrowserRouter([
       { path: "internship", element: withSuspense(Internship, "Loading Internship...") },
       // 404 Page
       { path: "*", element: <NotFound /> },
-      {path: "search", element: withSuspense(Search, "Search")}
+      {path: "search", element: withSuspense(Search, "Search")},
+      {path: "cookie-policy", element: withSuspense(cookiePolicy, "Loading Cookie Policy...")},
+      {path: "privacy-policy", element: withSuspense(PrivacyPolicy, "Loading Privacy Policy...")},
+      {path: "tos", element: withSuspense(TermsOfServices, "Loading Terms of services...")},
+      {path: "disclaimer", element: withSuspense(Disclaimer, "Loading Disclaimer...")},
+      {path: "gallery/photogallery", element: withSuspense(PhotoGallery, "Loading Album...")},
     ],
   },
 ]);

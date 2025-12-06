@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import BasicBreadcrumbs from '../Components/BasicBreadcrumb'; // optional
+import Ribbon from '../Components/Ribbon';
 
 export default function Faq() {
   const breadcrumbItems = [
@@ -159,16 +160,12 @@ export default function Faq() {
   return (
     <div className='footer'>
       {/* Ribbon/Header */}
-      <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-8 w-full">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <h1 className="text-4xl font-bold">Frequently Asked Questions</h1>
-        </div>
-      </div>
+      <Ribbon name="Frequently Asked Questions"/>
 
       <div className="px-5 py-10 max-w-7xl mx-auto">
         {/* FAQ List */}
-        <div className="flex items-start justify-center gap-4 ">
-          <div className='w-1/2 space-y-3 '>
+        <div className="flex flex-col lg:flex-row items-start justify-center gap-4 ">
+          <div className='w-full lg:w-1/2 space-y-3 '>
              {faq1.map((faq) => (
             <div key={faq.id} className="rounded-md overflow-hidden group border-none">
               <button
@@ -194,7 +191,7 @@ export default function Faq() {
             </div>
           ))}
           </div>
-          <div className='w-1/2 space-y-3'>
+          <div className='w-full lg:w-1/2 space-y-3'>
             {faq2.map((faq) => (
             <div key={faq.id} className="rounded-md overflow-hidden group border-none">
               <button

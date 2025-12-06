@@ -1,6 +1,7 @@
 import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
+import Ribbon from '../Components/Ribbon';
 
-export default function History() {
+export default function History() { 
     const breadcrumbItems = [
         { label: 'Home', path: '/' },
         { label: 'History', path: '/history' }
@@ -8,14 +9,9 @@ export default function History() {
 
     return (
         <div>
-            {/* <BasicBreadcrumbs items={breadcrumbItems} /> */}
 
             {/* Header */}
-            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-12">
-                <div className="max-w-7xl mx-auto px-4 md:px-8">
-                    <h1 className="text-4xl font-bold">History</h1>
-                </div>
-            </div>
+            <Ribbon name="History"/>
 
             <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-16">
 
@@ -52,42 +48,46 @@ export default function History() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
 
                         {/* Card 1 */}
-                        <div className="bg-white p-6 shadow rounded-xl border hover:shadow-md transition">
+                        <div className="card p-6 shadow rounded-xl border hover:shadow-md transition ">
                             <img
-                                src="/images/history/1.png"  // placeholder
-                                alt=" Placeholder"
-                                className="w-28 h-28 mx-auto rounded-full object-cover mb-4"
+                                src="/images/history/1.png"  // Male placeholder
+                                alt="Male Placeholder"
+                                className="w-40 h-40 mx-auto rounded-full object-cover mb-4"
                             />
 
-                            <h3 className="text-xl font-semibold text-center text-teal-700">
+                            <h3 className="text-[24px] font-semibold text-center">
                                 Full Name
                             </h3>
-                            <p className="text-center text-gray-600 text-sm">
+                            <p className="text-center text-sm">
                                 Designation
                             </p>
-                            <p className="mt-3 text-gray-700 text-center text-sm leading-relaxed">
-                                Short placeholder message about this individual’s contribution
-                                or involvement in the company’s evolution.
+                            <p className="mt-3 card2 text-center leading-relaxed">
+                                    This individual contributed to key projects and supported the growth
+                                    of multiple teams. Their leadership helped guide important initiatives
+                                    and strengthened overall performance. Through consistent effort, they
+                                    played a meaningful role in the company’s development and long-term progress.
                             </p>
                         </div>
 
                         {/* Card 2 */}
-                        <div className="bg-white p-6 shadow rounded-xl border hover:shadow-md transition">
+                        <div className="card p-6 shadow rounded-xl border hover:shadow-md transition h-full">
                             <img
-                                src="/images/history/2.png"  //  placeholder
-                                alt=" Placeholder"
-                                className="w-28 h-28 mx-auto rounded-full object-cover mb-4"
+                                src="/images/history/2.png"  // Female placeholder
+                                alt="Female Placeholder"
+                                className="w-40 h-40 mx-auto rounded-full object-cover mb-4"
                             />
 
-                            <h3 className="text-xl font-semibold text-center text-teal-700">
+                            <h3 className="text-[24px] font-semibold text-center ">
                                 Full Name
                             </h3>
-                            <p className="text-center text-gray-600 text-sm">
+                            <p className="text-center  text-sm">
                                 Designation
                             </p>
-                            <p className="mt-3 text-gray-700 text-center text-sm leading-relaxed">
-                                Short placeholder message describing contributions, leadership,
-                                or role in the company’s development.
+                            <p className="mt-3 card2 text-center leading-relaxed">
+                                    This individual contributed to key projects and supported the growth
+                                    of multiple teams. Their leadership helped guide important initiatives
+                                    and strengthened overall performance. Through consistent effort, they
+                                    played a meaningful role in the company’s development and long-term progress.
                             </p>
                         </div>
 

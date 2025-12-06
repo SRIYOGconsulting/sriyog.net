@@ -33,8 +33,7 @@ const NavItem = ({ to, label, onClick }) => (
   </Link>
 );
 
-const MobileDrawer = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const MobileDrawer = ({isOpen,setIsOpen}) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   // Navigation data without paths/icons
@@ -85,26 +84,26 @@ const MobileDrawer = () => {
       <div className="relative w-full">
         <button
           onClick={toggleDrawer}
-          className="absolute right-4 top-1/2 -translate-y-[165%] lg:hidden block z-50 p-2 rounded"
+          className=" lg:hidden block z-50 p-2 rounded"
           style={{ background: 'var(--header)', color: 'var(--text)' }}
           aria-label={isOpen ? 'Close menu' : 'Open menu'}
         >
-          {isOpen ? '✕' : '☰'}
+          {isOpen ? <img src="/icons/cross.svg" className='w-10 h-10' alt="" /> : <img src="/icons/hamburger.svg" alt="" className='w-10 h-10' /> }
         </button>
       </div>
 
       {/* Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          className="fixed -inset-10 bg-black bg-opacity-50 z-40"
           onClick={closeDrawer}
         />
       )}
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-80 z-50 transition-transform duration-300 ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed top-0 left-0 sm:-left-5 h-full w-80 z-50 transition-transform duration-300 ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
         style={{ background: 'var(--header)', color: 'var(--text)' }}
       >
@@ -114,7 +113,7 @@ const MobileDrawer = () => {
               <img
                 src="/images/Logo/sriyoglogo.svg"
                 alt="Sriyog Logo"
-                className="w-40 h-auto"
+                className="w-36 h-auto"
               />
             </Link>
             <button
@@ -127,7 +126,7 @@ const MobileDrawer = () => {
             </button>
           </div>
 
-          <nav className="flex flex-col space-y-6 py-4">
+          <nav className="flex flex-col space-y-2 pb-2">
             {navItems.map((item) => (
               <NavItem
                 key={item.to}
@@ -137,7 +136,7 @@ const MobileDrawer = () => {
               />
             ))}
 
-            <div className="pt-4 space-y-4">
+            <div className="pt-4 space-y-2">
               <Link to="/career" onClick={closeDrawer} className="block">
                 <button
                   className="w-full border rounded-lg px-6 py-2.5 hover:bg-opacity-10 hover:bg-gray-300 transition-colors duration-200"

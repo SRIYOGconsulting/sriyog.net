@@ -1,4 +1,5 @@
 import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
+import Ribbon from '../Components/Ribbon';
 
 export default function Services() {
     const breadcrumbItems = [
@@ -88,11 +89,7 @@ export default function Services() {
     return (
         <div className="bg-white min-h-screen">
             {/* Header Section */}
-            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-12">
-                <div className="max-w-7xl mx-auto px-4 md:px-8">
-                    <h1 className="text-4xl font-bold">Our Services</h1>
-                </div>
-            </div>
+            <Ribbon name="Services"/>
 
             {/* Services Grid */}
             <div className="max-w-7xl mx-auto px-4 md:px-8 pb-16">
@@ -100,7 +97,7 @@ export default function Services() {
                     {servicesList.map((service, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 p-9 flex flex-col "
+                            className="bg-white border space-y-6 sm:space-y-4 border-gray-400 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 p-9 flex flex-col "
                         >
                             {/* Icon */}
                             <div className="flex justify-center mb-6">
@@ -111,17 +108,17 @@ export default function Services() {
                                 />
                             </div>
                             {/* Title */}
-                            <h3 className="text-xl text-gray-700 mb-4 text-center">
+                            <h3 className="text-xl text-gray-700 py-1 sm:py-0 mb-4 text-center">
                                 {service.title}
                             </h3>
 
                             {/* Description */}
-                            <p className="text-gray-600 text-l leading-relaxed mb-4 flex-grow text-justify">
+                            <p className="text-gray-600 text-l py-1 sm:py-0 leading-relaxed mb-4 flex-grow text-justify">
                                 {service.desc}
                             </p>
 
                             {/* Read More Button */}
-                            <div className="flex justify-start">
+                            <div className="flex  py-1 sm:py-0 justify-center">
                                 <button className="px-6 py-2.5 border-2 border-teal-700 text-teal-700 rounded-md hover:bg-teal-700 hover:text-white transition-all duration-300 font-medium text-sm">
                                     Read More
                                 </button>

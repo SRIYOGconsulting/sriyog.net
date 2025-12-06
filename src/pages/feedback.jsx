@@ -1,6 +1,7 @@
 // import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
 import React, { useRef, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
+import Ribbon from '../Components/Ribbon';
 export default function Feedback() {
     const breadcrumbItems = [
         { label: 'Home', path: '/' },
@@ -41,11 +42,7 @@ export default function Feedback() {
         <div className="w-full">
 
             {/* Full-width Ribbon Header */}
-            <div className="bg-teal-800 text-white py-10 px-4 md:px-8 mb-10">
-                <div className="max-w-7xl mx-auto">
-                    <h1 className="text-3xl md:text-4xl font-bold">Feedback</h1>
-                </div>
-            </div>
+            <Ribbon name="Feedback"/>
 
             {/* FORM SECTION */}
             <div className="px-4 sm:px-6 md:px-8 lg:px-0 pt-8 pb-12 max-w-6xl mx-auto font-sans">
@@ -56,7 +53,7 @@ export default function Feedback() {
 
                 <form 
                     onSubmit={handleSubmit}
-                    className="grid grid-cols-2 gap-4 footer p-6 sm:p-8 rounded-xl shadow shadow-gray-700 border-gray-200"
+                    className=" space-y-6 md:space-y-0 md:grid sm:grid-cols-2 gap-4 footer p-6 sm:p-8 rounded-xl shadow shadow-gray-700 border-gray-200"
                 >
 
                     {/* Name */}
@@ -241,7 +238,7 @@ export default function Feedback() {
                     <div className="flex items-center justify-center col-span-2">
                         <button
                             type="submit"
-                            className="bg-black text-white px-6 py-3 rounded-md font-medium hover:bg-gray-900 transition-all w-full sm:w-auto"
+                            className="bg-black text-white px-6 py-3 rounded-md font-medium hover:bg-gray-900 transition-all md:w-full sm:w-auto"
                         >
                             Submit Feedback
                         </button>

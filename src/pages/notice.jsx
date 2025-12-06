@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Pagination from '../Components/Pagination';
+import Ribbon from '../Components/Ribbon';
 
 export default function Notice() {
     const [currentPage, setCurrentPage] = useState(1);
@@ -160,11 +161,7 @@ export default function Notice() {
 
     return (
         <>
-            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-8">
-                <div className="max-w-7xl mx-auto px-4 md:px-8">
-                    <h1 className="text-4xl font-bold">Notices</h1>
-                </div>
-            </div>
+            <Ribbon name="Notice"/>
 
             <div className="container mx-auto px-4 py-8 max-w-7xl">
                 
@@ -231,6 +228,11 @@ export default function Notice() {
                                     </h3>
 
                                     <div className="flex items-center gap-4">
+                                        <a href="#">
+                                        <button className='bg-[#ebebeb] hover:bg-teal-700 hover:text-white text-[13px] border px-2 py-px rounded-md border-gray-800'>
+                                            Browse More
+                                        </button>
+                                        </a>
                                         <span className="bg-green-100 text-black text-sm px-3 py-1 rounded-full">
                                             {notice.category}
                                         </span>

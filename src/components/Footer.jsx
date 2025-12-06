@@ -123,7 +123,7 @@ const Footer = () => {
                 <a href="https://trello.com" target="_blank" className="hover:text-green-700">Trello Board</a>
               </li>
               <li className={`py-1 cursor-pointer `}>
-                <Link to="/contact" className="hover:text-green-700">Location</Link>
+                <Link to="/location" className="hover:text-green-700">Location</Link>
               </li>
               <li className={`py-1 cursor-pointer `}>
                 <Link to="/refund-policy" className="hover:text-green-700">Refund Policy</Link>
@@ -137,35 +137,32 @@ const Footer = () => {
       </div>
 
       {/* SOCIAL + CONTACT SECTION */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between gap-8 mt-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-center lg:justify-between gap-8 mt-10">
 
         {/* SOCIAL ICONS */}
         <div className="flex gap-6 justify-center lg:justify-start">
           {["x", "linkedin", "youtube", "trello", "signal", "discord", "viber"].map((icon) => (
             <a key={icon} href="#" className="hover:opacity-60 transition hover:scale-110">
-              <img src={`/icons/${icon}.svg`} alt={icon} className="h-7 w-7 cursor-pointer" />
+              <img src={`/icons/${icon}.svg`} alt={icon} className="h-5 w-5 sm:h-6 sm:w-6 cursor-pointer" />
             </a>
           ))}
         </div>
 
         {/* CONTACT BOXES */}
-        <div className="flex flex-col sm:flex-row gap-4 items-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
 
           {/* EMAIL + PHONE */}
-          <div className="flex flex-col sm:flex-row items-stretch border-2 rounded-lg overflow-hidden w-full sm:w-auto">
-            <a href="mailto:info@sriyog.com" className={`flex items-center gap-2 px-6 py-3 `}>
+            <a href="mailto:info@sriyog.com" className={`flex items-center gap-2 border-2 rounded-lg px-7 py-3 w-full sm:w-auto `}>
               <img src="/icons/email.svg" alt="email" className="h-6 w-6" />
               <span className="text-sm">info@sriyog.com</span>
             </a>
 
-            <div className="border-t-2 sm:border-l-2  w-full sm:w-auto"></div>
 
-            <a href="tel:+977014548068" className={`flex items-center gap-2 px-6 py-3 `}>
+            <a href="tel:+977014548068" className={`flex items-center gap-2 border-2 rounded-lg px-7 py-3 w-full sm:w-auto `}>
               <img src="/icons/phone.svg" alt="phone" className="h-6 w-6" />
               <span className="text-sm">+977-01-4548068</span>
             </a>
-          </div>
-
+      
           {/* WHATSAPP */}
           <a
             href="https://wa.me/9779852024365"
@@ -182,17 +179,20 @@ const Footer = () => {
       <div className="w-full border-t  mt-14 mb-6"></div>
 
       {/* FOOTER BOTTOM */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 flex flex-col md:flex-row justify-between text-[13px]  gap-3 text-center md:text-left font-semibold">
-        <p>
-          All Rights Reserved. © 2018-{currentYear} SRIYOG Consulting Pvt. Ltd. Built With : <a href="https://broadpress.org" className="hover:border-b hover:border-black text-gray-500">BroadPress</a>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 lg:mt-12 flex flex-col lg:flex-row justify-center items-center lg:justify-between text-[13px]  gap-3 text-center md:text-left font-semibold">
+        <p className="flex flex-col md:flex-row gap-4 md:gap-0 items-center">
+          <span>All Rights Reserved. © 2018-{currentYear}</span>
+          <span>SRIYOG Consulting Pvt. Ltd.</span>
+          <span>Built With : <a href="https://broadpress.org" target="_blank" className="hover:border-b hover:border-black text-gray-500">BroadPress</a></span>
         </p>
+            
 
-        <div className="flex gap-4 justify-center md:justify-end font-semibold ">
+        <div className="flex gap-4 justify-center md:justify-end font-semibold mt-2 lg:mt-0">
           <Link to="/privacy-policy" className={` cursor-pointer `}>Privacy Policy</Link>
           <span>|</span>
           <Link to="/disclaimer" className={` cursor-pointer `}>Disclaimer</Link>
           <span>|</span>
-          <Link to="/terms-of-service" className={` cursor-pointer `}>Terms of Service</Link>
+          <Link to="/tos" className={` cursor-pointer `}>Terms of Service</Link>
         </div>
       </div>
 

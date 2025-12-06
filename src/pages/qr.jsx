@@ -1,5 +1,6 @@
 import React from "react";
 import BasicBreadcrumbs from "../Components/BasicBreadcrumb";
+import Ribbon from "../Components/Ribbon";
 
 const breadcrumbItems = [
   { label: "Home", path: "/" },
@@ -54,39 +55,33 @@ const cardData = [
 function Qr() {
   return (
     <div>
-      {/* Breadcrumb */}
-      {/* <BasicBreadcrumbs items={breadcrumbItems} /> */}
 
       {/* Page Header */}
-      <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-8">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl font-bold">QR Codes</h1>
-        </div>
-      </div>
+      <Ribbon name= "QR Codes"/>
 
       {/* Cards */}
-      <section className="min-h-screen  flex flex-col items-center py-10 px-4">
-        <div className="max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <section className="max-w-7xl mx-auto px-6 sm:px-10 py-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {cardData.map((card) => (
             <a
               key={card.id}
               href={card.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center text-center justify-between card border  rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 w-96 h-[28rem] mx-auto"
+              className="card rounded-lg shadow-md overflow-hidden w-full max-w-xs hover:shadow-lg transition-shadow duration-300 flex flex-col"
             >
-              <div className="pt-8 flex flex-col items-center">
+              <div className=" flex flex-col ">
                 {card.image && (
                   <img
                     src={card.image}
                     alt={card.title}
-                    className="w-64 h-64 object-contain mb-4 rounded-md shadow-sm"
+                    className="w-full h-auto object-contain mb-4 rounded-t-md shadow-sm"
                   />
                 )}
-                <h3 className="text-2xl font-semibold  mb-2">
+                <h3 className="text-2xl font-semibold px-4 mb-2">
                   {card.title}
                 </h3>
-                <p className="card2 text-sm px-4">{card.description}</p>
+                <p className="card2 text-sm px-4 pb-4 pt-3">{card.description}</p>
               </div>
             </a>
           ))}

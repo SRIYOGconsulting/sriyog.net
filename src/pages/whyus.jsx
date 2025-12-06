@@ -1,4 +1,5 @@
 import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
+import Ribbon from '../Components/Ribbon';
 
 const pageName = "This is Why Us Page";
 export default function WhyUs () {
@@ -11,13 +12,9 @@ export default function WhyUs () {
 
     return (
         <div>
-            {/* <BasicBreadcrumbs items={breadcrumbItems} /> */}
-            
-            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-8 ">
-                <div className="max-w-7xl mx-auto px-4 md:px-8">
-                    <h1 className="text-4xl font-bold">Why Us</h1>
-                </div>
-            </div>
+        
+            {/* Header  */}
+           <Ribbon name="History"/>
 
            <div className="max-w-6xl mx-auto flex flex-col gap-20 items-center justify-center px-4 pb-7">
 

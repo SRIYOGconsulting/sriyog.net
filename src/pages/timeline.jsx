@@ -1,4 +1,5 @@
 import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
+import Ribbon from '../Components/Ribbon';
 
 export default function Timeline() {
 
@@ -34,11 +35,7 @@ export default function Timeline() {
     return (
         <div>
             {/* Header */}
-            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-12">
-                <div className="max-w-7xl mx-auto px-4 md:px-8">
-                    <h1 className="text-4xl font-bold">Timeline</h1>
-                </div>
-            </div>
+            <Ribbon name="Timeline"/>
 
             {/* Timeline Container */}
             <div className="max-w-5xl mx-auto px-4 md:px-8 relative">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Ribbon from '../Components/Ribbon';
 
 const Sitemap = () => {
   
@@ -47,14 +48,7 @@ const Sitemap = () => {
     <div className="w-full min-h-screen py-12 px-4 md:px-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: 'var(--text)' }}>
-            Sitemap
-          </h1>
-          <p className="text-lg opacity-80" style={{ color: 'var(--text)' }}>
-            Find all pages and resources on our website
-          </p>
-        </div>
+        <Ribbon name="Sitemap"/>
 
         {/* Sitemap Content */}
         <div className="space-y-8">

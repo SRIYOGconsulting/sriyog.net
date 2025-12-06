@@ -1,43 +1,47 @@
 import React from "react";
 import BasicBreadcrumbs from "../Components/BasicBreadcrumb";
+import Ribbon from "../Components/Ribbon";
 
 const videos = [
   {
-    title: "Nepal Startup Meet",
-    embedUrl: "https://www.youtube.com/embed/IfDRlqHT6Xs",
+    title: "4 Types of Team Members You Can Hire",
+    embedUrl: "https://www.youtube.com/embed/O9_EHU5BKnQ?rel=0",
   },
   {
-    title: "Nepal Startup Meet 2019: Sriyog.com",
-    embedUrl: "https://www.youtube.com/embed/IfDRlqHT6Xs",
+    title: "The Power Of Teamwork",
+    embedUrl: "https://www.youtube.com/embed/4duPBWzf46E?rel=0" ,
   },
   {
-    title: "SRIYOG Nepal Startup Meet",
-    embedUrl: "https://www.youtube.com/embed/IfDRlqHT6Xs",
+    title: "Teamwork and Leadership",
+    embedUrl: "https://www.youtube.com/embed/I1J2Z_Fgado?rel=0",
+  },
+  {
+    title: "Employee engagement ",
+    embedUrl: "https://www.youtube.com/embed/bXji0yjYObo?rel=0",
   },
 ];
 
 function VideoPage() {
-  const featuredVideo = "https://www.youtube.com/embed/IfDRlqHT6Xs";
-
+const featuredVideo = "https://www.youtube.com/embed/en3z928rwus?rel=0";
   const breadcrumbItems = [
     { label: "Home", path: "/" },
     { label: "Videos", path: "/videos" },
   ];
 
   return (
-    <div className="bg-white min-h-screen font-sans">
-      {/* Breadcrumb */}
-      {/*<BasicBreadcrumbs items={breadcrumbItems} />*}
+    <div className=" min-h-screen font-sans">
+      {/* Header */}
+      <Ribbon name="Vidoes"/>
 
       {/* Featured Video Section */}
-      <section className="max-w-6xl mx-auto bg-[#0D5D59] rounded-md mt-16 md:mt-20 shadow-lg px-4 sm:px-6 py-10 sm:py-12 md:py-16">
+      <section className="max-w-7xl mx-auto  rounded-md px-4 sm:px-6 py-10 sm:py-12 md:py-10">
         <div className="text-center">
-          <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-semibold mb-8">
+          <h2 className=" text-2xl sm:text-3xl md:text-4xl font-semibold mb-8">
             Featured Sriyog Consulting Video
           </h2>
 
           <div className="flex justify-center">
-            <div className="w-full max-w-4xl aspect-video rounded-lg overflow-hidden shadow-2xl">
+            <div className="w-full max-w-7xl aspect-video rounded-lg overflow-hidden shadow-2xl">
               <iframe
                 src={featuredVideo}
                 title="Featured Sriyog Consulting Video"

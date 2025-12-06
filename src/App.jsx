@@ -23,8 +23,7 @@ export default function App() {
       <LoadfromTop/>
       <NavBar />
       <Header />
-     
-      <MobileDrawer />
+
    
       <main className="flex-grow">
         

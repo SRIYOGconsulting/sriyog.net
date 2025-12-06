@@ -1,4 +1,5 @@
 import React from "react";
+import Ribbon from "../Components/Ribbon";
 
 export default function Download() {
   // Table data
@@ -27,32 +28,28 @@ export default function Download() {
   return (
     <div>
       {/* Header Ribbon */}
-      <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-12">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <h1 className="text-4xl font-bold">Download</h1>
-        </div>
-      </div>
+     <Ribbon name="Download"/>
     
-    <div className="px-5 py-10 max-w-7xl mx-auto">
-      <div className="px-5 py-10 max-w-7xl mx-auto">
+    <div className="px-3 md:px-0 py-5 sm:py-8 max-w-7xl mx-auto">
+      <div className="px-5 max-w-7xl mx-auto">
 
         {/* Desktop Table */}
         <div className="hidden md:flex justify-center overflow-x-auto">
-          <table className="w-full max-w-5xl bg-white rounded-xl shadow-sm">
+          <table className="w-full max-w-6xl bg-white rounded-xl shadow-sm border border-gray-50">
             <thead className="bg-gray-200">
               <tr>
-                <th className="px-6 py-2 text-left font-semibold text-gray-700">Title</th>
-                <th className="px-6 py-2 text-left font-semibold text-gray-700">Size</th>
-                <th className="px-6 py-2 text-left font-semibold text-gray-700">Type</th>
-                <th className="px-6 py-2 text-left font-semibold text-gray-700">Last Updated</th>
-                <th className="px-6 py-2 text-left font-semibold text-gray-700">Download</th>
+                <th className="px-6 py-3 text-left font-semibold text-gray-700">Title</th>
+                <th className="px-6 py-3 text-left font-semibold text-gray-700">Size</th>
+                <th className="px-6 py-3 text-left font-semibold text-gray-700">Type</th>
+                <th className="px-6 py-3 text-left font-semibold text-gray-700">Last Updated</th>
+                <th className="px-6 py-3 text-left font-semibold text-gray-700">Download</th>
               </tr>
             </thead>
             <tbody>
               {files.map((file, index) => (
                 <tr
                   key={index}
-                  className={index % 2 === 0 ? "bg-gray-50" : "bg-gray-100"}
+                  className={index % 2 === 0 ? "bg-[#f5f5f5]" :  ""}
                 >
                   <td className="px-6 py-2 text-gray-800">{file.title}</td>
                   <td className="px-6 py-2 text-gray-800">{file.size}</td>
@@ -89,7 +86,7 @@ export default function Download() {
 
               <button
                 onClick={() => window.location.href = file.link}
-                className="inline-block border border-teal-700 text-teal-600 bg-white px-4 py-2 rounded-md text-sm  
+                className="inline-block border border-teal-700 text-teal-600 bg-white px-4 py-2 rounded-sm text-sm  
              hover:bg-teal-700 hover:text-white transition"
               >
                 Download

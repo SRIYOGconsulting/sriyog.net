@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Ribbon from '../Components/Ribbon';
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -63,54 +64,41 @@ export default function Contact() {
     ];
 
     return (
-        <div className="bg-white min-h-screen">
+        <div className="">
             {/* Header Section */}
-            <div className="bg-teal-800 text-white py-12 px-4 md:px-8 mb-12">
-                <div className="max-w-7xl mx-auto px-4 md:px-8">
-                    <h1 className="text-4xl font-bold">Contact</h1>
-                </div>
-            </div>
-
+            <Ribbon  name="Contact"/>
             <div className="max-w-7xl mx-auto px-4 md:px-8 pb-16">
                 {/* Main Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
                     {/* Left Side - Map and Services */}
                     <div className="space-y-6">
                         {/* Welcome Section */}
-                        <div className="bg-white border border-gray-200 rounded-lg p-6">
-                            <h2 className="text-2xl font-bold text-teal-700 mb-3">Welcome to SRIYOG Consulting</h2>
-                            <p className="text-gray-700 text-sm mb-4">
+                        <div className="border  rounded-lg p-6">
+                            <h2 className="text-2xl font-bold  mb-3">Welcome to SRIYOG Consulting</h2>
+                            <p className=" text-sm mb-4">
                                 Welcome to SRIYOG Consulting! We're located at Rem.Work, Kamalpokhari, Kathmandu, Nepal
                             </p>
 
                             {/* Google Map */}
                             <div className="rounded-lg overflow-hidden border border-gray-200 h-64 mb-3">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.1234567890!2d85.3240!3d27.7172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190123456789%3A0x1234567890abcdef!2sKamalpokhari%2C%20Kathmandu%2C%20Nepal!5e0!3m2!1sen!2sus!4v1699999999999"
-                                    width="100%"
-                                    height="100%"
-                                    style={{ border: 0 }}
-                                    allowFullScreen=""
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                ></iframe>
+                               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.193460784485!2d85.32073757615186!3d27.711312476180435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef740a066ed089%3A0xaf7934e44a7b1e17!2sSRIYOG!5e0!3m2!1sen!2snp!4v1741059444503!5m2!1sen!2snp" width="100%" height="100%"  ></iframe>
                             </div>
                             <a
-                                href="https://maps.google.com"
+                                href="https://www.google.com/maps/place/SRIYOG/@27.711185,85.323272,16z/data=!4m6!3m5!1s0x39ef740a066ed089:0xaf7934e44a7b1e17!8m2!3d27.7111849!4d85.3232716!16s%2Fg%2F11hbshgzmz?entry=tts&g_ep=EgoyMDI1MTIwMS4wIPu8ASoASAFQAw%3D%3D&skid=3876b84a-a371-4532-b369-fb8d01b4e9fc"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-teal-700 hover:text-teal-800 font-medium text-sm"
+                                className=" hover:text-teal-800 font-medium text-sm"
                             >
                                 Directions →
                             </a>
                         </div>
 
                         {/* Services Grid */}
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {services.map((service, index) => (
                                 <div
                                     key={index}
-                                    className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow flex items-start gap-4"
+                                    className="  rounded-lg p-6 border transition-shadow flex items-start gap-4"
                                 >
                                     {/* Icon (left) */}
                                     <img
@@ -121,10 +109,10 @@ export default function Contact() {
 
                                     {/* Text (right) */}
                                     <div>
-                                        <h3 className="text-lg font-bold text-teal-700 mb-2">
+                                        <h3 className="text-lg font-bold  mb-2">
                                             {service.title}
                                         </h3>
-                                        <p className="text-gray-700 text-sm">
+                                        <p className=" text-sm">
                                             {service.desc}
                                         </p>
                                     </div>
@@ -135,30 +123,30 @@ export default function Contact() {
                     </div>
 
                     {/* Right Side - Contact Form */}
-                    <div className="bg-white border border-gray-200 rounded-lg p-8">
+                    <div className="header border rounded-lg p-8">
                         <div className="flex items-center gap-3 mb-6">
                             <div className="w-8 h-8">
                                 <img src="/icons/email.svg" alt="email" className="w-full h-full" />
                             </div>
-                            <h2 className="text-2xl font-bold text-teal-700">Send Your Queries</h2>
+                            <h2 className="text-2xl font-bold ">Send Your Queries</h2>
                         </div>
 
-                        <form onSubmit={handleSubmit} className="space-y-4">
+                        <form onSubmit={handleSubmit} className="space-y-4 md:space-y-7">
                             {/* Name Fields */}
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label className="block text-sm font-semibold text-gray-700 mb-2">First Name</label>
+                                    <label className="block text-sm font-semibold  mb-2">First Name</label>
                                     <input
                                         type="text"
                                         name="firstName"
                                         placeholder="eg: Madan"
                                         value={formData.firstName}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent focus:bg-white"
+                                        className="w-full px-4 py-2.5 border  rounded text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent focus:bg-white"
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-semibold text-gray-700 mb-2">Last Name</label>
+                                    <label className="block text-sm font-semibold  mb-2">Last Name</label>
                                     <input
                                         type="text"
                                         name="lastName"
@@ -172,7 +160,7 @@ export default function Contact() {
 
                             {/* Email */}
                             <div>
-                                <label className="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+                                <label className="block text-sm font-semibold  mb-2">Email</label>
                                 <input
                                     type="email"
                                     name="email"
@@ -185,14 +173,14 @@ export default function Contact() {
                             </div>
 
                             {/* Phone Fields */}
-                            <div className="grid grid-cols-3 gap-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                 <div>
-                                    <label className="block text-sm font-semibold text-gray-700 mb-2">Country Code</label>
+                                    <label className="block text-sm font-semibold  mb-2">Country Code</label>
                                     <select
                                         name="countryCode"
                                         value={formData.countryCode}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent focus:bg-white"
+                                        className="w-full px-4 py-2.5  border  rounded text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent focus:bg-white"
                                     >
                                         {countries.map((country, index) => (
                                             <option key={index} value={country}>{country}</option>
@@ -200,37 +188,37 @@ export default function Contact() {
                                     </select>
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-semibold text-gray-700 mb-2">Phone</label>
+                                    <label className="block text-sm font-semibold  mb-2">Phone</label>
                                     <input
                                         type="tel"
                                         name="phone"
                                         placeholder="Phone"
                                         value={formData.phone}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent focus:bg-white"
+                                        className="w-full px-4 py-2.5  border  rounded text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent focus:bg-white"
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-semibold text-gray-700 mb-2">Extension</label>
+                                    <label className="block text-sm font-semibold  mb-2">Extension</label>
                                     <input
                                         type="text"
                                         name="extension"
                                         placeholder="Extension"
                                         value={formData.extension}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent focus:bg-white"
+                                        className="w-full px-4 py-2.5  border  rounded text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent focus:bg-white"
                                     />
                                 </div>
                             </div>
 
                             {/* Topic */}
                             <div>
-                                <label className="block text-sm font-semibold text-gray-700 mb-2">What do you need help with?</label>
+                                <label className="block text-sm font-semibold  mb-2">What do you need help with?</label>
                                 <select
                                     name="topic"
                                     value={formData.topic}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent focus:bg-white"
+                                    className="w-full px-4 py-2.5  border  rounded text-sm focus:ring-2 focus:ring-teal-500 focus:border-transparent focus:bg-white"
                                 >
                                     <option value="Sales">Sales</option>
                                     <option value="Support">Support</option>
@@ -246,7 +234,7 @@ export default function Contact() {
 
                             {/* Message */}
                             <div>
-                                <label className="block text-sm font-semibold text-gray-700 mb-2">Message</label>
+                                <label className="block text-sm font-semibold  mb-2">Message</label>
                                 <textarea
                                     name="message"
                                     placeholder="Message"
@@ -270,25 +258,25 @@ export default function Contact() {
 
                 {/* Quick Contact Section */}
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl text-teal-700 mb-2">Quick Contact</h2>
-                    <p className="text-gray-600">Quick contact the relevant people.</p>
+                    <h2 className="text-3xl  mb-2">Quick Contact</h2>
+                    <p className="">Quick contact the relevant people.</p>
                 </div>
 
                 {/* Team Members */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
                     {teamMembers.map((member, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-lg p-8 text-center hover:shadow-lg transition-shadow"
+                            className=" rounded-lg p-8 text-center "
                         >
                             <img
                                 src={member.img}
                                 alt={member.name}
-                                className="w-40 h-40 mx-auto mb-6 rounded-full object-cover"
+                                className="w-56 h-56 mx-auto mb-6 rounded-full object-cover"
                             />
-                            <h3 className="text-2xl font-bold text-gray-800 mb-2">{member.name}</h3>
-                            <p className="text-gray-600 text-base mb-6">{member.designation}</p>
-                            <button className="px-8 py-2.5 border-2 border-teal-700 text-teal-700 rounded hover:bg-teal-700 hover:text-white transition-colors font-semibold text-base">
+                            <h3 className="text-[22px] text mb-2">{member.name}</h3>
+                            <p className=" text-base mb-6">{member.designation}</p>
+                            <button className="px-5 py-1.5 border border-teal-700  rounded hover:bg-teal-700 hover:text-white transition-colors font-semibold text-base">
                                 eMail
                             </button>
                         </div>

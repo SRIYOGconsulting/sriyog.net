@@ -1,4 +1,5 @@
 import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
+import Ribbon from '../Components/Ribbon';
 // Icons are now loaded from the public folder
 
 export default function Vmgo() {
@@ -9,103 +10,103 @@ export default function Vmgo() {
 
   return (
     <div className="min-h-screen ">
-      {/* Ribbon Header */}
-      <div className="bg-teal-800 text-white py-12 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <h1 className="text-4xl font-bold">Vision, Mission, Goals and Objectives</h1>
-        </div>
-      </div>
       
-      {/* Breadcrumbs */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-4">
-       {/* <BasicBreadcrumbs items={breadcrumbItems} /> */}
-      </div>
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-        {/* Vision Section */}
-        <section id="vision" className="mb-12 card rounded-lg shadow-md p-8">
-          <div className="flex items-center mb-6">
-            <div className="bg-teal-100 p-2 rounded-full mr-4 w-10 h-10 flex items-center justify-center">
-              <img src="/icons/lightbulb.svg" alt="" className="w-6 h-6 text-teal-700" />
+        <Ribbon name="Vission, Mission, Goals and Objectives"/>
+
+        {/* Into section */}
+        <section className='max-w-7xl mx-auto py-8'>
+            <div className='grid grid-cols-4 place-content-center place-items-center'>
+                <div className='flex flex-col justify-center items-center gap-3'>
+                  <img src="/images/vmgo/vision.webp" alt="" className="w-24 h-24 " />
+                  <p>Vision</p>
+                </div>
+                <div className='flex flex-col justify-center items-center gap-3'>
+                  <img src="/images/vmgo/mission.webp" alt="" className="w-24 h-24 " />
+                  <p>Mission</p>
+                </div>
+                <div className='flex flex-col justify-center items-center gap-3'>
+                  <img src="/images/vmgo/goals.webp" alt="" className="w-24 h-24 " />
+                  <p>Goals</p> 
+                </div>
+                <div className='flex flex-col justify-center items-center gap-3'>
+                  <img src="/images/vmgo/Objectives.webp" alt="" className="w-24 h-24" /> 
+                  <p>Objectives</p>    
+                </div> 
             </div>
-            <h2 className="text-3xl font-bold ">Vision</h2>
+        </section>
+
+
+
+        {/* Vision Section */}
+        <section id="vision" className="flex justify-between gap-24 mb-12 py-8 max-w-5xl mx-auto">
+          <div className="flex items-center mb-6 ">
+              <img src="/images/vmgo/vision.webp" alt="" className="w-auto h-40 text-teal-700" />
           </div>
-          <div className="pl-16 card2">
-            <p className=" text-lg leading-relaxed mb-4">
-              Our vision is to create a future where every individual has access to opportunities that match their skills and aspirations.
-            </p>
-            <p className=" text-lg leading-relaxed">
-              We envision a world where people can easily connect with skilled professionals through a transparent and efficient platform.
+          <div className="p-16 card space-y-4 max-w-3xl rounded-xl">
+            <h2 className="text-3xl font-bold text">Vision</h2>
+            <p className=" text-md leading-relaxed mb-4">
+              Our vision at SRIYOG is to create a future where every individual has access to opportunities that match their skills and aspirations.            </p>
+            <p className=" text-md leading-relaxed">
+              We envision a world where people searching for any service can easily connect
+              with skilled professionals rather than hiring hefty commission from any service
+              marketplace, and where an individual can have his/her digital profile showcasing
+              their expertise.
             </p>
           </div>
         </section>
 
         {/* Mission Section */}
-        <section id="mission" className="mb-12 card  rounded-lg shadow-md p-8">
-          <div className="flex items-center mb-6">
-            <div className="bg-teal-100 p-2 rounded-full mr-4 w-10 h-10 flex items-center justify-center">
-              <img src="/icons/flag.svg" alt="" className="w-6 h-6 text-teal-700" />
-            </div>
-            <h2 className="text-3xl font-bold ">Mission</h2>
+        <section id="mission" className="flex justify-between gap-24 mb-12  max-w-5xl mx-auto">
+          <div className="p-16 bg-teal-700 space-y-4 max-w-3xl rounded-xl ">
+            <h2 className="text-3xl font-bold text2">Mission</h2>
+            <p className="text-md leading-relaxed text2">
+              At SRIYOG, our mission is to revolutionize the way work is connected with workers. We strive to provide a seamless platform that empowers individuals and businesses to find the perfect match for their needs, fostering opportunities for growth, collaboration, and success.            </p>
           </div>
-          <div className="pl-16 card2">
-            <p className="text-lg leading-relaxed">
-              Our mission is to revolutionize the way work is connected with workers by providing a seamless platform that empowers individuals and businesses to find the perfect match for their needs.
-            </p>
+          <div className="flex items-center mb-6">
+              <img src="/images/vmgo/mission.webp" alt="" className="w-auto h-40 " />
           </div>
         </section>
 
         {/* Goals Section */}
-        <section id="goals" className="mb-12 card  rounded-lg shadow-md p-8">
-          <div className="flex items-center  mb-6">
-            <div className="bg-teal-100 p-2 rounded-full mr-4 w-10 h-10 flex items-center justify-center">
-              <img src="/icons/rocket.svg" alt="" className="w-6 h-6 text-teal-700" />
-            </div>
-            <h2 className="text-3xl font-bold ">Our Goals</h2>
+        <section id="goals" className="flex justify-between gap-24 py-8 max-w-5xl mx-auto">
+          <div className="flex items-center  mb-6">   
+              <img src="/images/vmgo/goals.webp" alt="" className="w-60 h-40 " />
           </div>
-          <div className="pl-16 space-y-4 card2">
+          <div className="p-16 space-y-4 card rounded-xl">
+            <h2 className="text-3xl font-bold text">Our Goals</h2>
             {[
               "Enable transparent and efficient interactions between professionals and businesses through our platform's tools and features.",
               "Ensure trust through robust verification processes and accurate listings for all users.",
               "Provide equal access to opportunities for professionals from all backgrounds.",
               "Continuously enhance our platform with new technologies to deliver the best user experience."
             ].map((goal, index) => (
-              <div key={index} className="flex card2 items-center gap-3">
-                <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="4" cy="4" r="4"/>
-                </svg>
-                <p className=" text-lg">{goal}</p>
+              <div key={index} className="flex card2 items-center gap-3 pl-4">
+                <ul className='list-disc'><li>{goal}</li></ul>
               </div>
             ))}
           </div>
         </section>
 
         {/* Objectives Section */}
-        <section id="objectives" className="mb-12 card rounded-lg shadow-md p-8">
-          <div className="flex items-center mb-6">
-            <div className="bg-teal-100 p-2 rounded-full mr-4 w-10 h-10 flex items-center justify-center">
-              <img src="/icons/bullseye.svg" alt="" className="w-6 h-6 text-teal-700" />
-            </div>
-            <h2 className="text-3xl font-bold ">Objectives</h2>
-          </div>
-          <div className="pl-16 card2 space-y-4">
+        <section id="objectives" className="flex justify-between gap-24 mb-12 py-8 max-w-5xl mx-auto">
+          <div className="p-16 space-y-4 text2 bg-teal-700 max-w-3xl rounded-xl">
+            <h2 className="text-3xl font-bold">Objectives</h2>
             {[
-              "Expand our reach to new markets and demographics",
-              "Enhance user experience through continuous platform improvements",
+              "Expand our reach to new markets and demographics, ensuring that individuals and businesses from all backgrounds have access to our platform.",
+              "Continuously improve the user experience on our platform, making it easier and more intuitive for users to find what they're looking for.",
               "Foster a strong community of professionals and businesses",
               "Maintain high standards of security and privacy"
             ].map((objective, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="4" cy="4" r="4"/>
-                </svg>
-                <p className=" text-lg">{objective}</p>
+              <div key={index} className="flex items-center gap-3 pl-4">
+                <ul className='list-disc'><li>{objective}</li></ul>
               </div>
             ))}
           </div>
+          <div className="flex items-center mb-6">
+              <img src="/images/vmgo/Objectives.webp" alt="" className="w-auto h-44 text-teal-700" />
+          </div>
         </section>
-      </div>
     </div>
   );
 }

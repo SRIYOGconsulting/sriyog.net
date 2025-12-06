@@ -22,11 +22,8 @@ const Newsletter = () => {
               bg-transparent
               border border-white
               rounded-xl
-              italic
-              text-white
               text-lg sm:text-xl
               font-semibold
-              placeholder-white/100
               focus:outline-none
             "
           />

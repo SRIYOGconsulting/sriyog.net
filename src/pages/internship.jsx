@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import Ribbon from '../Components/Ribbon';
 
 
 
@@ -16,6 +17,7 @@ const Internship = () => {
     cv:"",
     internshipPeriod:"",
     institution:"",
+    subject: "",
     passedyear: "",
 })
   const handleChange = (e) => {
@@ -41,16 +43,13 @@ const handleSubmit = (e)=>{
     internshipPeriod:"",
     institution:"",
     passedyear: "",
+    subject:""
     })}
 }
   return (
     <>
     {/* Full-width Ribbon Header */}
-    <div className="bg-teal-800 text-white py-10 px-4 md:px-8 mb-10">
-        <div className="max-w-7xl mx-auto">
-            <h1 className="text-3xl md:text-4xl font-bold">Internship</h1>
-        </div>
-    </div>
+    <Ribbon name="Internship" />
     <div className='my-12'>
     <div className=' w-full max-w-7xl mx-auto flex flex-col px-5 py-15 '>
         <form onSubmit={handleSubmit} className='footer shadow rounded-lg p-5'>
@@ -92,12 +91,10 @@ const handleSubmit = (e)=>{
                                 <option value="Other">Other</option>
                         </select>
                         <span className='absolute right-5 pointer-events-none translate-y-1/2 top-0.5 cursor-pointer'>
-                            <svg fill="#4b4b4b" width="20px" height="20px" viewBox="-6.5 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#4b4b4b">
-                            <path d="M18.813 11.406l-7.906 9.906c-0.75 0.906-1.906 0.906-2.625 0l-7.906-9.906c-0.75-0.938-0.375-1.656 0.781-1.656h16.875c1.188 0 1.531 0.719 0.781 1.656z" />
-                            </svg>
+                            <img src="/icons/dropdown.svg" className='w-[20px] h-[20px]' alt="" />
                         </span>
                     </div>
-                </div>
+            </div>
             <div className='flex flex-col gap-1'>
                 <label>Upload CV/ Resume *</label>
                 <div className='relative'>
@@ -136,6 +133,27 @@ const handleSubmit = (e)=>{
                     </div>
                 )}
             </div>
+            <div className="flex flex-col ">
+                <label className="mb-1 font-medium pl-[2px]">Internship Subject *</label>
+                <div className='relative h-[42px]'>
+                        <select
+                            name="subject"
+                            value={form.subject}
+                            onChange={handleChange}
+                            required
+                            className="absolute inset-0 appearance-none w-full px-4 text-black bg-white border border-gray-400 rounded-md focus:ring-2 focus:ring-teal-700 focus:outline-none"
+                            >
+                                <option value="">-- Select --</option>
+                                <option value="Male">Management</option>
+                                <option value="Female">Social Works</option>
+                                <option value="Rather Not to Say">IT</option>
+                                <option value="Other">Other</option>
+                        </select>
+                        <span className='absolute right-5 pointer-events-none translate-y-1/2 top-0.5 cursor-pointer'>
+                            <img src="/icons/dropdown.svg" className='w-[20px] h-[20px]' alt="" />
+                        </span>
+                </div>
+            </div>
             <div className='flex flex-col gap-1'>
                 <label className='pl-[2px]'>Name of Institution *</label>
                 <input required name='institution' value={form.institution} type="text" className="px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-700 focus:outline-none" pattern='[A-Za-z/ ]+' onChange={handleChange}/>
@@ -160,14 +178,7 @@ const handleSubmit = (e)=>{
                         <option value="6 months">6 months</option>
                     </select>
                     <span className='absolute right-5 pointer-events-none translate-y-1/2 top-0.5 cursor-pointer'>
-                        <svg fill="#4b4b4b" width="20px" height="20px" viewBox="-6.5 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#4b4b4b">
-                            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                            <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                            <title>dropdown</title>
-                            <path d="M18.813 11.406l-7.906 9.906c-0.75 0.906-1.906 0.906-2.625 0l-7.906-9.906c-0.75-0.938-0.375-1.656 0.781-1.656h16.875c1.188 0 1.531 0.719 0.781 1.656z" />
-                            </g>
-                        </svg>
+                        <img src="/icons/dropdown.svg" className='w-[20px] h-[20px]' alt="" />
                     </span>
                     </div>
             </div>

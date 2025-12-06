@@ -1,6 +1,7 @@
 import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
 import ClapButton from '../Components/ClapButton';
 import FontSizeChanger from '../Components/FontSizeChanger';
+import Ribbon from '../Components/Ribbon';
 
 export default function About() {
     const breadcrumbItems = [
@@ -9,26 +10,11 @@ export default function About() {
     ];
 
     return (
-        <div className='about'>
+        <div className='about font-size'>
             {/* Full-width Ribbon Header */}
-            <div className="bg-teal-800 text-white py-8 md:py-12 px-4 md:px-8 mb-6 md:mb-8">
-                <div className="max-w-7xl mx-auto px-4 md:px-8">
-                    {/* Mobile: Stack vertically, Desktop: Side by side */}
-                    <div className="flex flex-col md:flex-row justify-between md:items-center gap-4">
-                        <h1 className="text-3xl md:text-4xl font-bold">About Us</h1>
-                        {/* Hide on mobile, show on tablet+ */}
-                        <div className="hidden md:block">
-                            <FontSizeChanger />
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Ribbon name="About" showfont={true}/>
            
             <div className="max-w-7xl mx-auto px-4 md:px-8 pb-8">
-                {/* Font Size Changer for Mobile - Show only on mobile */}
-                <div className="md:hidden mb-6 flex justify-center">
-                    <FontSizeChanger />
-                </div>
 
                 <div className="flex flex-col md:flex-row gap-6 md:gap-8">
                      {/* Image on mobile - inserted here for better reading flow */}
@@ -41,7 +27,7 @@ export default function About() {
                         </div>
                     {/* Left side - Text content */}
                     <div className="md:w-2/3 space-y-4 md:space-y-6 leading-relaxed ">
-                        <p className="content-text text-sm md:text-base">
+                        <p className="content-text ">
                             Established on June 14, 2018, SRIYOG Consulting Pvt. Ltd., based in Kamalpokhari,
                             Kathmandu, Nepal, is a leading provider of digital solutions dedicated to driving
                             digital transformation in the healthcare, employment, and tourism sectors. Our mission
@@ -49,7 +35,7 @@ export default function About() {
                             services that enhance operational efficiency and support long-term growth.
                         </p>
 
-                        <p className="content-text text-sm md:text-base">
+                        <p className="content-text ">
                             At SRIYOG Consulting, we believe that smart technology is key to addressing sector-specific challenges.
                             Our diverse IT services include data processing, software and web application development, digital
                             marketing, database management, business process automation, and expert IT consultancy—each tailored
@@ -58,19 +44,19 @@ export default function About() {
 
                        
 
-                        <p className="content-text text-sm md:text-base">
+                        <p className="content-text">
                             By optimizing digital infrastructure, we help our clients streamline services, engage users effectively,
                             and scale sustainably. We specialize in crafting robust, user-friendly web solutions with a focus on
                             modern UI/UX design, full-stack development, and industry-specific platforms—whether for agritech,
                             job-matching portals, or tourism management systems.
                         </p>
 
-                        <p className="content-text text-sm md:text-base">
+                        <p className="content-text ">
                             Our offerings include e-commerce platforms, CMS, SaaS-based solutions, and Progressive Web Applications
                             (PWAs) designed for mobile-first experiences with offline functionality.
                         </p>
 
-                        <p className="content-text text-sm md:text-base">
+                        <p className="content-text ">
                             Our comprehensive IT services are tailored to the unique demands of healthcare, employment platforms,
                             and tourism operations.
                         </p>

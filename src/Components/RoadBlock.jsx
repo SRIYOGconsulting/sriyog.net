@@ -77,76 +77,62 @@ const RoadBlock = () => {
   })
 
   return (
-    <>
-      {showRoadBlock && (
-        <div className="fixed inset-0 bg-[#D0D0D0] z-[9999] close">
-          <div>
-            <div>
-              <div
-                className="close"
-                style={{
-                  zIndex: 9999,
-                  borderRadius: "2%",
-                  height: "540px",
-                  position: "absolute",
-                  left: "500px",
-                  top: "100px",
-                  boxShadow: "1px 10px 10px grey",
-                }}
-              >
-                <button
-                  onClick={displayTimeLeft <= 0 ? onClose : undefined}
-                  style={{
-                    backgroundColor: "#055d59",
-                    borderRadius: "50%",
-                    border: "0px",
-                    width: "40px",
-                    height: "40px",
-                    textAlign: "center",
-                    alignContent: "center",
-                    position: "absolute",
-                    color: "white",
-                    top: "-10px",
-                    right: "-10px",
-                    fontSize: "20px",
-                    fontWeight: "bold",
-                    cursor: displayTimeLeft <= 0 ? "pointer" : "not-allowed",
-                  }}
-                >
-                  {displayTimeLeft <= 0 ? "X" : displayTimeLeft}
-                </button>
+  <>
+    {showRoadBlock && (
+      <div className="fixed inset-0 bg-[#D0D0D0] z-[9999] close flex items-center justify-center">
 
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  <img
-                    src={`/roadblock/${month}/${day}.jpg`}
-                    onError={(e) => {
-                      const originalSrc = e.currentTarget.src;
+        <div className="relative close">
+          <button
+            onClick={displayTimeLeft <= 0 ? onClose : undefined}
+            className={`sm:-top-[10px] sm:-right-[10px] ${window.innerWidth < 550 ? "top-[40px] right-0" : "-top-[10px] -right-[10px] "}`}
+            style={{
+              backgroundColor: "#055d59",
+              borderRadius: "50%",
+              border: "0px",
+              width: "40px",
+              height: "40px",
+              textAlign: "center",
+              alignContent: "center",
+              position: "absolute",
+              color: "white",
+              fontSize: "20px",
+              fontWeight: "bold",
+              cursor: displayTimeLeft <= 0 ? "pointer" : "not-allowed",
+            }}
+          >
+            {displayTimeLeft <= 0 ? "X" : displayTimeLeft}
+          </button>
 
-                      e.currentTarget.onerror = null;
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img
+              src={`/roadblock/${month}/${day}.jpg`}
+              onError={(e) => {
+                const originalSrc = e.currentTarget.src;
+                e.currentTarget.onerror = null;
 
-                      if (!originalSrc.includes("default.jpg")) {
-                        e.currentTarget.src = "/roadblock/default.jpg";
-                      } else {
-                        handleImageError();
-                      }
-                    }}
-                    className="img-fluid rounded"
-                    style={{
-                      borderRadius: "3%",
-                      objectFit: "contain",
-                      height: "550px",
-                      width: "550px",
-                    }}
-                    alt="Advertisement"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
+                if (!originalSrc.includes("default.jpg")) {
+                  e.currentTarget.src = "/roadblock/default.jpg";
+                } else {
+                  handleImageError();
+                }
+              }}
+              className="img-fluid rounded"
+              style={{
+                borderRadius: "3%",
+                objectFit: "contain",
+                height: "550px",
+                width: "550px",
+              }}
+              alt="Advertisement"
+            />
+          </a>
         </div>
-      )}
-    </>
-  );
+
+      </div>
+    )}
+  </>
+);
+
 };
 
 export default RoadBlock;

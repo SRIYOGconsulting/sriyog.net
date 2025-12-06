@@ -9,7 +9,7 @@ const Sidekick = () => {
   const [show,setShow] = useState(true);
   const [menu,setMenu] = useState(false);
   return (
-    <div className='fixed right-0 top-[58%] sm:top-[30%] min-h-screen z-20'>
+    <div className='fixed right-0 top-[48%] sm:top-[30%] min-h-screen z-20'>
         {show && 
         <div className='relative cursor-pointer hover:scale-[1.01] transition-all duration-200'>
             <div onClick={()=>{setShow(false);setMenu(true)}} className="hidden sm:flex flex-col justify-center items-center gap-2 rounded-tl-xl rounded-bl-xl sidekick px-4 py-3">
@@ -38,14 +38,15 @@ const Sidekick = () => {
               <p className='text-[9.5px] font-[700] text-[#888888]'>Phone</p>                                        
             </div>
          </div>
-          <div  onClick={()=>{setShow(false);setMenu(true)}} className="flex sm:hidden flex-col justify-center items-center gap-2 rounded-tl-xl rounded-bl-xl sidekick px-5 py-3">
-            <div onClick={()=>window.open("https://sriyog.com", "_blank")} className='flex flex-col items-center justify-center gap-1'>
+        </div> }
+        {show &&
+          <div onClick={()=>{setShow(false);setMenu(true)}} className="flex sm:hidden flex-col justify-center items-center gap-2 rounded-tl-xl rounded-bl-xl sidekick px-5 py-3">
+            <div className='flex flex-col items-center justify-center gap-1'>
               <img src="/icons/Frame.svg"  alt="" height="40px" width="40px" className=' hover:scale-[1.15] transition-all duration-200'/>
               <p className='text-[9.5px] font-[700] text-[#888888]'>Support</p>
             </div >
           </div>
-        </div> }
-
+          }
             <div className={`absolute top-0 sm:top-14  w-[250px] transition-transform duration-300 ${menu ? "-translate-x-[270px]" : "translate-x-80"}`}>              
             <button onClick={()=>{setMenu(false);setTimeout(()=>setShow(true),200)}} className='absolute top-2 right-4 bg-[#888888] rounded-full p-1'><img src="/icons/cross.svg" className='w-5 h-5' alt="" /></button>
               <div className='flex flex-col justify-center items-center sidekick py-4 rounded-xl w-[250px]'>
