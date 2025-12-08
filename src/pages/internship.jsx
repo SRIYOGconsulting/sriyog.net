@@ -82,7 +82,7 @@ const handleSubmit = (e)=>{
                             value={form.gender}
                             onChange={handleChange}
                             required
-                            className="absolute inset-0 appearance-none w-full px-4 text-black bg-white border border-gray-400 rounded-md focus:ring-2 focus:ring-teal-700 focus:outline-none"
+                            className="absolute inset-0 appearance-none w-full px-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-700 focus:outline-none"
                             >
                                 <option value="">-- Select --</option>
                                 <option value="Male">Male</option>
@@ -141,7 +141,7 @@ const handleSubmit = (e)=>{
                             value={form.subject}
                             onChange={handleChange}
                             required
-                            className="absolute inset-0 appearance-none w-full px-4 text-black bg-white border border-gray-400 rounded-md focus:ring-2 focus:ring-teal-700 focus:outline-none"
+                            className="absolute inset-0 appearance-none w-full px-4  border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-700 focus:outline-none"
                             >
                                 <option value="">-- Select --</option>
                                 <option value="Male">Management</option>
@@ -170,7 +170,7 @@ const handleSubmit = (e)=>{
                         value={form.internshipPeriod}
                         onChange={handleChange}
                         required
-                        className="absolute inset-0 appearance-none w-full px-4  text-black bg-white border border-gray-400 rounded-md focus:ring-2 focus:ring-teal-700 focus:outline-none"
+                        className="absolute inset-0 appearance-none w-full px-4  border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-700 focus:outline-none"
                         >
                         <option value="">-- Select --</option>
                         <option value="2 months">2 months</option>
