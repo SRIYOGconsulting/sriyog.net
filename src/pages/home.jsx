@@ -36,16 +36,13 @@ const Home = () => {
           </div>
 
           {/* Spacer for mobile to push image below */}
-          <div className="w-full md:hidden h-px"></div>
+          <div className="w-full md:hidden h-px"> </div>
 
 
         </div>
 
         {/* <div className="absolute inset-0 bg-gradient-to-r from-[#D0D0D0]/50 to-transparent md:from-transparent"></div> */}
       </section>
-
-
-      {/* More sections to be added below */}
     </div>
     
   );
