@@ -1,9 +1,9 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 
-// Pages
+
 import Home from "./pages/Home.jsx";
 import Search from "./components/Search.jsx";
 import NotFound from "./pages/NotFound.jsx";
@@ -24,23 +24,24 @@ const Team = React.lazy(() => import("./pages/Team.jsx"));
 const Timeline = React.lazy(() => import("./pages/Timeline.jsx"));
 const Videos = React.lazy(() => import("./pages/Videos.jsx"));
 const Vmgo = React.lazy(() => import("./pages/Vmgo.jsx"));
-const WhyUs = React.lazy(() => import("./pages/Whyus.jsx"));
+const WhyUs = React.lazy(() => import("./pages/WhyUs.jsx"));
 const Sitemap = React.lazy(() => import("./pages/Sitemap.jsx"));
 const Downloads = React.lazy(() => import("./pages/Download.jsx"));
 const FAQ = React.lazy(() => import("./pages/Faq.jsx"));
 const Glossary = React.lazy(() => import("./pages/Glossary.jsx"));
 const Location = React.lazy(() => import("./pages/Location.jsx"));
-const Refundpolicy = React.lazy(() => import("./pages/Refundpolicy.jsx"));
+const Refundpolicy = React.lazy(() => import("./pages/RefundPolicy.jsx"));
 const Calendar = React.lazy(() => import("./pages/Calendar.jsx"));
-const Internship = React.lazy(()=> import("./pages/Internship.jsx"));
-const cookiePolicy = React.lazy(()=> import("./pages/CookiePolicy.jsx"));
-const PrivacyPolicy = React.lazy(()=> import("./pages/PrivacyPolicy.jsx"));
-const TermsOfServices = React.lazy(()=>import("./pages/Tos.jsx"));
-const Disclaimer = React.lazy(()=>import("./pages/Disclaimer.jsx"));
-const PhotoGallery = React.lazy(()=>import("./pages/PhotoGallery.jsx"));
-const Career = React.lazy(()=>import("./pages/Career.jsx"));
-const ServicePage = React.lazy(()=> import("./pages/ServicePage.jsx"))
-// Helper to wrap lazy components in Suspense
+const Internship = React.lazy(() => import("./pages/Internship.jsx"));
+const CookiePolicy = React.lazy(() => import("./pages/CookiePolicy.jsx"));
+const PrivacyPolicy = React.lazy(() => import("./pages/PrivacyPolicy.jsx"));
+const TermsOfServices = React.lazy(() => import("./pages/Tos.jsx"));
+const Disclaimer = React.lazy(() => import("./pages/Disclaimer.jsx"));
+const PhotoGallery = React.lazy(() => import("./pages/PhotoGallery.jsx"));
+const Career = React.lazy(() => import("./pages/Career.jsx"));
+const ServicePage = React.lazy(() => import("./pages/ServicePage.jsx"));
+
+// Suspense helper
 const withSuspense = (Component, fallbackText) => (
   <Suspense fallback={<div>{fallbackText}</div>}>
     <Component />
@@ -74,20 +75,18 @@ const router = createBrowserRouter([
       { path: "videos", element: withSuspense(Videos, "Loading Videos...") },
       { path: "vmgo", element: withSuspense(Vmgo, "Loading Vmgo...") },
       { path: "whyus", element: withSuspense(WhyUs, "Loading Why Us...") },
-      {path: "calendar", element: withSuspense(Calendar, "Loading calendar..")},
-
+      { path: "calendar", element: withSuspense(Calendar, "Loading Calendar...") },
       { path: "sitemap", element: withSuspense(Sitemap, "Loading Sitemap...") },
       { path: "internship", element: withSuspense(Internship, "Loading Internship...") },
-      // 404 Page
-      { path: "*", element: <NotFound/> },
-      {path: "search", element: withSuspense(Search, "Search")},
-      {path: "cookie-policy", element: withSuspense(cookiePolicy, "Loading Cookie Policy...")},
-      {path: "privacy-policy", element: withSuspense(PrivacyPolicy, "Loading Privacy Policy...")},
-      {path: "tos", element: withSuspense(TermsOfServices, "Loading Terms of services...")},
-      {path: "disclaimer", element: withSuspense(Disclaimer, "Loading Disclaimer...")},
-      {path: "gallery/photogallery", element: withSuspense(PhotoGallery, "Loading Album...")},
-      {path: "career", element: withSuspense(Career, "Loading Career...")},
-      {path: "services/servicepage", element: withSuspense(ServicePage, "Loading Service Page...")},
+      { path: "*", element: <NotFound /> },
+      { path: "search", element: withSuspense(Search, "Loading Search...") },
+      { path: "cookie-policy", element: withSuspense(CookiePolicy, "Loading Cookie Policy...") },
+      { path: "privacy-policy", element: withSuspense(PrivacyPolicy, "Loading Privacy Policy...") },
+      { path: "tos", element: withSuspense(TermsOfServices, "Loading Terms of Services...") },
+      { path: "disclaimer", element: withSuspense(Disclaimer, "Loading Disclaimer...") },
+      { path: "gallery/photogallery", element: withSuspense(PhotoGallery, "Loading Album...") },
+      { path: "career", element: withSuspense(Career, "Loading Career...") },
+      { path: "services/servicepage", element: withSuspense(ServicePage, "Loading Service Page...") },
     ],
   },
 ]);

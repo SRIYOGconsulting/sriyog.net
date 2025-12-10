@@ -228,11 +228,17 @@ export default function Notice() {
                                     </h3>
 
                                     <div className="flex items-center gap-4">
+<<<<<<< Updated upstream
                                         <a href="#">
                                         <button className='bg-[#ebebeb] hover:bg-teal-700 hover:text-white text-[13px] border px-2 py-px rounded-md border-gray-800'>
                                             Browse More
                                         </button>
                                         </a>
+=======
+                                        <button className='bg-[#ebebeb] text-[13px] border px-2 py-px rounded-md border-gray-800'>
+                                            Browse More
+                                        </button>
+>>>>>>> Stashed changes
                                         <span className="bg-green-100 text-black text-sm px-3 py-1 rounded-full">
                                             {notice.category}
                                         </span>
