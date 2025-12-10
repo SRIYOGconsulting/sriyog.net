@@ -13,7 +13,7 @@ export default function Services() {
     const servicesList = services;
 
     return (
-        <div className="bg-white min-h-screen">
+        <div className=" min-h-screen">
             {/* Header Section */}
             <Ribbon name="Services"/>
 
@@ -23,7 +23,7 @@ export default function Services() {
                     {servicesList.map((service, index) => (
                         <div
                             key={index}
-                            className="bg-white space-y-6 sm:space-y-4 border-gray-400 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 p-9 flex flex-col "
+                            className="footer shadow space-y-6 sm:space-y-4 border-gray-400 rounded-lg hover:shadow-2xl transition-shadow duration-300 p-9 flex flex-col "
                         >
                             {/* Icon */}
                             <div className="flex justify-center mb-6">
@@ -34,19 +34,19 @@ export default function Services() {
                                 />
                             </div>
                             {/* Title */}
-                            <h3 className="text-xl text-gray-700 py-1 sm:py-0 mb-4 text-center">
+                            <h3 className="text-xl text py-1 sm:py-0 mb-4 text-center">
                                 {service.title}
                             </h3>
 
                             {/* Description */}
-                            <p className="text-gray-600 text-l py-1 sm:py-0 leading-relaxed mb-4 flex-grow text-justify">
+                            <p className=" text-l py-1 sm:py-0 leading-relaxed mb-4 flex-grow text-justify">
                                 {service.ShortDesc}
                             </p>
 
                             {/* Read More Button */}
                             <div className="flex  py-1 sm:py-0 justify-center">
                                 <Link to="servicepage" state={{ index: index }}>
-                                <button className="px-6 py-2.5 border-2 border-teal-700 text-teal-700 rounded-md hover:bg-teal-700 hover:text-white transition-all duration-300 font-medium text-sm">
+                                <button className="px-6 py-2.5 border-2 border-teal-700  rounded-md hover:bg-teal-700 hover:text-white transition-all duration-300 font-medium text-sm">
                                     Browse More
                                 </button>
                                 </Link>

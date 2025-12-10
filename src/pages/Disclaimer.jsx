@@ -3,7 +3,7 @@ import Ribbon from "../Components/Ribbon";
 
 const Disclaimer = () => {
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="h-full">
       {/* Header / Ribbon */}
       <Ribbon name="Disclaimer" />
 

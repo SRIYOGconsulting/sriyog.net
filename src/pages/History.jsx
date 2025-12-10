@@ -48,7 +48,7 @@ export default function History() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
 
                         {/* Card 1 */}
-                        <div className="card p-6 shadow rounded-xl border hover:shadow-md transition ">
+                        <div className="card p-6 shadow-sm rounded-xl hover:shadow-md transition ">
                             <img
                                 src="/images/history/1.png"  // Male placeholder
                                 alt="Male Placeholder"
@@ -70,7 +70,7 @@ export default function History() {
                         </div>
 
                         {/* Card 2 */}
-                        <div className="card p-6 shadow rounded-xl border hover:shadow-md transition h-full">
+                        <div className="card p-6 shadow-sm rounded-xl hover:shadow-md transition h-full">
                             <img
                                 src="/images/history/2.png"  // Female placeholder
                                 alt="Female Placeholder"
@@ -100,28 +100,28 @@ export default function History() {
 
                     <div className="space-y-6">
 
-                        <div className="p-6 card  border rounded-xl shadow-sm hover:shadow-md transition-all">
+                        <div className="p-6 card   rounded-xl shadow-sm hover:shadow-md transition-all">
                             <h3 className="text-xl font-semibold ">2018 – Company Established</h3>
                             <p className=" mt-2 card2">
                                 Official registration and initial establishment of the company.
                             </p>
                         </div>
 
-                        <div className="p-6 card border rounded-xl shadow-sm hover:shadow-md transition-all">
+                        <div className="p-6 card  rounded-xl shadow-sm hover:shadow-md transition-all">
                             <h3 className="text-xl font-semibold ">2020 – Service Expansion</h3>
                             <p className="card2 mt-2">
                                 Introduced more services including IT consulting, digital marketing, and automation.
                             </p>
                         </div>
 
-                        <div className="p-6 card border rounded-xl shadow-sm hover:shadow-md transition-all">
+                        <div className="p-6 card  rounded-xl shadow-sm hover:shadow-md transition-all">
                             <h3 className="text-xl font-semibold ">2022 – Major Platform Launch</h3>
                             <p className="card2 mt-2">
                                 Developed and deployed large-scale platforms for employment and agriculture sectors.
                             </p>
                         </div>
 
-                        <div className="p-6 card border rounded-xl shadow-sm hover:shadow-md transition-all">
+                        <div className="p-6 card  rounded-xl shadow-sm hover:shadow-md transition-all">
                             <h3 className="text-xl font-semibold ">2024 – Modernization & Innovation</h3>
                             <p className="card2 mt-2">
                                 Adopted cloud infrastructure, smart automation, AI integration, and modern UI/UX design.

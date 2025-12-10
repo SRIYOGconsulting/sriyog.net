@@ -3,7 +3,7 @@ import Ribbon from "../Components/Ribbon";
 
 export default function RefundPolicy() {
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className=" h-full">
       {/* Header / Ribbon */}
       <Ribbon name="Refund Policy"/>
 

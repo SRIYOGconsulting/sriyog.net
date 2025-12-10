@@ -210,7 +210,7 @@ export default function Notice() {
                         <div
                             key={notice.id}
                             className={`
-                                bg-white rounded-lg shadow-md border-l-4
+                                answers rounded-lg shadow-md border-l-4
                                 hover:scale-[1.02] transition-all hover:shadow-2xl 
                                 ${notice.important ? 'border-red-500' : 'border-[#074842]'}
                             `}
@@ -223,13 +223,13 @@ export default function Notice() {
 
                             <div className="p-6">
                                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                                    <h3 className="text-xl font-semibold text-gray-800 mb-2 md:mb-0">
+                                    <h3 className="text-xl font-semibold card2 mb-2 md:mb-0">
                                         {notice.title}
                                     </h3>
 
                                     <div className="flex items-center gap-4">
                                         <a href="#">
-                                        <button className='bg-[#ebebeb] hover:bg-teal-700 hover:text-white text-[13px] border px-2 py-px rounded-md border-gray-800'>
+                                        <button className=' hover:bg-teal-700 hover:text-white text-[13px] border px-2 py-px rounded-md border-gray-800'>
                                             Browse More
                                         </button>
                                         </a>
@@ -237,13 +237,13 @@ export default function Notice() {
                                             {notice.category}
                                         </span>
 
-                                        <span className="text-gray-500 text-sm">
+                                        <span className="text-gray-400 text-sm">
                                             {new Date(notice.date).toLocaleDateString()}
                                         </span>
                                     </div>
                                 </div>
 
-                                <p className="text-gray-600 leading-relaxed">
+                                <p className="leading-relaxed">
                                     {notice.content}
                                 </p>
                             </div>

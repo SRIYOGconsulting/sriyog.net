@@ -3,7 +3,7 @@ import Ribbon from "../Components/Ribbon";
 
 const PrivacyPolicy = () => {
   return (
-    <div className=" min-h-screen">
+    <div className=" h-full">
       {/* Header / Ribbon */}
       <Ribbon name="Privacy Policy" />
 

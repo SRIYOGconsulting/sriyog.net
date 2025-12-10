@@ -363,13 +363,13 @@ export default function Glossary() {
     const availableLetters = Object.keys(glossaryTerms);
 
     return (
-        <div className="bg-white min-h-screen">
+        <div className="h-full">
             {/* Header Section */}
             <Ribbon name="Glossary"/>
 
             <div className="max-w-7xl mx-auto px-4 md:px-8 pb-16">
                 {/* Alphabet Navigation */}
-                <div className="bg-gray-200 rounded-lg py-4 px-6 mb-8">
+                <div className="card rounded-lg py-4 px-6 mb-8">
                     <div className="flex flex-wrap justify-center gap-3">
                         {alphabet.map((letter) => (
                             <button
@@ -395,12 +395,12 @@ export default function Glossary() {
                     {glossaryTerms[selectedLetter]?.map((item, index) => (
                         <div
                             key={index}
-                            className="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+                            className="footer border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
                         >
-                            <h3 className="text-lg font-bold text-gray-900 mb-3">
+                            <h3 className="text-lg font-bold text mb-3">
                                 {item.term}
                             </h3>
-                            <p className="text-gray-700 text-sm leading-relaxed">
+                            <p className="card2 text-sm leading-relaxed">
                                 {item.definition}
                             </p>
                         </div>

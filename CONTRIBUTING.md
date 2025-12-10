@@ -6,6 +6,7 @@ This document explains how to use components and features in this React project.
 ---
 
   
+  
 
 ## 1.Adding Google Tag Manager
 
@@ -20,6 +21,7 @@ This document explains how to use components and features in this React project.
 
   
 
+
 ## 2.Adding Meta Pixel Code
 
 ### In index.html
@@ -28,6 +30,7 @@ This document explains how to use components and features in this React project.
 *'YOUR_PIXEL_ID' => replace with your actual Pixel ID*
 
   
+
 
 ## 3.OG and Meta Tags
 
@@ -42,6 +45,7 @@ Inside any page:
 `<Helmet> (your meta + og tags here) </Helmet>`
 
   
+
 
 ## 4.Lightbox Feature
 
@@ -79,6 +83,7 @@ data={datalist}
 body{ overflow: var(--overflow) !important; }
 ```
 
+
   
 
 ## 5.reCAPTCHA
@@ -88,6 +93,7 @@ Install library: `npm i react-google-recaptcha`
 Get your **sitekey** from Google Cloud.
 Replace old sitekey with your own.
 Get secret key also if you need it for backend
+
 
   
 
@@ -124,7 +130,28 @@ setDarkIcon(false);
 
   
 
-## 7.Dynamic Routing
+## 7.Font Size Changer
+
+Use em or rem for text that should scale with user settings or parent context.
+
+### Add font variables in index.css
+
+```
+:root{
+     --app-font-size: 1rem;
+}
+
+body{
+    font-size: var(--app-font-size);
+}
+```
+### Check `FontSizeChanger.jsx`
+
+### For fixed size use either text-[15px/....] or text-sm/md/xl....
+
+
+
+## 8.Dynamic Routing
 
 ***Pages are located in `/src/pages`.***
 
@@ -137,7 +164,7 @@ To add a new page:
 
   
 
-## 8.Lazy Loaded Pages
+## 9.Lazy Loaded Pages
 
 Example:
 
@@ -152,7 +179,7 @@ Use with Suspense (Shows a fallback UI (loading screen) while the component is b
 ```
 
 
-## 9.SEO With React Helmet
+## 10.SEO With React Helmet
 
 ***Default SEO is inside index.html.***
 

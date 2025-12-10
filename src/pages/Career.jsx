@@ -231,7 +231,7 @@ const jobs = [
                                 <div
                                     key={job.id}
                                     className={`
-                                    bg-white rounded-lg shadow-md border-l-4
+                                    answers rounded-lg shadow-md border-l-4
                                     hover:scale-[1.01] transition-all duration-300 hover:shadow-2xl
                                     ${job.urgent ? 'border-red-500' : 'border-[#074842]'}
                                 `}
@@ -244,7 +244,7 @@ const jobs = [
 
                                     <div className="p-6">
                                         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                                            <h3 className="text-xl font-semibold text-gray-800 mb-2 md:mb-0">
+                                            <h3 className="text-xl font-semibold  mb-2 md:mb-0">
                                                 {job.title}
                                             </h3>
 
@@ -253,20 +253,20 @@ const jobs = [
                                                     {job.category}
                                                 </span>
                                                 <Link to="/internship" state={{job : job.title}}>
-                                                <button className='bg-[#ebebeb] hover:bg-teal-700 hover:text-white text-[13px] border px-2 py-px rounded-md border-gray-800'>
+                                                <button className='footer hover:bg-teal-700 hover:text-white text-[13px] border px-2 py-px rounded-md border-gray-800'>
                                                     Apply Now
                                                 </button>
                                                 </Link>
                                             </div>
                                         </div>
-                                        <span className="text-gray-500 text-sm">
+                                        <span className="card2 text-sm">
                                                    📆 {new Date(job.date).toLocaleDateString()}
                                         </span>
-                                        <p className="text-gray-600 mb-2">
+                                        <p className="card2 mb-2">
                                             <strong>📌</strong> {job.location}
                                         </p>
 
-                                        <p className="text-gray-600 text-md leading-relaxed">
+                                        <p className="card2 text-md leading-relaxed">
                                             {job.description}
                                         </p>
                                     </div>

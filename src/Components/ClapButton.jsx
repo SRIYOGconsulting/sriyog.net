@@ -54,7 +54,7 @@ marginTop: "20px",
 },
 button: {
 fontSize: "32px",
-padding: "15px",
+padding: "11px",
 borderRadius: "50%",
 border: "none",
 cursor: "pointer",
@@ -63,7 +63,7 @@ background: "#fff",
 boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
 },
 clicked: {
-transform: "scale(1.3)",
+transform: "scale(1.1)",
 },
 disabled: {
 cursor: "not-allowed",

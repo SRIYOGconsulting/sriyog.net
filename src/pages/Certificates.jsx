@@ -52,11 +52,11 @@ export default function Certificate() {
                                 src={cert.img}
                                 alt={cert.title}
                                 onClick={()=>{setLightbox(true);setIndex(index)}}
-                                className="w-full h-56 object-cover"
+                                className="w-full h-56 object-cover cursor-pointer"
                             />
                             <div className="px-4 py-5 card2">
                                 <h2 className="text-lg font-medium ">{cert.title}</h2>
-                                <p className="text-gray-500 text-sm mt-2">
+                                <p className="card2 text-sm mt-2">
                                     Short description about the certificate.
                                 </p>
                             </div>

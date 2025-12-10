@@ -66,33 +66,33 @@ const Header = () => {
         <nav className="flex items-center spcae-x-0 sm:space-x-4">
           {!showSearch &&
           <div className="space-x-6 hidden lg:block">
-          <Link to="/" className=" hover:text-teal-700">
+          <Link to="/" className="text-[16px] hover:text-teal-700">
             Home
           </Link>
-          <Link to="/about" className=" hover:text-teal-700">
+          <Link to="/about" className="text-[16px] hover:text-teal-700">
             About
           </Link>
-          <Link to="/services" className=" hover:text-teal-700">
+          <Link to="/services" className="text-[16px] hover:text-teal-700">
             Services
           </Link>
-          <Link to="/feedback" className=" hover:text-teal-700">
+          <Link to="/feedback" className="text-[16px] hover:text-teal-700">
             Feedback
           </Link>
-          <Link to="/team" className=" hover:text-teal-700">
+          <Link to="/team" className="text-[16px] hover:text-teal-700">
             Team
           </Link>
-          <Link to="/contact" className=" hover:text-teal-700">
+          <Link to="/contact" className="text-[16px] hover:text-teal-700">
             Contact
           </Link>
 
           <Link to="/career">
-            <button className="border border-teal-900 rounded px-4 py-1  hover:bg-teal-50">
+            <button className="border text-[16px] border-teal-900 hover:text-black rounded px-4 py-1  hover:bg-teal-50">
               Career
             </button>
           </Link>
 
           <Link to="/notice">
-            <button className="bg-teal-900 border border-teal-900 text-white px-4 py-1 rounded hover:bg-teal-800">
+            <button className="bg-teal-900 text-[16px] border border-teal-900 text-white px-4 py-1 rounded hover:bg-teal-800">
               Notice
             </button>
           </Link>

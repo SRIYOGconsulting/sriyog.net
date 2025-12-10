@@ -51,14 +51,14 @@ function Gallery() {
                             {/* Card Content */}
                             <div className="p-4 card2 flex flex-col space-y-4">
                                 <h2 className="text-lg font-medium">{item.title}</h2>
-                                <p className="text-gray-500 text-sm mt-1">{item.description}</p> {/*  Reduced gap */}
-                                <div className="flex items-center gap-2 text-sm text-gray-500 mt-1"> {/*  Tight spacing */}
+                                <p className="card2 text-sm mt-1">{item.description}</p> {/*  Reduced gap */}
+                                <div className="flex items-center gap-2 text-sm card2 mt-1"> {/*  Tight spacing */}
                                     <FaCalendarAlt className="text-gray-400" />
                                     <span>{item.date}</span>
                                 </div>
                                 <div>
                                     <Link to="photogallery" state={{ count: item.count, title: item.title ,date: item.date, place:item.place}}>
-                                    <button className='bg-[#ebebeb] border border-[#074842] px-2 py-px rounded-md'>View Gallery</button>
+                                    <button className='bg-[#ebebeb] text-black border border-[#074842] px-2 py-px rounded-md'>View Gallery</button>
                                     </Link>
                                 </div>
                             </div>

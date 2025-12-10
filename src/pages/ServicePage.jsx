@@ -46,12 +46,12 @@ const ServicePage = () => {
                         <div key={i} className=" flex flex-col space-y-2  rounded-lg max-w-[300px] hover:scale-[1.02] transition-all">
                             <img src='/images/services/service-image-placeholder.jpg' className=' h-full  rounded-xl' alt="" />
                             <h3 className="text-xl font-semibold mb-2 pt-1">{item.title}</h3>
-                            <p className="text-gray-600 text-sm mb-4 line-clamp-3 pt-2">
+                            <p className="card2 text-sm mb-4 line-clamp-3 pt-2">
                                 {item.Desc}
                             </p>
                             <Link to="/services/servicepage" state={{index : services.indexOf(item)}}>
                             <button 
-                                className="px-4 py-2 border-2 mt-2 border-teal-700 text-teal-700 rounded-md hover:bg-teal-700 hover:text-white transition-all duration-300 font-medium text-sm"
+                                className="px-4 py-2 border-2 mt-2 border-teal-700 rounded-md hover:bg-teal-700 hover:text-white transition-all duration-300 font-medium text-sm"
                             >
                                 Browse More
                             </button>
