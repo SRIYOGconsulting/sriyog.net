@@ -5,7 +5,7 @@ import App from "./App.jsx";
 
 
 import Home from "./pages/Home.jsx";
-import Search from "./components/Search.jsx";
+import Search from "./Components/Search.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
 
