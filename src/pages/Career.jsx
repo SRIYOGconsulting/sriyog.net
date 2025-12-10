@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Pagination from '../Components/Pagination';
 import Ribbon from '../Components/Ribbon';
+import { Link } from 'react-router-dom';
 
 export default function Career() {
 
@@ -139,10 +140,15 @@ const jobs = [
   }
 ];
 
-
+    const sortedJobs = jobs.sort((a, b) => {
+        // urgent first
+        if (a.urgent && !b.urgent) return -1;
+        if (!a.urgent && b.urgent) return 1;
+        return 0; // keep original order if both urgent or both not
+    });
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage] = useState(10);
+    const [itemsPerPage] = useState(8);
 
     const [selectedCategory, setSelectedCategory] = useState("All");
     const [searchTerm, setSearchTerm] = useState("");
@@ -155,7 +161,7 @@ const jobs = [
     }, [currentPage]);
 
     // Filtering logic
-    const filteredJobs = jobs.filter(job => {
+    const filteredJobs = sortedJobs.filter(job => {
         const matchesCategory = selectedCategory === "All" || job.category === selectedCategory;
         const matchesSearch =
             job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -220,13 +226,13 @@ const jobs = [
                         </div>
 
                         {/* JOB CARDS */}
-                        <div className="space-y-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {currentData.map(job => (
                                 <div
                                     key={job.id}
                                     className={`
                                     bg-white rounded-lg shadow-md border-l-4
-                                    hover:scale-[1.02] transition-all hover:shadow-2xl
+                                    hover:scale-[1.01] transition-all duration-300 hover:shadow-2xl
                                     ${job.urgent ? 'border-red-500' : 'border-[#074842]'}
                                 `}
                                 >
@@ -243,25 +249,24 @@ const jobs = [
                                             </h3>
 
                                             <div className="flex items-center gap-4">
-                                                <button className='bg-[#ebebeb] hover:bg-teal-700 hover:text-white text-[13px] border px-2 py-px rounded-md border-gray-800'>
-                                                    Apply Now
-                                                </button>
-
                                                 <span className="bg-green-100 text-black text-sm px-3 py-1 rounded-full">
                                                     {job.category}
                                                 </span>
-
-                                                <span className="text-gray-500 text-sm">
-                                                    {new Date(job.date).toLocaleDateString()}
-                                                </span>
+                                                <Link to="/internship" state={{job : job.title}}>
+                                                <button className='bg-[#ebebeb] hover:bg-teal-700 hover:text-white text-[13px] border px-2 py-px rounded-md border-gray-800'>
+                                                    Apply Now
+                                                </button>
+                                                </Link>
                                             </div>
                                         </div>
-
+                                        <span className="text-gray-500 text-sm">
+                                                   📆 {new Date(job.date).toLocaleDateString()}
+                                        </span>
                                         <p className="text-gray-600 mb-2">
-                                            <strong>Location:</strong> {job.location}
+                                            <strong>📌</strong> {job.location}
                                         </p>
 
-                                        <p className="text-gray-600 leading-relaxed">
+                                        <p className="text-gray-600 text-md leading-relaxed">
                                             {job.description}
                                         </p>
                                     </div>

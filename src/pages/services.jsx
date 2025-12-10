@@ -23,7 +23,7 @@ export default function Services() {
                     {servicesList.map((service, index) => (
                         <div
                             key={index}
-                            className="bg-white border space-y-6 sm:space-y-4 border-gray-400 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 p-9 flex flex-col "
+                            className="bg-white space-y-6 sm:space-y-4 border-gray-400 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 p-9 flex flex-col "
                         >
                             {/* Icon */}
                             <div className="flex justify-center mb-6">
@@ -47,7 +47,7 @@ export default function Services() {
                             <div className="flex  py-1 sm:py-0 justify-center">
                                 <Link to="servicepage" state={{ index: index }}>
                                 <button className="px-6 py-2.5 border-2 border-teal-700 text-teal-700 rounded-md hover:bg-teal-700 hover:text-white transition-all duration-300 font-medium text-sm">
-                                    Read More
+                                    Browse More
                                 </button>
                                 </Link>
                             </div>

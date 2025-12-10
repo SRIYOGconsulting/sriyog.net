@@ -1,10 +1,13 @@
 import React, { useRef, useState } from 'react'
 import Ribbon from '../Components/Ribbon';
+import { useLocation } from 'react-router-dom';
 
 
 
 const Internship = () => {
   const headshot = useRef(null);
+  const location = useLocation();
+  const {job} = location.state || {}
   const cv = useRef(null)
   const [form,setForm] = useState(
     {firstname: "",
@@ -17,7 +20,7 @@ const Internship = () => {
     cv:"",
     internshipPeriod:"",
     institution:"",
-    subject: "",
+    subject: job,
     passedyear: "",
 })
   const handleChange = (e) => {
@@ -43,7 +46,7 @@ const handleSubmit = (e)=>{
     internshipPeriod:"",
     institution:"",
     passedyear: "",
-    subject:""
+    subject:job || ""
     })}
 }
   return (
@@ -142,11 +145,11 @@ const handleSubmit = (e)=>{
                             onChange={handleChange}
                             required
                             className="absolute inset-0 appearance-none w-full px-4  border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-700 focus:outline-none"
-                            >
-                                <option value="">-- Select --</option>
-                                <option value="Male">Management</option>
-                                <option value="Female">Social Works</option>
-                                <option value="Rather Not to Say">IT</option>
+                            >                  
+                                <option value={form.subject ? form.subject : ""}>{form.subject || "---select---"}</option>
+                                <option value="Management">Management</option>
+                                <option value="Social Works">Social Works</option>
+                                <option value="IT">IT</option>
                                 <option value="Other">Other</option>
                         </select>
                         <span className='absolute right-5 pointer-events-none translate-y-1/2 top-0.5 cursor-pointer'>

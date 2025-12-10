@@ -12,30 +12,30 @@ const Sidekick = () => {
     <div className='fixed right-0 top-[48%] sm:top-[30%] min-h-screen z-20'>
         {show && 
         <div className='relative cursor-pointer hover:scale-[1.01] transition-all duration-200'>
-            <div onClick={()=>{setShow(false);setMenu(true)}} className="hidden sm:flex flex-col justify-center items-center gap-2 rounded-tl-xl rounded-bl-xl sidekick px-4 py-3">
+            <div onClick={()=>{setShow(false);setMenu(true)}} className="hidden sm:flex flex-col justify-center items-center gap-2 rounded-tl-xl rounded-bl-xl sidekick px-3 py-3">
             <div onClick={()=>window.open("https://sriyog.com", "_blank")} className='flex flex-col items-center justify-center gap-1'>
-              <img src="/icons/whatsapp.svg"  alt="" height="34px" width="34px" className=' hover:scale-[1.15] transition-all duration-200'/>
-              <p className='text-[9.5px] font-[700] text-[#888888]'>Whatsapp</p>
+              <img src="/icons/whatsapp.svg"  alt="" height="26px" width="26px" className=' hover:scale-[1.15] transition-all duration-200'/>
+              <p className='text-[9px] font-[700] text-[#888888]'>Whatsapp</p>
             </div >
-            <img src="/icons/line.svg" className='h-1 w-14' alt="" />
+            <img src="/icons/line.svg" className='h-1 w-[52px]' alt="" />
             <div onClick={()=>window.open("https://sriyog.com", "_blank")} className='flex flex-col items-center justify-center gap-1'>
-              <img src="/icons/messenger.svg" alt="" height="34px" width="34px" className=' hover:scale-[1.15] transition-all duration-200'/>
-              <p className='text-[9.5px] font-[700] text-[#888888]'>Messenger</p>              
+              <img src="/icons/messenger.svg" alt="" height="26px" width="26px" className=' hover:scale-[1.15] transition-all duration-200'/>
+              <p className='text-[9px] font-[700] text-[#888888]'>Messenger</p>              
             </div>
-            <img src="/icons/line.svg" className='h-1 w-14' alt="" />
+            <img src="/icons/line.svg" className='h-1 w-[52px]' alt="" />
             <div onClick={()=>window.open("https://sriyog.com", "_blank")} className='flex flex-col items-center justify-center gap-1'>
-              <img onClick={()=>window.open("https://sriyog.com", "_blank")} src="/icons/signal.svg" alt="" height="34px" width="34px" className=' hover:scale-[1.15] transition-all duration-200'/>
-              <p className='text-[9.5px] font-[700] text-[#888888]'>Signal</p>                            
+              <img onClick={()=>window.open("https://sriyog.com", "_blank")} src="/icons/signal.svg" alt="" height="26px" width="26px" className=' hover:scale-[1.15] transition-all duration-200'/>
+              <p className='text-[9px] font-[700] pr-1 text-[#888888]'>Signal</p>                            
             </div>
-            <img src="/icons/line.svg" className='h-1 w-14' alt="" />
+            <img src="/icons/line.svg" className='h-1 w-[52px]' alt="" />
             <div onClick={()=>window.open("https://sriyog.com", "_blank")} className='flex flex-col items-center justify-center gap-1'>
-              <img onClick={()=>window.open("https://sriyog.com", "_blank")} src="/icons/discord.svg" alt="" height="34px" width="34px" className=' hover:scale-[1.15] transition-all duration-200'/>
-              <p className='text-[9.5px] font-[700] text-[#888888]'>Discord</p>                            
+              <img onClick={()=>window.open("https://sriyog.com", "_blank")} src="/icons/discord.svg" alt="" height="26px" width="26px" className=' hover:scale-[1.15] transition-all duration-200'/>
+              <p className='text-[9px] font-[700] text-[#888888]'>Discord</p>                            
             </div>
-            <img src="/icons/line.svg" className='h-1 w-14' alt="" />
+            <img src="/icons/line.svg" className='h-1 w-[52px]' alt="" />
             <div onClick={()=>window.open("https://sriyog.com", "_blank")} className='flex flex-col items-center justify-center gap-1'>
-              <img onClick={()=>window.open("https://sriyog.com", "_blank")} src="/icons/phone.svg" alt="" height="34px" width="34px" className=' hover:scale-[1.15] transition-all duration-200'/>
-              <p className='text-[9.5px] font-[700] text-[#888888]'>Phone</p>                                        
+              <img onClick={()=>window.open("https://sriyog.com", "_blank")} src="/icons/phone.svg" alt="" height="26px" width="26px" className=' hover:scale-[1.15] transition-all duration-200'/>
+              <p className='text-[9px] font-[700] text-[#888888]'>Phone</p>                                        
             </div>
          </div>
         </div> }
@@ -43,7 +43,7 @@ const Sidekick = () => {
           <div onClick={()=>{setShow(false);setMenu(true)}} className="flex sm:hidden flex-col justify-center items-center gap-2 rounded-tl-xl rounded-bl-xl sidekick px-5 py-3">
             <div className='flex flex-col items-center justify-center gap-1'>
               <img src="/icons/Frame.svg"  alt="" height="40px" width="40px" className=' hover:scale-[1.15] transition-all duration-200'/>
-              <p className='text-[9.5px] font-[700] text-[#888888]'>Support</p>
+              <p className='text-[9px] font-[700] text-[#888888]'>Support</p>
             </div >
           </div>
           }
@@ -82,7 +82,7 @@ const Sidekick = () => {
                 <div className="absolute inset-0 rounded-full bg-[#074842] opacity-0 
                               group-hover:opacity-75 group-hover:animate-ping transition"></div>
                 <div className="relative z-10 cursor-pointer bg-[#074842] p-3 rounded-full">
-                  <svg width="30px" height="30px" viewBox="0 0 24 24" className='group-hover:rotate-[120deg] transition-transform duration-200' fill="#ebebeb" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="28px" height="28px" viewBox="0 0 24 24" className='group-hover:rotate-[120deg] transition-transform duration-200' fill="#ebebeb" xmlns="http://www.w3.org/2000/svg">
                     <g id="SVGRepo_bgCarrier" strokeWidth="0" />
                     <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"/>
                     <g id="SVGRepo_iconCarrier">

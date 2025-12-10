@@ -40,7 +40,6 @@ export default function Feedback() {
 
     return (
         <div className="w-full">
-
             {/* Full-width Ribbon Header */}
             <Ribbon name="Feedback"/>
 
@@ -228,17 +227,20 @@ export default function Feedback() {
                             className="px-4 py-3 border text-black border-gray-300 rounded-md focus:ring-2 focus:ring-teal-700 focus:outline-none resize-none"
                         ></textarea>
                     </div>
-                    <div className='flex items-center justify-center col-span-2'>
-                    <ReCAPTCHA 
-                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" 
-                    onChange={(token) => setCaptchaToken(token)}
-                    />
+                    <div className='flex items-center justify-center col-span-2 scale-75'>
+                        <ReCAPTCHA
+                        sitekey="6LfeSyUsAAAAAHUNk-NbZKDKe6YqXU5WJxh9iscC"
+                        onChange={(token) => setCaptchaToken(token)}
+                        size="normal"          // <-- change size here
+                        badge = "inline"
+                    
+                        />
                     </div>
                     {/* Submit Button */}
                     <div className="flex items-center justify-center col-span-2">
                         <button
                             type="submit"
-                            className="bg-black text-white px-6 py-3 rounded-md font-medium hover:bg-gray-900 transition-all md:w-full sm:w-auto"
+                            className="bg-black text-white px-6 py-3 rounded-md font-medium hover:bg-gray-900 transition-all  sm:w-auto"
                         >
                             Submit Feedback
                         </button>

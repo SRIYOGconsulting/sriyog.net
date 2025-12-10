@@ -22,7 +22,7 @@ const OurTeam = () => {
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-6 md:py-10">
 
         {/* PRESIDENT SECTION */}
-        <div className="rounded-lg border card border-gray-300 p-6 md:p-10 bg-white">
+        <div className="rounded-lg  card  p-6 md:p-10">
           <div className="flex flex-col md:flex-row gap-10 items-center md:items-start">
             <div className="flex flex-col items-center">
               <img
@@ -88,7 +88,7 @@ const OurTeam = () => {
           {teamMembers.map((member) => (
             <div
               key={member.id}
-              className="border card  rounded-lg p-6 shadow-sm flex flex-col items-center hover:shadow-md hover:-translate-y-1 transition-all"
+              className=" card  rounded-lg p-6 shadow-sm flex flex-col items-center hover:shadow-md hover:-translate-y-1 transition-all"
             >
               <img
                 src={member.image}

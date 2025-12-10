@@ -30,29 +30,30 @@ const ServicePage = () => {
     return (
         <div>
             <Ribbon name={service.title} />
-            <div className="max-w-7xl mx-auto px-4 py-10">
+            <div className="max-w-6xl mx-auto px-4 py-10">
                 {/* Display content here */}
-                <div className='max-w-4xl mx-auto h-64'>
-                   <img src={service.image} alt=""  className='h-full w-full'/>
+                <div className='max-w-6xl mx-auto h-full'>
+                   <img src='/images/services/service-image-placeholder.jpg' alt=""  className='rounded-xl h-full w-full'/>
                 </div>
-                <p className='py-8'>{service.Desc}</p>
+                <h1 className='text-3xl text text-center mt-8'>{service.title}</h1>
+                <p className='py-8 text-[17px]'>{service.Desc}</p>
 
                 <div className="mt-10">
                 <h2 className="text-2xl font-bold mb-4">Related Services</h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {relatedServices.map((item, i) => (
-                        <div key={i} className="p-5 border rounded-lg shadow hover:shadow-lg hover:scale-[1.02] transition-all">
-                            <img src={item.image} className='w-full h-52 py-9' alt="" />
-                            <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                            <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                                {item.description}
+                        <div key={i} className=" flex flex-col space-y-2  rounded-lg max-w-[300px] hover:scale-[1.02] transition-all">
+                            <img src='/images/services/service-image-placeholder.jpg' className=' h-full  rounded-xl' alt="" />
+                            <h3 className="text-xl font-semibold mb-2 pt-1">{item.title}</h3>
+                            <p className="text-gray-600 text-sm mb-4 line-clamp-3 pt-2">
+                                {item.Desc}
                             </p>
                             <Link to="/services/servicepage" state={{index : services.indexOf(item)}}>
                             <button 
-                                className="text-[#074842] hover:underline font-medium"
+                                className="px-4 py-2 border-2 mt-2 border-teal-700 text-teal-700 rounded-md hover:bg-teal-700 hover:text-white transition-all duration-300 font-medium text-sm"
                             >
-                                View Service →
+                                Browse More
                             </button>
                             </Link>
                         </div>

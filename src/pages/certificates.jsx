@@ -1,14 +1,29 @@
 // import BasicBreadcrumbs from '../Components/BasicBreadcrumb';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Ribbon from '../Components/Ribbon';
+import Lightbox from '../Components/Lightbox';
 
 export default function Certificate() {
     const breadcrumbItems = [
         { label: 'Home', path: '/' },
         { label: 'Certificates', path: '/certificates' }
     ];
-    const [lightbox,openLightbox] = useState(false);
+    const [lightbox,setLightbox] = useState(false);
     const [index,setIndex] = useState(null);
+    useEffect(() => {
+        const originalStyle = window.getComputedStyle(document.body).overflow;
+        
+        if (lightbox) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = originalStyle;
+        }
+
+        // Cleanup on unmount or when lightbox changes
+        return () => {
+            document.body.style.overflow = originalStyle;
+        };
+    }, [lightbox]);
     // Updated certificate data with new image paths
     const certificates = [
         { title: 'Certificate 1', img: '/images/certificates/1.jpg' },
@@ -23,7 +38,7 @@ export default function Certificate() {
     ];
 
     return (
-        <div >
+        <div className='relative '>
             {/* Header */}
             <Ribbon name="Certificates"/>
             <div className="px-5 py-10 max-w-7xl mx-auto">
@@ -36,7 +51,7 @@ export default function Certificate() {
                             <img
                                 src={cert.img}
                                 alt={cert.title}
-                                onClick={()=>{openLightbox(true);setIndex(index)}}
+                                onClick={()=>{setLightbox(true);setIndex(index)}}
                                 className="w-full h-56 object-cover"
                             />
                             <div className="px-4 py-5 card2">
@@ -50,18 +65,9 @@ export default function Certificate() {
                 </div>
             </div>
             {lightbox && (
-            <div
-                className="fixed inset-0 bg-black/70 z-[9999] flex items-center justify-center"
-                onClick={() => openLightbox(false)}
-            >
-                <button className='absolute top-5 right-5 text-2xl rounded-full w-10 h-10 bg-white'>X</button>
-                <img
-                src={certificates[index].img}
-                alt=""
-                className="max-w-[90%] max-h-[90%] rounded-lg shadow-lg"
-                onClick={(e) => e.stopPropagation()} // prevent closing when clicking the image
-                />
-            </div>
+            <>
+            <Lightbox setLightbox={setLightbox} lightbox={lightbox} data={certificates} index={index} setIndex={setIndex}/>
+            </>
             )}
         </div>
     );

@@ -137,15 +137,31 @@ const Footer = () => {
       </div>
 
       {/* SOCIAL + CONTACT SECTION */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-center lg:justify-between gap-8 mt-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row lg:justify-between gap-8 mt-10">
 
         {/* SOCIAL ICONS */}
-        <div className="flex gap-6 justify-center lg:justify-start">
-          {["x", "linkedin", "youtube", "trello", "signal", "discord", "viber"].map((icon) => (
-            <a key={icon} href="#" className="hover:opacity-60 transition hover:scale-110">
-              <img src={`/icons/${icon}.svg`} alt={icon} className="h-5 w-5 sm:h-6 sm:w-6 cursor-pointer" />
+        <div className="flex gap-6 justify-center">
+            <a  href="#" className="flex items-center hover:opacity-60 transition hover:scale-110">
+              <img src={`/icons/x.svg`} className="h-5 w-5 sm:h-6 sm:w-6 cursor-pointer" />
             </a>
-          ))}
+            <a  href="#" className="flex items-center hover:opacity-60 transition hover:scale-110">
+              <img src={`/icons/linkedin.svg`}  className="h-5 w-5 sm:h-6 sm:w-6 cursor-pointer" />
+            </a>
+            <a  href="#" className="flex items-center hover:opacity-60 transition hover:scale-110 ">
+              <img src={`/icons/youtube.svg`}  className="h-5 w-5 sm:h-6 sm:w-6 cursor-pointer" />
+            </a>
+            <a  href="#" className="flex items-center hover:opacity-60 transition hover:scale-110">
+              <img src={`/icons/trello.svg`}  className="h-5 w-5 sm:h-6 sm:w-6 cursor-pointer" />
+            </a>
+            <a  href="#" className="flex items-center hover:opacity-60 transition hover:scale-110">
+              <img src={`/icons/signal.svg`}  className="h-5 w-5 sm:h-6 sm:w-6 cursor-pointer" />
+            </a>
+            <a  href="#" className="flex items-center hover:opacity-60 transition hover:scale-110">
+              <img src={`/icons/discord.svg`}  className="h-5 w-5 sm:h-6 sm:w-6 cursor-pointer" />
+            </a>
+            <a  href="#" className="flex items-center hover:opacity-60 transition hover:scale-110">
+              <img src={`/icons/viber.svg`} className="h-5 w-5 sm:h-6 sm:w-6 cursor-pointer" />
+            </a>
         </div>
 
         {/* CONTACT BOXES */}
@@ -180,10 +196,10 @@ const Footer = () => {
 
       {/* FOOTER BOTTOM */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 lg:mt-12 flex flex-col lg:flex-row justify-center items-center lg:justify-between text-[13px]  gap-3 text-center md:text-left font-semibold">
-        <p className="flex flex-col md:flex-row gap-4 md:gap-0 items-center">
+        <p className="flex flex-col md:flex-row gap-4 md:gap-1 items-center">
           <span>All Rights Reserved. © 2018-{currentYear}</span>
           <span>SRIYOG Consulting Pvt. Ltd.</span>
-          <span>Built With : <a href="https://broadpress.org" target="_blank" className="hover:border-b hover:border-black text-gray-500">BroadPress</a></span>
+          <span>Built with : <a href="https://broadpress.org" target="_blank" className="hover:border-b hover:border-black text-gray-500">BroadPress</a></span>
         </p>
             
 

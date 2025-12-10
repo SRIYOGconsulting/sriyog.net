@@ -62,25 +62,30 @@ export const services = [
         {
             title: "Business eMail",
             ShortDesc: "Our team of experienced marketers can help you build high-quality Business eMail campaigns that drive traffic and engagement.",
-            image: "/images/services/11.svg"
+            image: "/images/services/11.svg",
+            Desc : "Our business email marketing services are designed to help you connect with your audience in a personal, professional, and impactful way. Whether you're reaching out to existing customers or nurturing leads, we craft tailored email campaigns that drive engagement, build trust, and encourage action. Our services include everything from list segmentation and campaign strategy to email design, content creation, and performance tracking. We utilize industry-leading platforms to ensure your emails are delivered successfully and comply with privacy regulations such as GDPR and CAN-SPAM. From promotional blasts and newsletters to automated drip campaigns, we help you maintain consistent communication that adds value and reinforces your brand. Every email is designed to be mobile-friendly, visually appealing, and optimized for high open and click-through rates. With ongoing A/B testing and analytics, we continuously refine our approach to maximize your results and help your business stay top-of-mind with your audience."
         },
         {
             title: "Human Resource Management",
             ShortDesc: "We offer a range of human resource management services, including recruitment, onboarding, and performance management.",
-            image: "/images/services/12.svg"
+            image: "/images/services/12.svg",
+            Desc: "We offer comprehensive human resource management services that empower organizations to effectively manage their workforce and foster a productive work environment. Our solutions cover the entire employee lifecycle, including recruitment, onboarding, performance management, payroll coordination, and compliance support. We use modern HR tools and best practices to streamline hiring processes, enhance employee engagement, and ensure regulatory compliance. Our recruitment strategies attract top talent, while our onboarding systems make the integration process smooth and efficient. We also provide tools and strategies for performance evaluations, employee feedback, and development planning to help organizations retain and grow talent. Whether you're a small business looking to formalize HR practices or a large enterprise seeking process optimization, our services are customized to fit your unique needs. We help organizations build a strong HR foundation that supports long-term growth and employee satisfaction."
         },
         {
             title: "IT Consultancy Management",
             ShortDesc: "We offer a range of IT consultancy services, including system design, implementation, and support.",
-            image: "/images/services/13.svg"
+            image: "/images/services/13.svg",
+            Desc: "Our IT consultancy management services help businesses navigate complex technology challenges with confidence. We provide strategic guidance and hands-on support across a wide range of IT needs, including infrastructure design, system implementation, cybersecurity, cloud migration, and digital transformation. Our consultants work closely with your internal teams to understand your objectives and create tailored solutions that enhance efficiency, reduce costs, and support scalability. We bring expertise in selecting and deploying enterprise software, integrating systems, and optimizing IT operations. From short-term projects to long-term partnerships, we deliver results that align with your business goals and technical requirements. We also offer post-implementation support and training to ensure smooth transitions and maximum ROI. Whether you're modernizing your IT environment or planning a full-scale system overhaul, our consultancy services help you leverage technology as a strategic asset, not just a business necessity."
         },
         {
             title: "UI/UX Designing",
             ShortDesc: "We offer a range of UI/ UX designing services, including wireframing, prototyping, and user testing.",
-            image: "/images/services/14.svg"
+            image: "/images/services/14.svg",
+            Desc: "Our UI/UX design services are focused on creating digital experiences that are not only visually appealing but also highly functional and user-centric. We start with in-depth research and wireframing to understand user behavior, pain points, and interaction flows. From there, we create high-fidelity prototypes and conduct user testing to ensure the final product meets usability standards and business goals. Our designers combine aesthetics with purpose — every color, icon, and animation is carefully chosen to enhance usability and engagement. Whether you’re building a web app, mobile app, or software interface, we ensure the design is responsive, accessible, and aligned with your brand identity. We also collaborate closely with developers to ensure that our designs are seamlessly implemented in the final product. With a strong focus on both function and form, our UI/UX services help you deliver intuitive experiences that keep users coming back."
         },
         {
             title: "Content/ Email Marketing",
             ShortDesc: "We offer a range of video / email / content marketing services, including video creation, email marketing, and content creation.",
-            image: "/images/services/15.svg"
+            image: "/images/services/15.svg",
+            Desc: "We offer a powerful combination of video, content, and email marketing services designed to elevate your brand's communication strategy. From engaging videos and insightful blog posts to high-converting email campaigns, we create content that resonates with your target audience and drives results. Our video marketing services include scripting, shooting, editing, and animation, perfect for explainer videos, testimonials, or social media campaigns. In content marketing, we focus on SEO-optimized articles, product descriptions, and thought leadership pieces that enhance visibility and authority. For email marketing, we handle campaign planning, list management, and performance analysis to ensure consistent, effective outreach. Each element of our marketing strategy is driven by data and crafted to support lead generation, customer retention, and brand awareness. Whether used individually or together, our marketing services provide a cohesive approach that boosts engagement and aligns with your broader digital goals."
         }]
