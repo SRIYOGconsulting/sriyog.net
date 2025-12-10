@@ -23,58 +23,58 @@ const RoadBlock = () => {
   const month = monthNames[monthIndex];
 
   const [showRoadBlock, setShowRoadBlock] = useState(false);
-  const onClose = () => {
-    document.body.style.overflow = "auto";
-    setShowRoadBlock(false);
+
+const onClose = () => {
+  document.body.classList.replace('hideScroll','showScroll');
+  setShowRoadBlock(false);
+}
+
+// Code for forceful closing timer
+const [timeLeft, setTimeLeft] = useState(20);
+useEffect(() => {
+  const timer = setInterval(() => {
+    setTimeLeft((prev) => {
+      if (prev <= 1) {
+        clearInterval(timer);
+        onClose();
+      }
+      return prev - 1;
+    });
+  }, 1000);
+
+  return () => clearInterval(timer);
+}, [onClose]);
+
+// Show close timer (10 sec)
+const [displayTimeLeft, setDisplayTimeLeft] = useState(5);
+useEffect(() => {
+  const timer = setInterval(() => {
+    setDisplayTimeLeft((prev) => {
+      if (prev <= 1) {
+        clearInterval(timer);
+        return 0;
+      }
+      return prev - 1;
+    });
+  }, 1000);
+
+  return () => clearInterval(timer);
+}, []);
+
+// If no image found → close
+const handleImageError = () => {
+  onClose();
+};
+
+useEffect(()=>{
+  const hasSeen = sessionStorage.getItem('roadblock_seen');
+  if(!hasSeen){
+    setShowRoadBlock(true);
+    document.body.classList.toggle('hideScroll');
+    sessionStorage.setItem('roadblock_seen','true');
   }
+},[])
 
-
-  // Code for forceful closing timer
-  const [timeLeft, setTimeLeft] = useState(20);
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          onClose();
-        }
-        return prev - 1;
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, [onClose]);
-
-  // Show close timer (10 sec)
-  const [displayTimeLeft, setDisplayTimeLeft] = useState(2);
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setDisplayTimeLeft((prev) => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  // If no image found → close
-  const handleImageError = () => {
-    onClose();
-  };
-
-  
-  useEffect(()=>{
-    const hasSeen = sessionStorage.getItem('roadblock_seen');
-    if(!hasSeen){
-      setShowRoadBlock(true);
-      document.body.style.overflow = "hidden";
-      sessionStorage.setItem('roadblock_seen','true');
-    }
-  })
 
   return (
   <>

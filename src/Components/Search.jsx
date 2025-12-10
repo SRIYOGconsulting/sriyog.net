@@ -227,15 +227,15 @@ const Search = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-4">
+    <div className="min-h-screen  dark:bg-gray-900 py-12 px-4">
       <div className="container mx-auto max-w-4xl">
         {/* Page Header */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-3">
+          <h1 className="text-4xl font-bold  dark:text-white mb-3">
             Search Results
           </h1>
           {query && (
-            <p className="text-lg text-gray-600 dark:text-gray-400">
+            <p className="text-lg card2 dark:text-gray-400">
               Showing results for:
               <span className="font-semibold text-teal-600 dark:text-teal-400 ml-2">
                 "{query}"
@@ -248,7 +248,7 @@ const Search = () => {
         {loading ? (
           <div className="text-center py-20">
             <div className="inline-block animate-spin rounded-full h-16 w-16 border-4 border-gray-300 border-t-teal-600"></div>
-            <p className="mt-6 text-xl text-gray-600 dark:text-gray-400">
+            <p className="mt-6 text-xl card2 dark:text-gray-400">
               Searching...
             </p>
           </div>
@@ -268,18 +268,18 @@ const Search = () => {
                   <Link
                     key={result.id}
                     to={result.url}
-                    className="block bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-teal-500 dark:hover:border-teal-500"
+                    className="block footer dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-teal-500 dark:hover:border-teal-500"
                   >
                     {/* Category Badge */}
                     <span className="inline-block bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 text-xs font-semibold px-3 py-1 rounded-full mb-3">
                       {result.category}
                     </span>
 
-                    <h2 className="text-2xl font-semibold text-teal-600 dark:text-teal-400 mb-3 hover:text-teal-700 dark:hover:text-teal-300">
+                    <h2 className="text-2xl font-semibold card2 dark:text-teal-400 mb-3 hover:text-teal-700 dark:hover:text-teal-300">
                       {highlightText(result.title, query)}
                     </h2>
 
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    <p className="card2 dark:text-gray-300 leading-relaxed">
                       {highlightText(result.content, query)}
                     </p>
 
@@ -291,15 +291,15 @@ const Search = () => {
               </div>
             ) : (
               // No Results Found
-              <div className="text-center py-20 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+              <div className="text-center py-20 footer dark:bg-gray-800 rounded-lg shadow-md">
                 <div className="text-6xl mb-4">🔍</div>
-                <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-3">
+                <h2 className="text-2xl font-semibold card2 dark:text-gray-200 mb-3">
                   No Results Found
                 </h2>
-                <p className="text-gray-600 dark:text-gray-400 mb-6">
+                <p className="card2 dark:text-gray-400 mb-6">
                   We couldn't find any results for "{query}"
                 </p>
-                <p className="text-gray-500 dark:text-gray-500 mb-8">
+                <p className="card2 dark:text-gray-500 mb-8">
                   Try searching with different keywords like: team, services,
                   career, contact, or notice
                 </p>
