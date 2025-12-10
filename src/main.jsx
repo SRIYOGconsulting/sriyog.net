@@ -5,8 +5,8 @@ import App from "./App.jsx";
 
 // Pages
 import Home from "./pages/Home.jsx";
-import NotFound from "./pages/NotFound.jsx"; // 404 page
 import Search from "./components/Search.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 
 const About = React.lazy(() => import("./pages/About.jsx"));
@@ -24,16 +24,16 @@ const Team = React.lazy(() => import("./pages/Team.jsx"));
 const Timeline = React.lazy(() => import("./pages/Timeline.jsx"));
 const Videos = React.lazy(() => import("./pages/Videos.jsx"));
 const Vmgo = React.lazy(() => import("./pages/Vmgo.jsx"));
-const WhyUs = React.lazy(() => import("./pages/WhyUs.jsx"));
+const WhyUs = React.lazy(() => import("./pages/Whyus.jsx"));
 const Sitemap = React.lazy(() => import("./pages/Sitemap.jsx"));
 const Downloads = React.lazy(() => import("./pages/Download.jsx"));
-const FAQ = React.lazy(() => import("./pages/FAQ.jsx"));
+const FAQ = React.lazy(() => import("./pages/Faq.jsx"));
 const Glossary = React.lazy(() => import("./pages/Glossary.jsx"));
 const Location = React.lazy(() => import("./pages/Location.jsx"));
 const Refundpolicy = React.lazy(() => import("./pages/Refundpolicy.jsx"));
-const Calendar = React.lazy(() => import("./pages/calendar.jsx"));
-const Internship = React.lazy(()=> import("./pages/internship.jsx"));
-const cookiePolicy = React.lazy(()=> import("./pages/cookiePolicy.jsx"));
+const Calendar = React.lazy(() => import("./pages/Calendar.jsx"));
+const Internship = React.lazy(()=> import("./pages/Internship.jsx"));
+const cookiePolicy = React.lazy(()=> import("./pages/CookiePolicy.jsx"));
 const PrivacyPolicy = React.lazy(()=> import("./pages/PrivacyPolicy.jsx"));
 const TermsOfServices = React.lazy(()=>import("./pages/Tos.jsx"));
 const Disclaimer = React.lazy(()=>import("./pages/Disclaimer.jsx"));
@@ -79,7 +79,7 @@ const router = createBrowserRouter([
       { path: "sitemap", element: withSuspense(Sitemap, "Loading Sitemap...") },
       { path: "internship", element: withSuspense(Internship, "Loading Internship...") },
       // 404 Page
-      { path: "*", element: <NotFound /> },
+      { path: "*", element: <NotFound/> },
       {path: "search", element: withSuspense(Search, "Search")},
       {path: "cookie-policy", element: withSuspense(cookiePolicy, "Loading Cookie Policy...")},
       {path: "privacy-policy", element: withSuspense(PrivacyPolicy, "Loading Privacy Policy...")},
